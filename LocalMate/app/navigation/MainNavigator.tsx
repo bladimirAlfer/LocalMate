@@ -12,6 +12,7 @@ import DispositivoScreen from '../screens/Onboarding/DispositivoScreen';
 import DiaPreferidoScreen from '../screens/Onboarding/DiaPreferidoScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from '../database/firebase';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { doc, getDoc } from 'firebase/firestore';
 
 const Stack = createStackNavigator();
@@ -22,24 +23,33 @@ const MainNavigator = () => {
   const [initialRoute, setInitialRoute] = useState('Home');
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    const checkOnboardingStatus = async (user) => {
       if (user) {
-        setIsAuthenticated(true);
-        
-        const userRef = doc(db, 'users', user.uid);
-        const userDoc = await getDoc(userRef);
+        // Primero intenta obtener `hasCompletedOnboarding` de AsyncStorage
+        let hasCompletedOnboarding = await AsyncStorage.getItem('hasCompletedOnboarding');
 
-        if (userDoc.exists() && userDoc.data().hasCompletedOnboarding) {
-          setInitialRoute('HomeUser');
-        } else {
-          setInitialRoute('PreferenciasScreen');
+        if (!hasCompletedOnboarding) {
+          // Si no está en AsyncStorage, consulta Firebase y almacena el resultado en AsyncStorage
+          const userRef = doc(db, 'users', user.uid);
+          const userDoc = await getDoc(userRef);
+
+          hasCompletedOnboarding = userDoc.exists() && userDoc.data()?.hasCompletedOnboarding ? 'true' : 'false';
+          await AsyncStorage.setItem('hasCompletedOnboarding', hasCompletedOnboarding);
         }
+
+        setInitialRoute(hasCompletedOnboarding === 'true' ? 'HomeUser' : 'PreferenciasScreen');
       } else {
-        setIsAuthenticated(false);
         setInitialRoute('Home');
       }
       setLoadingAuth(false);
+    };
+
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      setIsAuthenticated(!!user);
+      setLoadingAuth(true);  // Muestra la pantalla de carga durante la verificación
+      await checkOnboardingStatus(user);
     });
+
     return unsubscribe;
   }, []);
 
