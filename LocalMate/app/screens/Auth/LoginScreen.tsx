@@ -1,40 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { auth, signInWithEmailAndPassword, db } from '../../database/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { doc, getDoc } from 'firebase/firestore';
+import LoadingScreen from '../LoadingScreen';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false); 
   const navigation = useNavigation();
 
   const handleLogin = async () => {
+    setLoading(true);
+
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      
-      // Obtén el ID de usuario y verifica en Firebase
       const user = auth.currentUser;
       if (user) {
-        const userRef = doc(db, 'users', user.uid);
-        const userDoc = await getDoc(userRef);
-        
-        const hasCompletedOnboarding = userDoc.exists() && userDoc.data()?.hasCompletedOnboarding;
-        
-        // Almacena el valor en AsyncStorage para futuras referencias en la misma sesión
-        await AsyncStorage.setItem('hasCompletedOnboarding', hasCompletedOnboarding ? 'true' : 'false');
+        // Revisa primero en AsyncStorage
+        let hasCompletedOnboarding = await AsyncStorage.getItem('hasCompletedOnboarding');
 
-        if (hasCompletedOnboarding) {
-          navigation.replace('HomeUser'); // Va directamente a HomeUser si el onboarding está completo
+        if (!hasCompletedOnboarding) {
+          // Si no está en AsyncStorage, consulta Firebase
+          const userRef = doc(db, 'users', user.uid);
+          const userDoc = await getDoc(userRef);
+          hasCompletedOnboarding = userDoc.exists() && userDoc.data()?.hasCompletedOnboarding ? 'true' : 'false';
+
+          // Guarda en AsyncStorage para evitar consultas repetidas
+          await AsyncStorage.setItem('hasCompletedOnboarding', hasCompletedOnboarding);
+        }
+
+        if (hasCompletedOnboarding === 'true') {
+          navigation.replace('HomeUser'); // Ir directamente a HomeUser
         } else {
-          navigation.replace('PreferenciasScreen'); // Comienza el onboarding si no está completo
+          navigation.replace('PreferenciasScreen'); // Iniciar onboarding si no está completo
         }
       }
     } catch (error) {
       Alert.alert('Error al iniciar sesión', error.message);
+    } finally {
+      setLoading(false);
     }
   };
+
+  if (loading) {
+    return <LoadingScreen />; 
+  }
 
   return (
     <View style={styles.container}>
