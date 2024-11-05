@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones de Tiendas</title>
+</head>
+<body>
+    <h1>Recomendaciones de Tiendas</h1>
+    <form id="recommendationForm">
+        <label for="tienda_id">ID de la Tienda:</label>
+        <input type="text" id="tienda_id" name="tienda_id" required><br><br>
+        
+        <label for="latitud">Latitud:</label>
+        <input type="text" id="latitud" name="latitud" required><br><br>
+        
+        <label for="longitud">Longitud:</label>
+        <input type="text" id="longitud" name="longitud" required><br><br>
+        
+        <label for="radius_km">Radio (km):</label>
+        <input type="number" id="radius_km" name="radius_km" value="1"><br><br>
+        
+        <button type="submit">Obtener Recomendaciones</button>
+    </form>
+    
+    <h2>Resultados:</h2>
+    <ul id="result"></ul>
+    
+    <script>
+        document.getElementById('recommendationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const tienda_id = document.getElementById('tienda_id').value;
+            const latitud = parseFloat(document.getElementById('latitud').value);
+            const longitud = parseFloat(document.getElementById('longitud').value);
+            const radius_km = parseFloat(document.getElementById('radius_km').value);
+            
+            fetch('/recommend', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    tienda_id: tienda_id,
+                    user_location: [latitud, longitud],
+                    radius_km: radius_km
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultElement = document.getElementById('result');
+                resultElement.innerHTML = '';  // Limpiar resultados anteriores
+                data.forEach(tienda => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>Nombre:</strong> ${tienda.nombre}<br>
+                                    <strong>Calificaciones:</strong> ${tienda.calificaciones}<br>
+                                    <strong>Distrito:</strong> ${tienda.distrito}<br>
+                                    <strong>Distancia:</strong> ${tienda.distance.toFixed(2)} km`;
+                    resultElement.appendChild(li);
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
