@@ -1,0 +1,16 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",  // Base de tu proyecto
+    "strict": true,
+    "paths": {
+      "@/*": ["app/*"]  // Para resolver cualquier importación con @/
+    }
+  },
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "expo-env.d.ts",
+    ".expo/types/**/*.ts"
+  ]
+}
