@@ -1,9 +1,7 @@
-// app/screens/Onboarding/FrecuenciaVisitasScreen.tsx
 import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert } from 'react-native';
 import DropdownSelect from '../../../components/Onboarding/DropdownSelect';
-import { db, auth } from '../../database/firebase';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function FrecuenciaVisitasScreen({ navigation }) {
   const [frecuencia, setFrecuencia] = useState<string | null>(null);
@@ -18,25 +16,15 @@ export default function FrecuenciaVisitasScreen({ navigation }) {
       Alert.alert('Por favor selecciona una frecuencia de visitas');
       return;
     }
-    const userId = auth.currentUser?.uid;
-    if (!userId) {
-      Alert.alert('Error', 'No se pudo autenticar el usuario');
-      return;
-    }
 
     try {
-      const userRef = doc(db, 'users', userId);
-      const userDoc = await getDoc(userRef);
+      // Guarda la frecuencia de visitas temporalmente en AsyncStorage
+      await AsyncStorage.setItem('frecuencia_visitas', frecuencia);
 
-      if (userDoc.exists()) {
-        await updateDoc(userRef, { frecuencia_visitas: frecuencia });
-      } else {
-        await setDoc(userRef, { frecuencia_visitas: frecuencia });
-      }
-
-      navigation.navigate('DispositivoScreen'); // Ir a la siguiente pantalla
+      // Navega a la siguiente pantalla del onboarding
+      navigation.navigate('DispositivoScreen');
     } catch (error) {
-      Alert.alert('Error', 'No se pudo guardar la frecuencia de visitas en Firebase');
+      Alert.alert('Error', 'No se pudo guardar la frecuencia de visitas localmente');
       console.error(error);
     }
   };

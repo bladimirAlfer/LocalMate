@@ -5,6 +5,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import { auth, createUserWithEmailAndPassword } from '../../database/firebase';
 import { RootStackParamList } from '../../navigation/MainNavigator';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type RegisterScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Register'>;
 
@@ -16,11 +17,13 @@ export default function RegisterScreen() {
   const handleRegister = async () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigation.replace('PreferenciasScreen'); // Navegar al inicio del onboarding
+      await AsyncStorage.setItem('hasCompletedOnboarding', 'false'); // Inicializa en falso
+      navigation.replace('PreferenciasScreen'); // Navega al inicio del onboarding
     } catch (error) {
       Alert.alert('Error al registrarse', error.message);
     }
   };
+  
 
   return (
     <View style={styles.container}>

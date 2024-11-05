@@ -1,9 +1,7 @@
-// app/screens/Onboarding/DispositivoScreen.tsx
 import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert } from 'react-native';
 import DropdownSelect from '../../../components/Onboarding/DropdownSelect';
-import { db, auth } from '../../database/firebase';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function DispositivoScreen({ navigation }) {
   const [dispositivo, setDispositivo] = useState<string | null>(null);
@@ -18,25 +16,15 @@ export default function DispositivoScreen({ navigation }) {
       Alert.alert('Por favor selecciona un tipo de dispositivo');
       return;
     }
-    const userId = auth.currentUser?.uid;
-    if (!userId) {
-      Alert.alert('Error', 'No se pudo autenticar el usuario');
-      return;
-    }
 
     try {
-      const userRef = doc(db, 'users', userId);
-      const userDoc = await getDoc(userRef);
+      // Guarda el tipo de dispositivo temporalmente en AsyncStorage
+      await AsyncStorage.setItem('dispositivo', dispositivo);
 
-      if (userDoc.exists()) {
-        await updateDoc(userRef, { dispositivo: dispositivo });
-      } else {
-        await setDoc(userRef, { dispositivo: dispositivo });
-      }
-
-      navigation.navigate('DiaPreferidoScreen'); // Ir a la siguiente pantalla
+      // Navega a la siguiente pantalla del onboarding
+      navigation.navigate('DiaPreferidoScreen');
     } catch (error) {
-      Alert.alert('Error', 'No se pudo guardar el dispositivo en Firebase');
+      Alert.alert('Error', 'No se pudo guardar el dispositivo localmente');
       console.error(error);
     }
   };

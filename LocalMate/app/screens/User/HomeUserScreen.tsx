@@ -1,5 +1,3 @@
-// app/screens/User/HomeUserScreen.js
-
 import React, { useEffect, useState } from 'react';
 import { View, StyleSheet, Dimensions, ActivityIndicator, Alert, Modal, Button, TouchableOpacity, Text } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
@@ -12,11 +10,12 @@ import SearchBar from '../../../components/SearchBar';
 import Sidebar from '../../../components/SideBar';
 import ZoomControls from '../../../components/ZoomControls';
 import StoreDetail from '../../../components/StoreDetail';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeUserScreen({ navigation }) {
   const [stores, setStores] = useState([]);
   const [selectedStore, setSelectedStore] = useState(null);
-  const [showDetailModal, setShowDetailModal] = useState(false); // Estado para el modal completo
+  const [showDetailModal, setShowDetailModal] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
   const [loadingLocation, setLoadingLocation] = useState(true);
   const [region, setRegion] = useState({
@@ -26,34 +25,59 @@ export default function HomeUserScreen({ navigation }) {
     longitudeDelta: 0.005,
   });
 
+  const RADIO_TIENDAS_CERCANAS = 5; // Radio en kilómetros
+
+  // Función para calcular la distancia entre dos coordenadas geográficas
+  const calcularDistancia = (lat1, lon1, lat2, lon2) => {
+    const R = 6371; // Radio de la Tierra en km
+    const dLat = ((lat2 - lat1) * Math.PI) / 180;
+    const dLon = ((lon2 - lon1) * Math.PI) / 180;
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos((lat1 * Math.PI) / 180) *
+        Math.cos((lat2 * Math.PI) / 180) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // Distancia en km
+  };
+
+  const fetchLocationAndStores = async () => {
+    const { status } = await Location.requestForegroundPermissionsAsync();
+    if (status !== 'granted') {
+      Alert.alert('Permiso denegado', 'Necesitamos permisos para acceder a tu ubicación.');
+      setLoadingLocation(false);
+      return;
+    }
+    try {
+      const userLocation = await Location.getCurrentPositionAsync({});
+      const { latitude, longitude } = userLocation.coords;
+      setRegion({
+        latitude,
+        longitude,
+        latitudeDelta: 0.005,
+        longitudeDelta: 0.005,
+      });
+
+      // Filtrar las tiendas cercanas
+      const allStores = getStoresData();
+      const nearbyStores = allStores.filter(store =>
+        calcularDistancia(latitude, longitude, store.latitud, store.longitud) <= RADIO_TIENDAS_CERCANAS
+      );
+      setStores(nearbyStores);
+    } catch (error) {
+      Alert.alert('Error al obtener ubicación', 'No se pudo obtener la ubicación del usuario.');
+    } finally {
+      setLoadingLocation(false);
+    }
+  };
+
   useEffect(() => {
-    const fetchLocationAndStores = async () => {
-      const { status } = await Location.requestForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        Alert.alert('Permiso denegado', 'Necesitamos permisos para acceder a tu ubicación.');
-        setLoadingLocation(false);
-        return;
-      }
-      try {
-        const userLocation = await Location.getCurrentPositionAsync({});
-        setRegion({
-          latitude: userLocation.coords.latitude,
-          longitude: userLocation.coords.longitude,
-          latitudeDelta: 0.005,
-          longitudeDelta: 0.005,
-        });
-      } catch (error) {
-        Alert.alert('Error al obtener ubicación', 'No se pudo obtener la ubicación del usuario.');
-      } finally {
-        setLoadingLocation(false);
-      }
-      setStores(getStoresData());
-    };
     fetchLocationAndStores();
   }, []);
 
   const handleMarkerPress = (store) => {
-    setSelectedStore(store); // Muestra la vista previa de la tienda
+    setSelectedStore(store);
   };
 
   const toggleSidebar = () => setShowSidebar(!showSidebar);
@@ -76,15 +100,18 @@ export default function HomeUserScreen({ navigation }) {
 
   const handleLogout = async () => {
     try {
+      await AsyncStorage.removeItem('hasCompletedOnboarding');
       await signOut(auth);
-      navigation.reset({
-        index: 0,
-        routes: [{ name: 'Home' }],
-      });
+  
+      // Reinicia el stack y navega a Home en el stack no autenticado
+      navigation.navigate('Home');
     } catch (error) {
       Alert.alert('Error', 'Hubo un problema al cerrar sesión');
     }
   };
+  
+  
+  
 
   if (loadingLocation) {
     return (
@@ -137,8 +164,8 @@ export default function HomeUserScreen({ navigation }) {
         <View style={styles.modalContainer}>
           {selectedStore && (
             <StoreDetail store={selectedStore} onClose={() => {
-              setShowDetailModal(false); // Cierra el modal completo
-              setSelectedStore(null); // Limpia la tienda seleccionada
+              setShowDetailModal(false);
+              setSelectedStore(null);
             }} />
           )}
         </View>

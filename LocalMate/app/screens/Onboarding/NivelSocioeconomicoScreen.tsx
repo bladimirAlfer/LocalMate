@@ -1,9 +1,7 @@
-// app/screens/Onboarding/NivelSocioeconomicoScreen.tsx
 import React, { useState } from 'react';
 import { View, StyleSheet, Alert, Button } from 'react-native';
 import NivelSocioeconomicoSelector from '../../../components/Onboarding/NivelSocioeconomicoSelector';
-import { db, auth } from '../../database/firebase';
-import { doc, updateDoc, getDoc, setDoc } from 'firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function NivelSocioeconomicoScreen({ navigation }) {
   const [distrito, setDistrito] = useState<string | null>(null);
@@ -22,25 +20,14 @@ export default function NivelSocioeconomicoScreen({ navigation }) {
       nivel = 'Bajo';
     }
 
-    const userId = auth.currentUser?.uid;
-    if (!userId) {
-      Alert.alert('Error', 'No se pudo autenticar el usuario.');
-      return;
-    }
-
     try {
-      const userRef = doc(db, 'users', userId);
-      const userDoc = await getDoc(userRef);
+      // Guarda el nivel socioeconómico temporalmente en AsyncStorage
+      await AsyncStorage.setItem('nivel_socioeconomico', nivel);
 
-      if (userDoc.exists()) {
-        await updateDoc(userRef, { nivel_socioeconomico: nivel });
-      } else {
-        await setDoc(userRef, { nivel_socioeconomico: nivel });
-      }
-
+      // Navega a la siguiente pantalla del onboarding
       navigation.navigate('FrecuenciaVisitasScreen');
     } catch (error) {
-      Alert.alert('Error', 'No se pudo guardar el nivel socioeconómico en Firebase.');
+      Alert.alert('Error', 'No se pudo guardar el nivel socioeconómico localmente.');
       console.error(error);
     }
   };

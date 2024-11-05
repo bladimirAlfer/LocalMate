@@ -11,8 +11,8 @@ import FrecuenciaVisitasScreen from '../screens/Onboarding/FrecuenciaVisitasScre
 import DispositivoScreen from '../screens/Onboarding/DispositivoScreen';
 import DiaPreferidoScreen from '../screens/Onboarding/DiaPreferidoScreen';
 import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../database/firebase';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { auth, db } from '../database/firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 const Stack = createStackNavigator();
 
@@ -23,14 +23,19 @@ const MainNavigator = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      const hasCompletedOnboarding = await AsyncStorage.getItem('hasCompletedOnboarding');
-      setIsAuthenticated(!!user);
-      
       if (user) {
-        // Si el usuario está autenticado, verificar si completó el onboarding
-        setInitialRoute(hasCompletedOnboarding === 'true' ? 'HomeUser' : 'PreferenciasScreen');
+        setIsAuthenticated(true);
+        
+        const userRef = doc(db, 'users', user.uid);
+        const userDoc = await getDoc(userRef);
+
+        if (userDoc.exists() && userDoc.data().hasCompletedOnboarding) {
+          setInitialRoute('HomeUser');
+        } else {
+          setInitialRoute('PreferenciasScreen');
+        }
       } else {
-        // Si no está autenticado, llevarlo al inicio
+        setIsAuthenticated(false);
         setInitialRoute('Home');
       }
       setLoadingAuth(false);
@@ -39,7 +44,7 @@ const MainNavigator = () => {
   }, []);
 
   if (loadingAuth) {
-    return <LoadingScreen />; // Puedes mostrar una pantalla de carga aquí si es necesario
+    return <LoadingScreen />;
   }
 
   return (

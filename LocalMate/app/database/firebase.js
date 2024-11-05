@@ -1,22 +1,22 @@
 // app/database/firebase.js
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { initializeFirestore } from 'firebase/firestore';
 import { initializeAuth, getReactNativePersistence, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBH512zkMbrB3QvDZp_Zd1Qg8wMmlm0gE0",
-    authDomain: "localmate-9cc45.firebaseapp.com",
-    projectId: "localmate-9cc45",
-    storageBucket: "localmate-9cc45.firebasestorage.app",
-    messagingSenderId: "687975485209",
-    appId: "1:687975485209:web:51c40c5ea31edb57a67f88",
-    measurementId: "G-G7YXJRH8BG"
-  };
+  apiKey: "AIzaSyCwbe71xv08YvYs1qZ2uadXfR4mSx-jFbs",
+  authDomain: "localmate-e5528.firebaseapp.com",
+  projectId: "localmate-e5528",
+  storageBucket: "localmate-e5528.firebasestorage.app",
+  messagingSenderId: "743928314158",
+  appId: "1:743928314158:web:c2d6fd6b18f88646b562bf"
+};
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
+const db = initializeFirestore(app, {
+  useFetchStreams: false, 
+});
 const auth = initializeAuth(app, {
   persistence: getReactNativePersistence(AsyncStorage),
 });

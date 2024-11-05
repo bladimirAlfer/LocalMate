@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert, Text } from 'react-native';
 import MultiSelect from 'react-native-multiple-select';
 import { db, auth } from '../../database/firebase';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function DiaPreferidoScreen({ navigation }) {
@@ -29,39 +29,45 @@ export default function DiaPreferidoScreen({ navigation }) {
       Alert.alert('Por favor selecciona al menos un día');
       return;
     }
-
+  
     const diaPreferido = clasificarDias();
     const userId = auth.currentUser?.uid;
-
+  
     if (!userId) {
       Alert.alert('Error', 'No se pudo autenticar el usuario');
       return;
     }
-
+  
     try {
+      // Recupera todos los datos de AsyncStorage
+      const preferencia = await AsyncStorage.getItem('preferencia');
+      const nivelSocioeconomico = await AsyncStorage.getItem('nivel_socioeconomico');
+      const frecuenciaVisitas = await AsyncStorage.getItem('frecuencia_visitas');
+      const dispositivo = await AsyncStorage.getItem('dispositivo');
+  
+      // Guarda todos los datos en Firebase en una sola operación
       const userRef = doc(db, 'users', userId);
-      const userDoc = await getDoc(userRef);
-
-      if (userDoc.exists()) {
-        await updateDoc(userRef, { dia_preferido_visita: diaPreferido });
-      } else {
-        await setDoc(userRef, { dia_preferido_visita: diaPreferido });
-      }
-
-      // Aquí llamamos a `completeOnboarding` al final del flujo de onboarding
-      completeOnboarding();
+      await setDoc(userRef, {
+        preferencias: preferencia,
+        nivel_socioeconomico: nivelSocioeconomico,
+        frecuencia_visitas: frecuenciaVisitas,
+        dispositivo: dispositivo,
+        dia_preferido_visita: diaPreferido,
+        hasCompletedOnboarding: true // Marca el onboarding como completado en Firebase
+      }, { merge: true });
+  
+      // Limpia AsyncStorage y marca el onboarding como completado en esta sesión
+      await AsyncStorage.multiRemove(['preferencia', 'nivel_socioeconomico', 'frecuencia_visitas', 'dispositivo']);
+      await AsyncStorage.setItem('hasCompletedOnboarding', 'true');
+  
+      // Navega a HomeUser
+      navigation.navigate('HomeUser');
     } catch (error) {
-      Alert.alert('Error', 'No se pudo guardar el día preferido en Firebase');
+      Alert.alert('Error', 'No se pudo completar el onboarding');
       console.error(error);
     }
   };
-
-  const completeOnboarding = async () => {
-    await AsyncStorage.setItem('hasCompletedOnboarding', 'true');
-    navigation.navigate('HomeUser');
- };
- 
-
+  
 
   return (
     <View style={styles.container}>

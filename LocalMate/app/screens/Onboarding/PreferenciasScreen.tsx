@@ -1,9 +1,7 @@
-// app/screens/Onboarding/PreferenciasScreen.tsx
 import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert } from 'react-native';
 import DropdownSelect from '../../../components/Onboarding/DropdownSelect';
-import { db, auth } from '../../database/firebase';
-import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function PreferenciasScreen({ navigation }) {
   const [preferencia, setPreferencia] = useState<string | null>(null);
@@ -21,25 +19,15 @@ export default function PreferenciasScreen({ navigation }) {
       Alert.alert('Por favor selecciona una preferencia');
       return;
     }
-    const userId = auth.currentUser?.uid;
-    if (!userId) {
-      Alert.alert('Error', 'No se pudo autenticar el usuario');
-      return;
-    }
-
+  
     try {
-      const userRef = doc(db, 'users', userId);
-      const userDoc = await getDoc(userRef);
-
-      if (userDoc.exists()) {
-        await updateDoc(userRef, { preferencias: preferencia });
-      } else {
-        await setDoc(userRef, { preferencias: preferencia });
-      }
-
-      navigation.navigate('NivelSocioeconomicoScreen'); // Ir a la siguiente pantalla
+      // Guarda la preferencia temporalmente en AsyncStorage
+      await AsyncStorage.setItem('preferencia', preferencia);
+      
+      // Navega a la siguiente pantalla del onboarding
+      navigation.navigate('NivelSocioeconomicoScreen');
     } catch (error) {
-      Alert.alert('Error', 'No se pudo guardar la preferencia en Firebase');
+      Alert.alert('Error', 'No se pudo guardar la preferencia localmente');
       console.error(error);
     }
   };
