@@ -1,6 +1,7 @@
 // app/screens/User/HomeUserScreen.js
+
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Dimensions, ActivityIndicator, Alert, Modal, Button } from 'react-native';
+import { View, StyleSheet, Dimensions, ActivityIndicator, Alert, Modal, Button, TouchableOpacity, Text } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 import { getStoresData } from '../../data/storesData';
@@ -15,6 +16,7 @@ import StoreDetail from '../../../components/StoreDetail';
 export default function HomeUserScreen({ navigation }) {
   const [stores, setStores] = useState([]);
   const [selectedStore, setSelectedStore] = useState(null);
+  const [showDetailModal, setShowDetailModal] = useState(false); // Estado para el modal completo
   const [showSidebar, setShowSidebar] = useState(false);
   const [loadingLocation, setLoadingLocation] = useState(true);
   const [region, setRegion] = useState({
@@ -51,7 +53,7 @@ export default function HomeUserScreen({ navigation }) {
   }, []);
 
   const handleMarkerPress = (store) => {
-    setSelectedStore(store);
+    setSelectedStore(store); // Muestra la vista previa de la tienda
   };
 
   const toggleSidebar = () => setShowSidebar(!showSidebar);
@@ -119,11 +121,25 @@ export default function HomeUserScreen({ navigation }) {
       <ZoomControls onZoomIn={zoomIn} onZoomOut={zoomOut} />
       <Button title="Cerrar sesión" onPress={handleLogout} />
 
+      {/* Vista previa de la tienda */}
+      {selectedStore && !showDetailModal && (
+        <View style={styles.previewContainer}>
+          <Text style={styles.previewTitle}>{selectedStore.nombre}</Text>
+          <Text style={styles.previewCategory}>{selectedStore.categoria}</Text>
+          <TouchableOpacity style={styles.previewButton} onPress={() => setShowDetailModal(true)}>
+            <Text style={styles.previewButtonText}>Ver más detalles</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+
       {/* Modal para mostrar el detalle de la tienda */}
-      <Modal visible={!!selectedStore} animationType="slide" transparent={true}>
+      <Modal visible={showDetailModal} animationType="slide" transparent={true}>
         <View style={styles.modalContainer}>
           {selectedStore && (
-            <StoreDetail store={selectedStore} onClose={() => setSelectedStore(null)} />
+            <StoreDetail store={selectedStore} onClose={() => {
+              setShowDetailModal(false); // Cierra el modal completo
+              setSelectedStore(null); // Limpia la tienda seleccionada
+            }} />
           )}
         </View>
       </Modal>
@@ -159,5 +175,37 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  previewContainer: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    backgroundColor: 'white',
+    padding: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    alignItems: 'center',
+  },
+  previewTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#1f2024',
+  },
+  previewCategory: {
+    fontSize: 14,
+    color: '#71727a',
+    marginVertical: 5,
+  },
+  previewButton: {
+    marginTop: 10,
+    backgroundColor: '#006ffd',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+  },
+  previewButtonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
