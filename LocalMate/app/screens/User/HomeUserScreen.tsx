@@ -7,8 +7,8 @@ import { signOut } from 'firebase/auth';
 import { auth } from '../../database/firebase';
 import Header from '../../../components/Header';
 import SearchBar from '../../../components/SearchBar';
-import Sidebar from '../../../components/SideBar';
-import ZoomControls from '../../../components/ZoomControls';
+import Sidebar from '../../../components/HomeUser/SideBar';
+import ZoomControls from '../../../components/HomeUser/ZoomControls';
 import StoreDetail from '../../../components/StoreDetail';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
