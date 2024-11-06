@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function StoreDetail({ store, onClose }) {
+export default function StoreDetail({ store, onClose, onShowRecommendations }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.closeButton} onPress={onClose}>
@@ -16,13 +16,14 @@ export default function StoreDetail({ store, onClose }) {
         <Text style={styles.price}>{`S/. ${store.rangoPrecios}`}</Text>
         <Text style={styles.category}>{store.categoria}</Text>
         <Text style={styles.description}>{store.descripcion}</Text>
-        <TouchableOpacity style={styles.button} onPress={onClose}>
-          <Text style={styles.buttonText}>Ver más detalles</Text>
+        <TouchableOpacity style={styles.button} onPress={onShowRecommendations}>
+          <Text style={styles.buttonText}>Más opciones</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
