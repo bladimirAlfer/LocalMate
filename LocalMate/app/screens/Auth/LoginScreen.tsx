@@ -33,7 +33,7 @@ export default function LoginScreen() {
         }
 
         if (hasCompletedOnboarding === 'true') {
-          navigation.replace('HomeUser'); // Ir directamente a HomeUser
+          navigation.replace('MainTabs'); // Dirige al TabNavigator después del login
         } else {
           navigation.replace('PreferenciasScreen'); // Iniciar onboarding si no está completo
         }

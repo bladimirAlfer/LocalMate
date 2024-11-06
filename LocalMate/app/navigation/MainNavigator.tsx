@@ -3,13 +3,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../screens/Auth/LoginScreen';
 import RegisterScreen from '../screens/Auth/RegisterScreen';
 import HomeScreen from '../screens/Home/HomeScreen';
-import HomeUserScreen from '../screens/User/HomeUserScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import PreferenciasScreen from '../screens/Onboarding/PreferenciasScreen';
 import NivelSocioeconomicoScreen from '../screens/Onboarding/NivelSocioeconomicoScreen';
 import FrecuenciaVisitasScreen from '../screens/Onboarding/FrecuenciaVisitasScreen';
 import DispositivoScreen from '../screens/Onboarding/DispositivoScreen';
 import DiaPreferidoScreen from '../screens/Onboarding/DiaPreferidoScreen';
+import AppTabNavigator from './AppTabNavigator';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from '../database/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -25,19 +25,14 @@ const MainNavigator = () => {
   useEffect(() => {
     const checkOnboardingStatus = async (user) => {
       if (user) {
-        // Primero intenta obtener `hasCompletedOnboarding` de AsyncStorage
         let hasCompletedOnboarding = await AsyncStorage.getItem('hasCompletedOnboarding');
-
         if (!hasCompletedOnboarding) {
-          // Si no está en AsyncStorage, consulta Firebase y almacena el resultado en AsyncStorage
           const userRef = doc(db, 'users', user.uid);
           const userDoc = await getDoc(userRef);
-
           hasCompletedOnboarding = userDoc.exists() && userDoc.data()?.hasCompletedOnboarding ? 'true' : 'false';
           await AsyncStorage.setItem('hasCompletedOnboarding', hasCompletedOnboarding);
         }
-
-        setInitialRoute(hasCompletedOnboarding === 'true' ? 'HomeUser' : 'PreferenciasScreen');
+        setInitialRoute(hasCompletedOnboarding === 'true' ? 'MainTabs' : 'PreferenciasScreen');
       } else {
         setInitialRoute('Home');
       }
@@ -46,7 +41,7 @@ const MainNavigator = () => {
 
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setIsAuthenticated(!!user);
-      setLoadingAuth(true);  // Muestra la pantalla de carga durante la verificación
+      setLoadingAuth(true);
       await checkOnboardingStatus(user);
     });
 
@@ -72,7 +67,7 @@ const MainNavigator = () => {
           <Stack.Screen name="FrecuenciaVisitasScreen" component={FrecuenciaVisitasScreen} options={{ headerShown: false }} />
           <Stack.Screen name="DispositivoScreen" component={DispositivoScreen} options={{ headerShown: false }} />
           <Stack.Screen name="DiaPreferidoScreen" component={DiaPreferidoScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="HomeUser" component={HomeUserScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="MainTabs" component={AppTabNavigator} options={{ headerShown: false }} />
         </>
       )}
     </Stack.Navigator>

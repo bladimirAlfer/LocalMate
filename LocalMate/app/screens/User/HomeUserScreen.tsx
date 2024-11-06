@@ -11,6 +11,7 @@ import Sidebar from '../../../components/HomeUser/SideBar';
 import ZoomControls from '../../../components/HomeUser/ZoomControls';
 import StoreDetail from '../../../components/StoreDetail';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import TabBar from '../../../components/HomeUser/TabBar';
 
 export default function HomeUserScreen({ navigation }) {
   const [stores, setStores] = useState([]);
@@ -139,7 +140,7 @@ export default function HomeUserScreen({ navigation }) {
           />
         ))}
       </MapView>
-
+  
       <Header onMenuPress={toggleSidebar} />
       <SearchBar onSearch={(text) => {/* Implementar funcionalidad de búsqueda */}} />
       {showSidebar && (
@@ -147,7 +148,7 @@ export default function HomeUserScreen({ navigation }) {
       )}
       <ZoomControls onZoomIn={zoomIn} onZoomOut={zoomOut} />
       <Button title="Cerrar sesión" onPress={handleLogout} />
-
+  
       {/* Vista previa de la tienda */}
       {selectedStore && !showDetailModal && (
         <View style={styles.previewContainer}>
@@ -158,7 +159,7 @@ export default function HomeUserScreen({ navigation }) {
           </TouchableOpacity>
         </View>
       )}
-
+  
       {/* Modal para mostrar el detalle de la tienda */}
       <Modal visible={showDetailModal} animationType="slide" transparent={true}>
         <View style={styles.modalContainer}>
@@ -170,8 +171,10 @@ export default function HomeUserScreen({ navigation }) {
           )}
         </View>
       </Modal>
-    </View>
-  );
+
+      {/* Agregar el TabBar aquí */}
+      </View>
+  );  
 }
 
 const mapStyle = [
@@ -205,14 +208,18 @@ const styles = StyleSheet.create({
   },
   previewContainer: {
     position: 'absolute',
-    bottom: 0,
-    width: '100%',
+    bottom: 100, // Cambia este valor para ajustar la distancia desde el TabBar
+    width: '90%',
+    alignSelf: 'center',
     backgroundColor: 'white',
     padding: 20,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    borderRadius: 10,
+    elevation: 10,
     alignItems: 'center',
   },
+  
   previewTitle: {
     fontSize: 18,
     fontWeight: 'bold',

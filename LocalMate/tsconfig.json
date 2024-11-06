@@ -1,16 +1,23 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "baseUrl": ".",  // Base de tu proyecto
+    "baseUrl": ".",
     "strict": true,
     "paths": {
-      "@/*": ["app/*"]  // Para resolver cualquier importación con @/
+      "@/*": [
+        "app/*"
+      ],
+      "assets/*": [
+        "assets/*"
+      ]
     }
   },
   "include": [
     "app/**/*.ts",
     "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
     "expo-env.d.ts",
     ".expo/types/**/*.ts"
-, "app/screens/Home/ProfileScreen.jsx"  ]
+  ]
 }
