@@ -45,6 +45,25 @@ export default function DiaPreferidoScreen({ navigation }) {
       const frecuenciaVisitas = await AsyncStorage.getItem('frecuencia_visitas');
       const dispositivo = await AsyncStorage.getItem('dispositivo');
   
+      // Log para verificar los datos antes de guardarlos
+      console.log("Datos a enviar a Firestore:", {
+        preferencias: preferencia,
+        nivel_socioeconomico: nivelSocioeconomico,
+        frecuencia_visitas: frecuenciaVisitas,
+        dispositivo: dispositivo,
+        dia_preferido_visita: diaPreferido,
+        hasCompletedOnboarding: true
+      });
+  
+      // Verifica que todos los datos existen antes de guardar
+      if (!preferencia || !nivelSocioeconomico || !frecuenciaVisitas || !dispositivo) {
+        Alert.alert(
+          'Error',
+          'Faltan algunos datos del onboarding. Por favor completa todos los pasos del onboarding.'
+        );
+        return;
+      }
+  
       // Guarda todos los datos en Firebase en una sola operación
       const userRef = doc(db, 'users', userId);
       await setDoc(userRef, {
@@ -61,14 +80,13 @@ export default function DiaPreferidoScreen({ navigation }) {
       await AsyncStorage.setItem('hasCompletedOnboarding', 'true');
   
       // Navega a HomeUser
-      navigation.navigate('HomeUser');
+      navigation.navigate('MainTabs');
     } catch (error) {
       Alert.alert('Error', 'No se pudo completar el onboarding');
       console.error(error);
     }
   };
   
-
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Selecciona tus días preferidos para salir</Text>

@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 
 # Cargar los modelos y los datos
-df_tiendas = pickle.load(open("backend/tiendas.pkl", "rb"))
-cosine_sim = pickle.load(open("backend/tfidf_similarity.pkl", "rb"))
+df_tiendas = pickle.load(open("./tiendas.pkl", "rb"))
+cosine_sim = pickle.load(open("./tfidf_similarity-001.pkl", "rb"))
 
 def obtener_recomendaciones_con_distancia(tienda_id, user_location, cosine_sim=cosine_sim, radius_km=1):
     if tienda_id not in df_tiendas['tienda_id'].values:
@@ -32,12 +32,17 @@ def obtener_recomendaciones_con_distancia(tienda_id, user_location, cosine_sim=c
 @app.route("/recommend", methods=["POST"])
 def recommend():
     data = request.get_json()
-    tienda_id = int(data["tienda_id"])
-    user_location = tuple(data["user_location"])
-    radius_km = float(data.get("radius_km", 5))
-    #print(f'Tienda: {tienda_id}, Ubicación: {user_location}, Radio: {radius_km}')
+    print("Datos recibidos en el servidor:", data)  # Agrega esto para ver los datos en la consola
+
+    try:
+        tienda_id = int(data["tienda_id"])
+        user_location = tuple(data["user_location"])
+        radius_km = float(data.get("radius_km", 5))
+    except KeyError as e:
+        print("Falta una clave en los datos:", e)
+        return jsonify({"error": f"Falta una clave en los datos: {e}"}), 400
+
     recomendaciones = obtener_recomendaciones_con_distancia(tienda_id, user_location, radius_km=radius_km)
-    #print(recomendaciones)
     return jsonify(recomendaciones)
 
 @app.route("/")
@@ -45,4 +50,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)

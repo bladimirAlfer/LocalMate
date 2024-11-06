@@ -13,6 +13,7 @@ import StoreDetail from '../../../components/StoreDetail';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function HomeUserScreen({ navigation }) {
+  const [initialStores, setInitialStores] = useState([]); // Guardar las tiendas iniciales
   const [stores, setStores] = useState([]);
   const [selectedStore, setSelectedStore] = useState(null);
   const [showDetailModal, setShowDetailModal] = useState(false);
@@ -25,9 +26,24 @@ export default function HomeUserScreen({ navigation }) {
     longitudeDelta: 0.005,
   });
 
-  const RADIO_TIENDAS_CERCANAS = 10; // Radio en kilómetros, configurado a 10
+  const RADIO_TIENDAS_INICIAL = 1; // Radio inicial de 1 km
+  const RADIO_TIENDAS_CERCANAS = 10; // Radio de 10 km para recomendaciones
+
+  const calcularDistancia = (lat1, lon1, lat2, lon2) => {
+    const R = 6371; // Radio de la Tierra en km
+    const dLat = ((lat2 - lat1) * Math.PI) / 180;
+    const dLon = ((lon2 - lon1) * Math.PI) / 180;
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // Distancia en km
+  };
 
   const fetchLocationAndStores = async () => {
+    setLoadingLocation(true);
     const { status } = await Location.requestForegroundPermissionsAsync();
     if (status !== 'granted') {
       Alert.alert('Permiso denegado', 'Necesitamos permisos para acceder a tu ubicación.');
@@ -45,7 +61,12 @@ export default function HomeUserScreen({ navigation }) {
       });
 
       const allStores = getStoresData();
-      setStores(allStores);
+      const nearbyStores = allStores.filter(store =>
+        calcularDistancia(latitude, longitude, store.latitud, store.longitud) <= RADIO_TIENDAS_INICIAL
+      );
+
+      setStores(nearbyStores);
+      setInitialStores(nearbyStores); // Guardar las tiendas iniciales para restauración
     } catch (error) {
       Alert.alert('Error al obtener ubicación', 'No se pudo obtener la ubicación del usuario.');
     } finally {
@@ -58,9 +79,10 @@ export default function HomeUserScreen({ navigation }) {
   }, []);
 
   const handleMarkerPress = (store) => {
-    console.log("Tienda seleccionada:", store); // Verificar que `store` tenga `tienda_id`
+    console.log("Tienda seleccionada:", store);
     setSelectedStore(store);
   };
+
   const fetchRecommendations = async () => {
     if (!selectedStore || !selectedStore.id) {
       console.error("selectedStore o tienda_id no están definidos:", selectedStore);
@@ -69,8 +91,7 @@ export default function HomeUserScreen({ navigation }) {
     }
   
     const { latitude, longitude } = region;
-    const tienda_id = selectedStore.id; // Usa `id` en lugar de `tienda_id`
-    const radius_km = RADIO_TIENDAS_CERCANAS;
+    const tienda_id = selectedStore.id;
   
     try {
       const response = await fetch("http://127.0.0.1:5000/recommend", {
@@ -79,9 +100,9 @@ export default function HomeUserScreen({ navigation }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          tienda_id, // Enviar el ID correcto aquí
+          tienda_id,
           user_location: [latitude, longitude],
-          radius_km,
+          radius_km: RADIO_TIENDAS_CERCANAS, // Cambia a 10 km para las recomendaciones
         }),
       });
   
@@ -93,15 +114,19 @@ export default function HomeUserScreen({ navigation }) {
       }
   
       const recommendations = await response.json();
-      setStores(recommendations); // Filtrar y mostrar solo las tiendas recomendadas en el mapa
-      setShowDetailModal(false); // Cerrar el modal después de obtener recomendaciones
+      setStores(recommendations); // Actualiza con tiendas recomendadas dentro de 10 km
+      setShowDetailModal(false); // Cierra el modal después de obtener recomendaciones
     } catch (error) {
       console.error("Error al obtener recomendaciones:", error);
       Alert.alert("Error", "No se pudo obtener las recomendaciones. Verifica tu conexión.");
     }
   };
-  
-  
+
+  const restoreInitialStores = async () => {
+    await fetchLocationAndStores(); // Vuelve a obtener la ubicación y las tiendas iniciales
+    setSelectedStore(null); // Cierra cualquier selección actual
+  };
+
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
   if (loadingLocation) {
@@ -132,15 +157,26 @@ export default function HomeUserScreen({ navigation }) {
       </MapView>
   
       <Header onMenuPress={toggleSidebar} />
-      <SearchBar onSearch={(text) => {/* Implementar funcionalidad de búsqueda */}} />
+      <SearchBar onSearch={(text) => { /* Implementar funcionalidad de búsqueda */ }} />
       {showSidebar && (
-        <Sidebar onLogout={() => {
-          AsyncStorage.removeItem('hasCompletedOnboarding');
-          signOut(auth);
-          navigation.navigate('Home');
-        }} onProfile={() => Alert.alert('Perfil')} />
+        <Sidebar
+          onLogout={async () => {
+            try {
+              await AsyncStorage.removeItem('hasCompletedOnboarding');
+              await signOut(auth);
+              navigation.navigate('Home');
+            } catch (error) {
+              Alert.alert('Error', 'Hubo un problema al cerrar sesión');
+            }
+          }}
+          onProfile={() => Alert.alert('Perfil')}
+        />
       )}
-      <ZoomControls onZoomIn={() => setRegion({ ...region, latitudeDelta: region.latitudeDelta / 2, longitudeDelta: region.longitudeDelta / 2 })} onZoomOut={() => setRegion({ ...region, latitudeDelta: region.latitudeDelta * 2, longitudeDelta: region.longitudeDelta * 2 })} />
+
+      <ZoomControls
+        onZoomIn={() => setRegion({ ...region, latitudeDelta: region.latitudeDelta / 2, longitudeDelta: region.longitudeDelta / 2 })}
+        onZoomOut={() => setRegion({ ...region, latitudeDelta: region.latitudeDelta * 2, longitudeDelta: region.longitudeDelta * 2 })}
+      />
 
       {/* Vista previa de la tienda */}
       {selectedStore && !showDetailModal && (
@@ -148,7 +184,7 @@ export default function HomeUserScreen({ navigation }) {
           <Text style={styles.previewTitle}>{selectedStore.nombre}</Text>
           <Text style={styles.previewCategory}>{selectedStore.categoria}</Text>
           <TouchableOpacity style={styles.previewButton} onPress={() => setShowDetailModal(true)}>
-            <Text style={styles.previewButtonText}>Más opciones</Text>
+            <Text style={styles.previewButtonText}>Más Detalles</Text>
           </TouchableOpacity>
         </View>
       )}
@@ -160,7 +196,8 @@ export default function HomeUserScreen({ navigation }) {
             <StoreDetail
               store={selectedStore}
               onClose={() => setShowDetailModal(false)}
-              onShowRecommendations={fetchRecommendations} // Llama a la API cuando se hace clic en "Más opciones"
+              onShowRecommendations={fetchRecommendations}
+              onRestoreStores={restoreInitialStores} // Llama a restoreInitialStores cuando se hace clic en "Ver todas las tiendas"
             />
           )}
         </View>

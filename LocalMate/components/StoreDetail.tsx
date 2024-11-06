@@ -1,8 +1,7 @@
-// app/components/StoreDetail.js
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-export default function StoreDetail({ store, onClose, onShowRecommendations }) {
+export default function StoreDetail({ store, onClose, onShowRecommendations, onRestoreStores }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.closeButton} onPress={onClose}>
@@ -16,14 +15,25 @@ export default function StoreDetail({ store, onClose, onShowRecommendations }) {
         <Text style={styles.price}>{`S/. ${store.rangoPrecios}`}</Text>
         <Text style={styles.category}>{store.categoria}</Text>
         <Text style={styles.description}>{store.descripcion}</Text>
+
+        {/* Botón para mostrar recomendaciones */}
         <TouchableOpacity style={styles.button} onPress={onShowRecommendations}>
-          <Text style={styles.buttonText}>Más opciones</Text>
+          <Text style={styles.buttonText}>Otras opciones</Text>
+        </TouchableOpacity>
+
+        {/* Botón para restaurar las tiendas iniciales */}
+        <TouchableOpacity style={styles.restoreButton}
+          onPress={() => {
+            onClose();       // Cerrar el modal antes de restaurar las tiendas
+            onRestoreStores(); // Llamar a la función para restaurar tiendas
+          }}
+        >
+          <Text style={styles.buttonText}>Ver todas las tiendas</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -76,6 +86,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  restoreButton: {
+    backgroundColor: '#71727a', // Un color diferente para distinguir este botón
+    borderRadius: 8,
+    paddingVertical: 10,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  restoreButtonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: '600',
