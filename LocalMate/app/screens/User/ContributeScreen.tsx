@@ -1,30 +1,75 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, Modal, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { signOut } from 'firebase/auth';
 import { auth } from '../../database/firebase';
+import { useNavigation } from '@react-navigation/native';
 
 export default function ContributeScreen() {
   const [userName, setUserName] = useState('');
+  const [menuVisible, setMenuVisible] = useState(false);
+  const navigation = useNavigation();
 
   useEffect(() => {
     const userEmail = auth.currentUser?.email || 'Usuario';
     const nameWithoutDomain = userEmail.split('@')[0];
     setUserName(nameWithoutDomain);
   }, []);
+  
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      Alert.alert('Sesión cerrada', 'Has cerrado sesión correctamente.');
+      navigation.navigate('Home'); // Redirect to home screen after sign out
+    } catch (error) {
+      Alert.alert('Error', 'Hubo un problema al cerrar sesión.');
+    }
+  };
+
+  const toggleMenu = () => setMenuVisible(!menuVisible);
 
   return (
     <View style={styles.container}>
-      {/* Header */}
+      {/* Header with welcome message and profile image */}
       <View style={styles.header}>
-        <Ionicons name="menu" size={24} color="black" />
+        <TouchableOpacity onPress={toggleMenu}>
+          <Ionicons name="menu" size={28} color="#333" />
+        </TouchableOpacity>
         <Text style={styles.welcomeText}>Bienvenido {userName}</Text>
         <Image
-          source={require('../../../assets/images/badass-ash.jpg')} // Cambiar a la imagen del perfil
+          source={require('../../../assets/images/badass-ash.jpg')}
           style={styles.profileImage}
         />
       </View>
 
-      {/* Beneficios */}
+      {/* Modal for the hamburger menu */}
+      <Modal
+        transparent={true}
+        visible={menuVisible}
+        animationType="slide"
+        onRequestClose={toggleMenu}
+      >
+        <View style={styles.modalBackground}>
+          <View style={styles.menuContainer}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => {
+              toggleMenu();
+              navigation.navigate('ProfileScreen'); // Navigate to ProfileScreen
+            }}>
+              <Ionicons name="person" size={24} color="#333" />
+              <Text style={styles.menuText}>Perfil</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.menuItem} onPress={() => {
+              toggleMenu();
+              handleSignOut();
+            }}>
+              <Ionicons name="log-out" size={24} color="#333" />
+              <Text style={styles.menuText}>Cerrar sesión</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
+      {/* Benefits Section */}
       <Text style={styles.sectionTitle}>Beneficios GreatMate</Text>
       <View style={styles.benefitsList}>
         <Text style={styles.benefit}>• Vales de descuento semanales</Text>
@@ -33,7 +78,7 @@ export default function ContributeScreen() {
         <Text style={styles.benefit}>• Visualización interactiva de tus movimientos</Text>
       </View>
 
-      {/* Opciones de suscripción */}
+      {/* Subscription Options */}
       <Text style={styles.plansTitle}>Planes ofrecidos</Text>
       <View style={styles.plansContainer}>
         <TouchableOpacity style={styles.planBox}>
@@ -71,6 +116,25 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
+  },
+  modalBackground: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  menuContainer: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+  menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 15,
+  },
+  menuText: {
+    fontSize: 16,
     marginLeft: 10,
   },
   sectionTitle: {

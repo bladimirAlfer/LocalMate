@@ -1,47 +1,89 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet, Image, Modal, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { signOut } from 'firebase/auth';
 import { auth } from '../../database/firebase';
+import { useNavigation } from '@react-navigation/native';
 
 export default function ProfileScreen() {
-  const [username, setUsername] = useState('');
+  const [userName, setUserName] = useState('');
+  const [menuVisible, setMenuVisible] = useState(false);
+  const navigation = useNavigation();
 
   useEffect(() => {
-    // Obtén el nombre de usuario (antes del @ en el correo)
-    const email = auth.currentUser?.email;
-    if (email) {
-      const name = email.split('@')[0];
-      setUsername(name);
-    }
+    const userEmail = auth.currentUser?.email || 'Usuario';
+    const nameWithoutDomain = userEmail.split('@')[0];
+    setUserName(nameWithoutDomain);
   }, []);
+  
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+      Alert.alert('Sesión cerrada', 'Has cerrado sesión correctamente.');
+      navigation.navigate('Home'); // Redirect to home screen
+    } catch (error) {
+      Alert.alert('Error', 'Hubo un problema al cerrar sesión.');
+    }
+  };
+
+  const toggleMenu = () => setMenuVisible(!menuVisible);
 
   return (
     <View style={styles.container}>
-      {/* Barra superior */}
-      <View style={styles.topBar}>
-        <TouchableOpacity style={styles.menuButton}>
-          <Ionicons name="menu" size={24} color="black" />
+      {/* Header with welcome message and profile image */}
+      <View style={styles.header}>
+        <TouchableOpacity onPress={toggleMenu}>
+          <Ionicons name="menu" size={28} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.welcomeText}>Bienvenido {username}</Text>
+        <Text style={styles.welcomeText}>Bienvenido {userName}</Text>
         <Image
           source={require('../../../assets/images/badass-ash.jpg')}
           style={styles.profileImage}
         />
       </View>
 
-      {/* Sección de Preferencia y Opciones */}
+      {/* Modal for the hamburger menu */}
+      <Modal
+        transparent={true}
+        visible={menuVisible}
+        animationType="slide"
+        onRequestClose={toggleMenu}
+      >
+        <View style={styles.modalBackground}>
+          <View style={styles.menuContainer}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => {
+              toggleMenu();
+              navigation.navigate('ProfileScreen'); // Ensure route name matches navigation stack
+            }}>
+              <Ionicons name="person" size={24} color="#333" />
+              <Text style={styles.menuText}>Perfil</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.menuItem} onPress={() => {
+              toggleMenu();
+              handleSignOut();
+            }}>
+              <Ionicons name="log-out" size={24} color="#333" />
+              <Text style={styles.menuText}>Cerrar sesión</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
+      {/* Rest of the content */}
       <Text style={styles.sectionTitle}>Preferencia: Ropa</Text>
       <Text style={styles.subTitle}>Planes ofrecidos</Text>
-
+      
+      {/* Options */}
       <View style={styles.optionsContainer}>
-        <TouchableOpacity style={styles.option}>
+        <TouchableOpacity style={styles.option} onPress={() => navigation.navigate('SavedScreen')}>
           <Ionicons name="bookmark" size={24} color="#333" style={styles.icon} />
           <View>
             <Text style={styles.optionText}>Recomendaciones hechas</Text>
             <Text style={styles.optionDescription}>Tu lista de recomendaciones guardadas</Text>
           </View>
         </TouchableOpacity>
-
+        
+        {/* Other buttons */}
         <TouchableOpacity style={styles.option}>
           <Ionicons name="settings" size={24} color="#333" style={styles.icon} />
           <View>
@@ -49,7 +91,7 @@ export default function ProfileScreen() {
             <Text style={styles.optionDescription}>Ajustes dentro de la app</Text>
           </View>
         </TouchableOpacity>
-
+        
         <TouchableOpacity style={styles.option}>
           <Ionicons name="chatbubbles" size={24} color="#333" style={styles.icon} />
           <View>
@@ -57,8 +99,8 @@ export default function ProfileScreen() {
             <Text style={styles.optionDescription}>Nos importa tu opinión o mejoras</Text>
           </View>
         </TouchableOpacity>
-
-        <TouchableOpacity style={styles.option}>
+        
+        <TouchableOpacity style={styles.option} onPress={handleSignOut}>
           <Ionicons name="power" size={24} color="#333" style={styles.icon} />
           <View>
             <Text style={styles.optionText}>Apagar Localmate</Text>
@@ -76,26 +118,42 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#F7F8FA',
   },
-  topBar: {
+  header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     marginBottom: 20,
   },
-  menuButton: {
-    padding: 10,
-  },
   welcomeText: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     color: '#333',
     flex: 1,
     textAlign: 'center',
   },
   profileImage: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+  },
+  modalBackground: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  menuContainer: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+  },
+  menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 15,
+  },
+  menuText: {
+    fontSize: 16,
+    marginLeft: 10,
   },
   sectionTitle: {
     fontSize: 16,
