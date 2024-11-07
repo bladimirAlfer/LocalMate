@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { db, auth } from '../../../database/firebase';
+import { db, auth } from '../app/database/firebase';
 import { doc, setDoc } from 'firebase/firestore';
 
 export default function TiendaInfo({ tienda, onClose }) {
