@@ -27,7 +27,7 @@ export default function HomeUserScreen({ navigation }) {
   });
 
   const RADIO_TIENDAS_INICIAL = 1; // Radio inicial de 1 km
-  const RADIO_TIENDAS_CERCANAS = 10; // Radio de 10 km para recomendaciones
+  const RADIO_TIENDAS_CERCANAS = 1; // Radio de 10 km para recomendaciones
 
   const calcularDistancia = (lat1, lon1, lat2, lon2) => {
     const R = 6371; // Radio de la Tierra en km
