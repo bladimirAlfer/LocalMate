@@ -2,6 +2,8 @@
 
 Link de presentación: https://docs.google.com/presentation/d/1VbpWmlBRahr0UROZsJx-NYN4omwHokD4Pi_vBhdJzkw/edit?usp=sharing
 
+Modelos: https://drive.google.com/drive/folders/1acMW_nd3Nn0tQxG1rZKrjm-3VSTyAFzl
+
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
