@@ -1,0 +1,301 @@
+user_id,nombre,edad,genero,zona,categorias_favoritas,horario_preferido,dia_preferido_visita,nivel_socioeconomico,metodo_pago_preferido,ubicacion_preferida,frecuencia_visitas,promociones_interesantes,preferencias,ultima_interaccion,popularidad_usuario
+1,Jacinto,61,M,top,"abogado, marino",Tarde,Fin de semana,Medio,Transferencia,san isidro,Alta,2x1,"Juegos,Arte",2024-11-19,4
+2,Cristóbal,29,M,este,"salón de belleza, agencia de seguros",Noche,Días de semana,Bajo,Efectivo,surquillo,Baja,Regalo,"Música en vivo,Investigación",2024-11-19,8
+3,Esther,35,F,top,"tienda de muebles, parque de atracciones, avicola",Tarde,Días de semana,Medio,Tarjeta,santiago de surco,Alta,Happy Hour,"Danza,Tecnología,Música en vivo",2024-11-19,14
+4,Lalo,24,M,top,"pizzeria, contabilidad, farmacia",Noche,Días de semana,Alto,Yape/Plin,santiago de surco,Alta,2x1,"Cerámica,Wifi",2024-11-19,4
+5,Candela,28,F,este,"Cafetería, salud",Tarde,Fin de semana,Medio,Transferencia,pueblo libre,Media,Happy Hour,"Libros,Cultura,Belleza",2024-11-19,13
+6,Salomé,38,F,este,"discoteca, heladeria, supermercado",Tarde,Fin de semana,Alto,Efectivo,jesus maria,Baja,Happy Hour,"Investigación,Música en vivo",2024-11-19,18
+7,Eligia,39,F,este,"tienda, farmacia",Mañana,Días de semana,Bajo,Efectivo,san borja,Alta,Regalo,"Wifi,Aventura",2024-11-19,6
+8,Maristela,43,F,top,"banco, abogado",Tarde,Días de semana,Medio,Efectivo,santiago de surco,Media,Regalo,"Mascotas,Teatro",2024-11-19,15
+9,Carmelo,39,M,top,"vegetariano, fisioterapeuta, argentino",Mañana,Días de semana,Medio,Yape/Plin,san borja,Baja,Happy Hour,"Arte,Cerámica",2024-11-19,15
+10,Amando,29,M,top,"selvatica, cine, funeraria",Noche,Fin de semana,Alto,Tarjeta,la molina,Media,Descuento,"Cerámica,Wifi",2024-11-19,2
+11,Dan,47,M,este,"carnes, finanzas",Mañana,Fin de semana,Bajo,Efectivo,lince,Media,Manualidades,"Investigación,Cocina,Tecnología",2024-11-19,13
+12,Itziar,26,F,este,"chifa, parque, comida",Tarde,Fin de semana,Alto,Transferencia,san miguel,Alta,2x1,"Tecnología,Cultura,Juegos",2024-11-19,1
+13,Domitila,46,F,top,"spa, saludable, mexicano",Mañana,Días de semana,Alto,Tarjeta,jesus maria,Alta,Descuento,"Tecnología,Mascotas,Investigación",2024-11-19,7
+14,Ana,18,F,este,"hamburguesa, desayuno",Tarde,Días de semana,Bajo,Transferencia,jesus maria,Media,2x1,"Moda,Aventura,Investigación",2024-11-19,7
+15,Abilio,30,M,top,"tienda de comestibles o supermercado, comida rapida, panadería",Noche,Fin de semana,Alto,Tarjeta,barranco,Alta,Descuento,"Cultura,Libros,Belleza",2024-11-19,17
+16,Alma,36,F,top,"saludable, Cafetería, comida",Noche,Fin de semana,Alto,Tarjeta,barranco,Alta,2x1,"Música,Cocina",2024-11-19,19
+17,Juana,18,F,este,"Cafetería, tienda de ropa, finanzas",Tarde,Días de semana,Medio,Efectivo,san miguel,Baja,Descuento,"Wifi,Cultura",2024-11-19,18
+18,José,41,F,este,"criolla, italiano, galería de arte",Tarde,Fin de semana,Alto,Yape/Plin,miraflores,Alta,2x1,"Estacionamiento,Música",2024-11-19,2
+19,Reynaldo,25,M,top,"dentista, sushi, restaurante",Noche,Fin de semana,Alto,Transferencia,miraflores,Alta,Happy Hour,"Investigación,Música,Salud",2024-11-19,11
+20,Feliciana,18,F,top,"desayuno, mexicano, hamburguesa",Mañana,Fin de semana,Alto,Transferencia,san miguel,Media,Descuento,"Mascotas,Arte,Juegos",2024-11-19,19
+21,Ángel,33,M,top,"cine, pasteleria",Mañana,Fin de semana,Medio,Yape/Plin,barranco,Alta,Happy Hour,"Belleza,Libros,Moda",2024-11-19,19
+22,Chus,31,M,top,"tienda de muebles, hospital, polleria",Noche,Fin de semana,Medio,Tarjeta,jesus maria,Media,Manualidades,"Aventura,Arte,Libros",2024-11-19,2
+23,Ámbar,22,F,este,"cafeteria, local, Postres",Mañana,Días de semana,Bajo,Efectivo,magdalena del mar,Baja,Descuento,"Música en vivo,Investigación,Cultura",2024-11-19,10
+24,Ángela,22,F,top,"heladeria, farmacia, criolla",Noche,Días de semana,Medio,Tarjeta,magdalena del mar,Media,Regalo,"Moda,Teatro",2024-11-19,16
+25,María,37,M,top,"contabilidad, parque, salón de belleza",Noche,Fin de semana,Alto,Tarjeta,san borja,Alta,Descuento,"Música en vivo,Juegos",2024-11-19,13
+26,Pelayo,28,M,este,"lavado de coches, tienda de muebles, comida",Mañana,Días de semana,Bajo,Efectivo,pueblo libre,Baja,2x1,"Danza,Deporte",2024-11-19,15
+27,Virginia,36,F,este,"marino, tienda de mascotas, salud",Mañana,Días de semana,Bajo,Efectivo,surquillo,Baja,Regalo,"Mascotas,Wifi",2024-11-19,9
+28,Segismundo,29,M,este,"minimarket, cerrajero, comida rapida",Noche,Fin de semana,Medio,Yape/Plin,san borja,Baja,2x1,"Estacionamiento,Aventura",2024-11-19,11
+29,Chema,51,M,top,"comida rápida, minimarket",Mañana,Fin de semana,Medio,Transferencia,san isidro,Alta,Happy Hour,"Tecnología,Moda",2024-11-19,9
+30,Paloma,64,F,top,"saludable, comida rapida",Mañana,Fin de semana,Medio,Transferencia,san miguel,Alta,Manualidades,"Cocina,Juegos,Investigación",2024-11-19,3
+31,Anacleto,54,M,top,"fisioterapeuta, alitas",Noche,Fin de semana,Medio,Efectivo,miraflores,Media,Happy Hour,"Danza,Música,Cultura",2024-11-19,12
+32,Aristides,30,M,este,"dentista, desayuno, cafeteria",Mañana,Días de semana,Alto,Efectivo,magdalena del mar,Media,Happy Hour,"Mascotas,Deporte",2024-11-19,15
+33,Bruno,28,M,top,"contabilidad, finanzas",Mañana,Días de semana,Alto,Yape/Plin,la molina,Alta,Descuento,"Salud,Cerámica",2024-11-19,5
+34,Donato,36,M,top,"casino, dentista, tienda",Noche,Días de semana,Alto,Yape/Plin,san luis,Alta,2x1,"Cocina,Belleza",2024-11-19,4
+35,Asunción,48,F,top,"comida, reparación de coches",Mañana,Fin de semana,Alto,Tarjeta,santiago de surco,Media,2x1,"Wifi,Teatro",2024-11-19,9
+36,Luis Miguel,35,M,top,"hamburguesa, cafetería",Noche,Fin de semana,Medio,Tarjeta,la molina,Alta,2x1,"Tecnología,Cerámica",2024-11-19,1
+37,Mariana,56,F,top,"mexicano, farmacia, sandwich",Noche,Fin de semana,Alto,Tarjeta,miraflores,Media,Manualidades,"Cerámica,Cultura",2024-11-19,19
+38,Isaura,26,F,top,"desayuno, galería de arte, librería",Noche,Fin de semana,Alto,Transferencia,san borja,Media,Regalo,"Belleza,Música",2024-11-19,7
+39,Aura,37,F,top,"discoteca, casino, vegetariano",Noche,Fin de semana,Medio,Tarjeta,la molina,Baja,Happy Hour,"Cultura,Wifi,Mascotas",2024-11-19,6
+40,Aránzazu,24,F,top,"Sushi, panadería, marino",Noche,Días de semana,Alto,Yape/Plin,barranco,Alta,Regalo,"Investigación,Salud,Estacionamiento",2024-11-19,2
+41,Juan Manuel,23,M,top,"alquiler de coches, librería, biblioteca",Noche,Fin de semana,Alto,Tarjeta,la molina,Alta,Happy Hour,"Juegos,Belleza",2024-11-19,10
+42,Paula,18,F,top,"sushi, parque de atracciones, marino",Mañana,Días de semana,Alto,Tarjeta,san borja,Alta,Happy Hour,"Moda,Música,Salud",2024-11-19,1
+43,Olimpia,40,F,este,"tienda de mascotas, casino, agencia de seguros",Mañana,Fin de semana,Medio,Yape/Plin,surquillo,Media,Descuento,"Investigación,Mascotas,Juegos",2024-11-19,16
+44,Aurelia,28,F,top,"bodega, polleria",Mañana,Fin de semana,Medio,Tarjeta,miraflores,Alta,Happy Hour,"Wifi,Danza,Música",2024-11-19,9
+45,Eusebia,54,F,top,"selvatica, floristería",Mañana,Fin de semana,Bajo,Transferencia,san isidro,Alta,2x1,"Moda,Tecnología",2024-11-19,9
+46,León,27,M,top,"farmacia, tienda de bicicletas, contabilidad",Tarde,Días de semana,Alto,Yape/Plin,la molina,Alta,Manualidades,"Música en vivo,Wifi",2024-11-19,5
+47,Rafa,30,M,top,"finanzas, carnes",Mañana,Días de semana,Alto,Tarjeta,miraflores,Alta,2x1,"Investigación,Belleza",2024-11-19,12
+48,Emma,36,F,top,"tienda de artículos para el hogar, empresa de mudanzas",Mañana,Fin de semana,Medio,Tarjeta,san isidro,Alta,Regalo,"Tecnología,Teatro,Estacionamiento",2024-11-19,13
+49,Serafina,44,F,top,"sandwich, abogado, restaurante",Mañana,Días de semana,Alto,Yape/Plin,san borja,Alta,2x1,"Wifi,Estacionamiento,Arte",2024-11-19,14
+50,Hugo,32,M,top,"zapatería, tienda de ropa, bar",Tarde,Fin de semana,Alto,Tarjeta,san isidro,Media,Manualidades,"Mascotas,Danza",2024-11-19,5
+51,Adelardo,45,M,este,"sandwich, venezolano, pasteleria",Mañana,Fin de semana,Bajo,Efectivo,san miguel,Baja,Manualidades,"Música,Teatro,Wifi",2024-11-19,15
+52,Gilberto,40,M,top,"salud, funeraria",Tarde,Fin de semana,Alto,Tarjeta,san miguel,Alta,2x1,"Libros,Música en vivo",2024-11-19,8
+53,Vidal,38,M,top,"peruano, hospital",Mañana,Fin de semana,Alto,Transferencia,miraflores,Media,Descuento,"Estacionamiento,Wifi,Mascotas",2024-11-19,7
+54,Ester,37,F,top,"tienda de muebles, sopas",Noche,Días de semana,Medio,Yape/Plin,miraflores,Media,Manualidades,"Música en vivo,Cocina",2024-11-19,4
+55,María Luisa,49,F,top,"tienda por departamentos, tienda de comestibles o supermercado",Noche,Fin de semana,Bajo,Tarjeta,santiago de surco,Alta,Happy Hour,"Tecnología,Estacionamiento,Música en vivo",2024-11-19,8
+56,Osvaldo,23,M,top,"tienda de muebles, hamburguesa",Mañana,Días de semana,Medio,Tarjeta,magdalena del mar,Media,Manualidades,"Arte,Wifi,Estacionamiento",2024-11-19,11
+57,Cristóbal,29,M,top,"comida rapida, sopas",Mañana,Fin de semana,Medio,Transferencia,miraflores,Alta,Descuento,"Deporte,Estacionamiento",2024-11-19,16
+58,Yaiza,42,F,top,"sopas, farmacia, Sushi",Tarde,Días de semana,Medio,Transferencia,miraflores,Media,Manualidades,"Belleza,Deporte",2024-11-19,4
+59,Leandra,54,F,top,"biblioteca, mexicano, tienda de electrónica",Noche,Fin de semana,Alto,Tarjeta,san miguel,Alta,Manualidades,"Investigación,Cultura,Danza",2024-11-19,14
+60,Josep,30,M,top,"zapatería, reparación de coches",Tarde,Días de semana,Alto,Yape/Plin,santiago de surco,Baja,Regalo,"Investigación,Música en vivo,Wifi",2024-11-19,12
+61,Lourdes,48,F,este,"tienda de conveniencia, parque, heladeria",Noche,Días de semana,Alto,Transferencia,miraflores,Media,Regalo,"Libros,Deporte",2024-11-19,5
+62,Luis Ángel,21,M,top,"agencia de viajes, chifa",Noche,Fin de semana,Bajo,Yape/Plin,miraflores,Alta,Happy Hour,"Cerámica,Salud",2024-11-19,10
+63,Luisa,30,F,top,"reparación de coches, atracción turística, venezolano",Tarde,Fin de semana,Alto,Yape/Plin,san borja,Alta,2x1,"Cerámica,Estacionamiento",2024-11-19,7
+64,Marc,36,M,top,"fisioterapeuta, entrega de comida",Noche,Días de semana,Bajo,Transferencia,barranco,Media,2x1,"Cultura,Wifi,Salud",2024-11-19,2
+65,Lupita,31,F,top,"marino, comida rapida",Noche,Fin de semana,Alto,Yape/Plin,san isidro,Media,Happy Hour,"Belleza,Moda",2024-11-19,4
+66,Nazario,39,M,top,"Cafetería, hospital, desayuno",Noche,Fin de semana,Alto,Tarjeta,magdalena del mar,Alta,Happy Hour,"Belleza,Teatro,Cocina",2024-11-19,5
+67,Sandra,26,F,top,"criolla, almuerzo",Noche,Fin de semana,Alto,Yape/Plin,san miguel,Media,Happy Hour,"Wifi,Estacionamiento",2024-11-19,9
+68,Andrea,37,F,top,"licorería, tienda de artículos para el hogar",Noche,Fin de semana,Alto,Tarjeta,magdalena del mar,Media,2x1,"Cocina,Mascotas,Cerámica",2024-11-19,18
+69,Josué,31,M,top,"tienda de artículos para el hogar, agencia de viajes, tienda de mascotas",Tarde,Fin de semana,Alto,Tarjeta,san isidro,Alta,Happy Hour,"Moda,Belleza,Juegos",2024-11-19,4
+70,Leandra,28,F,top,"postres, librería, cafetería",Noche,Fin de semana,Medio,Tarjeta,san isidro,Media,Manualidades,"Investigación,Belleza",2024-11-19,15
+71,Juan Carlos,53,M,top,"tienda de ropa, comida, peruano",Tarde,Fin de semana,Medio,Tarjeta,santiago de surco,Alta,2x1,"Cerámica,Deporte,Mascotas",2024-11-19,7
+72,Gilberto,39,M,top,"banco, electricista",Mañana,Fin de semana,Medio,Tarjeta,jesus maria,Media,Manualidades,"Deporte,Mascotas",2024-11-19,20
+73,Baltasar,35,M,top,"sandwich, local",Mañana,Fin de semana,Medio,Yape/Plin,la molina,Media,Happy Hour,"Estacionamiento,Juegos",2024-11-19,14
+74,Prudencia,20,F,top,"catering, restaurante, peruano",Tarde,Fin de semana,Alto,Yape/Plin,santiago de surco,Alta,Descuento,"Estacionamiento,Música,Juegos",2024-11-19,20
+75,Aníbal,42,M,top,"dentista, tienda de artículos para el hogar",Tarde,Días de semana,Alto,Tarjeta,barranco,Media,Descuento,"Arte,Juegos",2024-11-19,19
+76,Agustina,32,F,top,"concesionario de coches, sandwich, parque de atracciones",Mañana,Días de semana,Bajo,Tarjeta,san miguel,Alta,Descuento,"Danza,Salud,Teatro",2024-11-19,20
+77,César,38,M,top,"hamburguesa, reparación de coches, tienda de bicicletas",Mañana,Fin de semana,Medio,Transferencia,barranco,Alta,Descuento,"Libros,Cerámica",2024-11-19,20
+78,Cipriano,32,M,top,"galería de arte, sushi",Noche,Días de semana,Alto,Yape/Plin,la molina,Alta,Descuento,"Teatro,Música",2024-11-19,12
+79,Pepito,30,M,este,"criolla, tienda de conveniencia",Mañana,Fin de semana,Bajo,Tarjeta,pueblo libre,Baja,Happy Hour,"Teatro,Cerámica",2024-11-19,6
+80,Cesar,31,M,top,"español, selvatica, tienda por departamentos",Tarde,Días de semana,Medio,Yape/Plin,san isidro,Media,2x1,"Música en vivo,Belleza,Arte",2024-11-19,13
+81,José Luis,18,M,este,"hospital, salud",Noche,Días de semana,Bajo,Tarjeta,san luis,Alta,Descuento,"Investigación,Tecnología",2024-11-19,9
+82,Catalina,28,F,este,"Cafetería, gimnasio, entrega de comida",Noche,Días de semana,Bajo,Yape/Plin,san borja,Media,Descuento,"Cocina,Moda",2024-11-19,7
+83,Judith,37,F,top,"desayuno, supermercado",Mañana,Fin de semana,Bajo,Tarjeta,miraflores,Baja,Regalo,"Salud,Teatro,Cerámica",2024-11-19,15
+84,Dafne,36,F,top,"almuerzo, alquiler de coches",Noche,Fin de semana,Alto,Efectivo,magdalena del mar,Alta,Manualidades,"Estacionamiento,Cerámica",2024-11-19,14
+85,Demetrio,37,M,este,"salón de belleza, discoteca, cine",Noche,Fin de semana,Bajo,Efectivo,san miguel,Baja,Regalo,"Arte,Mascotas",2024-11-19,5
+86,Cebrián,25,M,top,"agencia de viajes, salón de belleza",Noche,Fin de semana,Bajo,Tarjeta,miraflores,Media,Manualidades,"Deporte,Investigación",2024-11-19,20
+87,Godofredo,29,M,este,"comida rapida, tienda de ropa",Tarde,Fin de semana,Medio,Efectivo,san luis,Media,Happy Hour,"Wifi,Cerámica,Juegos",2024-11-19,19
+88,Rafa,53,M,top,"agencia de viajes, desayuno",Mañana,Días de semana,Alto,Tarjeta,san luis,Alta,Descuento,"Salud,Cultura,Estacionamiento",2024-11-19,4
+89,Vanesa,23,F,este,"cafeteria, droguería, tienda de artículos para el hogar",Tarde,Fin de semana,Bajo,Transferencia,san miguel,Alta,2x1,"Investigación,Cerámica",2024-11-19,9
+90,Begoña,61,F,top,"lavado de coches, local, cafetería",Mañana,Días de semana,Medio,Yape/Plin,san miguel,Media,Happy Hour,"Libros,Danza,Cocina",2024-11-19,6
+91,Edelmiro,40,M,top,"banco, concesionario de coches, tienda de mascotas",Tarde,Fin de semana,Medio,Transferencia,pueblo libre,Alta,Manualidades,"Deporte,Música,Moda",2024-11-19,9
+92,Encarna,37,F,este,"comida para llevar, cevicheria, gimnasio",Tarde,Días de semana,Medio,Efectivo,san borja,Baja,2x1,"Moda,Teatro,Juegos",2024-11-19,11
+93,Fabián,45,M,top,"empresa de mudanzas, dentista, sandwich",Tarde,Fin de semana,Medio,Yape/Plin,surquillo,Media,2x1,"Mascotas,Libros",2024-11-19,10
+94,Diana,37,F,top,"Sushi, español",Noche,Fin de semana,Medio,Tarjeta,surquillo,Alta,Descuento,"Moda,Investigación",2024-11-19,15
+95,Vera,43,F,top,"español, alitas",Noche,Fin de semana,Alto,Yape/Plin,santiago de surco,Alta,Regalo,"Wifi,Teatro",2024-11-19,15
+96,Fortunata,18,F,este,"restaurante, criolla, Postres",Mañana,Fin de semana,Alto,Efectivo,pueblo libre,Baja,Descuento,"Deporte,Cultura,Cerámica",2024-11-19,20
+97,Carla,30,F,este,"almacenamiento, supermercado",Tarde,Fin de semana,Bajo,Yape/Plin,lince,Baja,2x1,"Cultura,Belleza,Teatro",2024-11-19,1
+98,Teodoro,23,M,top,"casino, parque de atracciones, chifa",Mañana,Días de semana,Alto,Transferencia,surquillo,Media,2x1,"Belleza,Juegos",2024-11-19,16
+99,Javiera,36,F,top,"gimnasio, pizzeria",Tarde,Días de semana,Medio,Transferencia,san isidro,Alta,Descuento,"Aventura,Moda",2024-11-19,20
+100,Marcelino,32,M,top,"empresa de mudanzas, salón de belleza, dentista",Noche,Fin de semana,Alto,Yape/Plin,san isidro,Alta,Manualidades,"Arte,Estacionamiento",2024-11-19,13
+101,Rosaura,42,F,top,"sandwich, comida para llevar",Noche,Días de semana,Alto,Yape/Plin,san isidro,Media,2x1,"Belleza,Cerámica,Investigación",2024-11-19,11
+102,Jerónimo,42,M,top,"selvatica, argentino",Mañana,Días de semana,Medio,Yape/Plin,santiago de surco,Alta,Happy Hour,"Mascotas,Tecnología",2024-11-19,4
+103,Federico,43,M,top,"sushi, sandwich, Postres",Noche,Fin de semana,Alto,Yape/Plin,la molina,Alta,Manualidades,"Música,Juegos,Tecnología",2024-11-19,6
+104,María Manuela,37,F,top,"marino, panadería, comida para llevar",Tarde,Días de semana,Alto,Transferencia,santiago de surco,Alta,2x1,"Libros,Moda",2024-11-19,13
+105,Vidal,18,M,top,"joyería, entrega de comida",Noche,Fin de semana,Alto,Tarjeta,jesus maria,Baja,2x1,"Salud,Cultura,Wifi",2024-11-19,8
+106,Nicolasa,36,F,top,"Cafetería, postres",Mañana,Días de semana,Alto,Transferencia,magdalena del mar,Media,Manualidades,"Belleza,Cocina",2024-11-19,2
+107,Florina,47,F,top,"venezolano, bodega, zapatería",Mañana,Fin de semana,Medio,Transferencia,jesus maria,Alta,Regalo,"Belleza,Cultura,Deporte",2024-11-19,3
+108,Clímaco,18,M,top,"empresa de mudanzas, tienda por departamentos, entrega de comida",Tarde,Fin de semana,Medio,Tarjeta,san luis,Alta,Manualidades,"Moda,Música",2024-11-19,5
+109,Amarilis,25,F,top,"abarrotes, cine",Tarde,Días de semana,Medio,Transferencia,jesus maria,Baja,2x1,"Tecnología,Cocina",2024-11-19,16
+110,Cosme,18,M,top,"abarrotes, cafeteria, licorería",Mañana,Días de semana,Medio,Tarjeta,san isidro,Media,2x1,"Deporte,Música en vivo",2024-11-19,20
+111,Álvaro,37,M,top,"comida, almuerzo, tienda por departamentos",Noche,Fin de semana,Medio,Tarjeta,santiago de surco,Alta,Manualidades,"Deporte,Wifi,Aventura",2024-11-19,6
+112,Andrés Felipe,40,M,top,"galería de arte, spa",Tarde,Fin de semana,Medio,Tarjeta,san isidro,Baja,Regalo,"Música,Aventura",2024-11-19,3
+113,Eloy,40,M,top,"restaurante, galería de arte",Tarde,Fin de semana,Medio,Efectivo,san borja,Alta,2x1,"Moda,Belleza,Salud",2024-11-19,15
+114,Mohamed,25,M,top,"comida, dentista",Mañana,Fin de semana,Medio,Yape/Plin,miraflores,Media,Regalo,"Arte,Cerámica",2024-11-19,3
+115,Socorro,23,F,este,"avicola, saludable, peruano",Tarde,Fin de semana,Alto,Yape/Plin,magdalena del mar,Baja,Manualidades,"Belleza,Cerámica,Moda",2024-11-19,6
+116,Isabel,45,F,top,"funeraria, agencia de seguros, spa",Noche,Fin de semana,Medio,Tarjeta,san miguel,Baja,Manualidades,"Teatro,Aventura",2024-11-19,5
+117,Nicodemo,29,M,top,"parque, tienda de artículos para el hogar, hospital",Tarde,Fin de semana,Medio,Yape/Plin,san isidro,Media,Descuento,"Arte,Libros,Cocina",2024-11-19,11
+118,Adela,22,F,top,"bodega, local, abogado",Noche,Fin de semana,Alto,Efectivo,lince,Media,2x1,"Cocina,Música,Libros",2024-11-19,17
+119,Américo,26,M,top,"abogado, vegetariano",Mañana,Días de semana,Medio,Tarjeta,santiago de surco,Alta,2x1,"Investigación,Salud,Teatro",2024-11-19,18
+120,Jorge,18,M,top,"biblioteca, cafetería",Tarde,Días de semana,Medio,Transferencia,san miguel,Media,Happy Hour,"Tecnología,Música",2024-11-19,11
+121,Ángeles,35,F,top,"empresa de mudanzas, catering",Mañana,Días de semana,Medio,Tarjeta,santiago de surco,Alta,Regalo,"Juegos,Música en vivo",2024-11-19,1
+122,Dorotea,38,F,top,"bar, dentista, alojamiento",Mañana,Días de semana,Medio,Efectivo,miraflores,Alta,Happy Hour,"Teatro,Danza,Cerámica",2024-11-19,1
+123,Lázaro,30,M,top,"sushi, comida rapida",Tarde,Fin de semana,Bajo,Tarjeta,pueblo libre,Media,Happy Hour,"Moda,Música en vivo",2024-11-19,8
+124,Felisa,25,F,top,"cerrajero, supermercado, electricista",Tarde,Fin de semana,Medio,Yape/Plin,la molina,Alta,Manualidades,"Belleza,Música en vivo",2024-11-19,7
+125,Duilio,24,M,top,"cuidado del cabello, lavado de coches",Noche,Fin de semana,Medio,Tarjeta,barranco,Media,2x1,"Libros,Cocina,Wifi",2024-11-19,7
+126,Sarita,22,F,top,"avicola, polleria, local",Noche,Días de semana,Medio,Tarjeta,jesus maria,Alta,2x1,"Música,Moda,Arte",2024-11-19,1
+127,Apolinar,35,M,este,"polleria, comida rápida, chifa",Mañana,Fin de semana,Medio,Efectivo,magdalena del mar,Baja,Regalo,"Investigación,Cerámica,Cocina",2024-11-19,4
+128,Beatriz,18,F,top,"concesionario de coches, dentista, médico",Noche,Fin de semana,Medio,Tarjeta,san miguel,Media,Happy Hour,"Aventura,Wifi,Música",2024-11-19,6
+129,Jenaro,31,M,top,"panadería, criolla",Noche,Días de semana,Alto,Efectivo,san isidro,Media,Happy Hour,"Juegos,Cocina",2024-11-19,14
+130,Paulino,53,M,top,"bar, desayuno",Noche,Días de semana,Medio,Tarjeta,san luis,Media,Happy Hour,"Cultura,Estacionamiento",2024-11-19,15
+131,Rufino,43,M,top,"argentino, hamburguesa",Noche,Días de semana,Alto,Tarjeta,san isidro,Alta,2x1,"Libros,Teatro",2024-11-19,7
+132,Ruth,29,F,top,"Postres, tienda de bicicletas, alojamiento",Tarde,Fin de semana,Alto,Tarjeta,miraflores,Media,Manualidades,"Investigación,Belleza",2024-11-19,3
+133,Angelina,29,F,top,"hospital, supermercado, Postres",Tarde,Fin de semana,Medio,Efectivo,barranco,Alta,Regalo,"Salud,Deporte,Estacionamiento",2024-11-19,15
+134,Pía,28,F,top,"hospital, comida para llevar",Noche,Días de semana,Medio,Tarjeta,san isidro,Alta,Happy Hour,"Danza,Mascotas",2024-11-19,4
+135,Miguel,43,M,top,"argentino, tienda de bicicletas, tienda de muebles",Noche,Días de semana,Alto,Transferencia,san isidro,Media,Happy Hour,"Aventura,Deporte",2024-11-19,19
+136,Abraham,28,M,top,"librería, local",Noche,Fin de semana,Medio,Tarjeta,magdalena del mar,Alta,Happy Hour,"Mascotas,Danza,Música en vivo",2024-11-19,7
+137,Dominga,35,F,top,"sushi, italiano",Noche,Fin de semana,Medio,Yape/Plin,lince,Media,Regalo,"Cerámica,Estacionamiento,Deporte",2024-11-19,10
+138,Rebeca,18,F,top,"tienda de ropa, carnes, lavandería",Tarde,Fin de semana,Medio,Efectivo,la molina,Alta,2x1,"Salud,Música en vivo",2024-11-19,7
+139,Román,29,M,top,"peruano, cafeteria, pasteleria",Noche,Fin de semana,Medio,Tarjeta,san luis,Media,Descuento,"Teatro,Cultura",2024-11-19,7
+140,Serafina,44,F,top,"Cafetería, spa, floristería",Mañana,Fin de semana,Alto,Tarjeta,san isidro,Media,2x1,"Investigación,Música en vivo,Mascotas",2024-11-19,8
+141,Yago,35,M,este,"tienda de ropa, venezolano",Tarde,Fin de semana,Bajo,Efectivo,magdalena del mar,Baja,2x1,"Mascotas,Música,Juegos",2024-11-19,17
+142,Herminio,41,M,top,"agencia de viajes, alojamiento, casino",Noche,Fin de semana,Alto,Tarjeta,jesus maria,Baja,Regalo,"Danza,Deporte",2024-11-19,13
+143,Daniela,40,F,top,"médico, peruano",Mañana,Fin de semana,Alto,Efectivo,lince,Media,Descuento,"Tecnología,Juegos,Deporte",2024-11-19,13
+144,Nazario,41,M,top,"hamburguesa, abogado",Tarde,Días de semana,Medio,Yape/Plin,miraflores,Alta,2x1,"Aventura,Belleza,Libros",2024-11-19,5
+145,Serafina,18,F,top,"desayuno, alitas",Noche,Días de semana,Medio,Tarjeta,pueblo libre,Alta,Manualidades,"Danza,Estacionamiento",2024-11-19,19
+146,Brunilda,34,F,top,"alitas, salón de belleza",Tarde,Fin de semana,Alto,Transferencia,santiago de surco,Alta,Manualidades,"Investigación,Danza",2024-11-19,20
+147,Teodora,48,F,este,"comida, entrega de comida, parque",Tarde,Fin de semana,Medio,Yape/Plin,magdalena del mar,Baja,Manualidades,"Arte,Aventura,Mascotas",2024-11-19,20
+148,Luciano,48,M,top,"venezolano, cafeteria",Mañana,Días de semana,Medio,Transferencia,pueblo libre,Baja,Manualidades,"Cerámica,Deporte,Arte",2024-11-19,3
+149,Óscar,36,M,top,"entrega de comida, carnes",Tarde,Fin de semana,Alto,Tarjeta,la molina,Media,Happy Hour,"Wifi,Investigación",2024-11-19,18
+150,Rocío,24,F,top,"comida, casino",Noche,Días de semana,Alto,Transferencia,jesus maria,Alta,2x1,"Libros,Estacionamiento,Aventura",2024-11-19,8
+151,Chuy,34,M,este,"bar, avicola, finanzas",Mañana,Fin de semana,Bajo,Transferencia,santiago de surco,Media,Manualidades,"Libros,Tecnología,Danza",2024-11-19,4
+152,Yaiza,18,F,top,"concesionario de coches, alquiler de coches",Tarde,Días de semana,Alto,Yape/Plin,santiago de surco,Media,Manualidades,"Cocina,Wifi",2024-11-19,10
+153,Dora,38,F,top,"droguería, fisioterapeuta, gimnasio",Noche,Días de semana,Medio,Yape/Plin,san borja,Alta,2x1,"Moda,Aventura,Arte",2024-11-19,16
+154,Manolo,18,M,este,"parque, comida rapida",Mañana,Días de semana,Medio,Efectivo,surquillo,Baja,2x1,"Teatro,Salud,Estacionamiento",2024-11-19,15
+155,Calisto,55,M,top,"lavandería, argentino, salud",Tarde,Días de semana,Medio,Efectivo,miraflores,Media,Regalo,"Cultura,Aventura",2024-11-19,17
+156,Chema,33,M,top,"panadería, local, spa",Mañana,Fin de semana,Alto,Tarjeta,jesus maria,Media,2x1,"Mascotas,Arte",2024-11-19,10
+157,Haroldo,48,M,top,"salud, funeraria",Noche,Fin de semana,Alto,Tarjeta,barranco,Media,Descuento,"Teatro,Moda",2024-11-19,18
+158,Benita,48,F,este,"panadería, carnes",Mañana,Días de semana,Bajo,Transferencia,santiago de surco,Alta,Regalo,"Danza,Wifi",2024-11-19,6
+159,Ricardo,23,M,top,"vegetariano, reparación de coches, discoteca",Tarde,Fin de semana,Medio,Tarjeta,pueblo libre,Media,Happy Hour,"Cultura,Aventura,Juegos",2024-11-19,11
+160,Fanny,46,F,top,"contabilidad, minimarket, tienda de bicicletas",Tarde,Fin de semana,Bajo,Tarjeta,la molina,Alta,2x1,"Tecnología,Moda,Investigación",2024-11-19,11
+161,Emelina,24,F,top,"chifa, restaurante",Tarde,Fin de semana,Alto,Tarjeta,santiago de surco,Media,2x1,"Danza,Cocina",2024-11-19,20
+162,Yolanda,37,F,top,"salón de belleza, tienda por departamentos, zapatería",Noche,Fin de semana,Medio,Tarjeta,san borja,Baja,Regalo,"Mascotas,Música,Cultura",2024-11-19,9
+163,Delia,24,F,top,"chifa, librería",Noche,Días de semana,Alto,Tarjeta,san borja,Media,2x1,"Aventura,Moda,Arte",2024-11-19,1
+164,Anita,37,F,este,"ferretería, sopas",Mañana,Días de semana,Bajo,Transferencia,barranco,Baja,Manualidades,"Juegos,Tecnología",2024-11-19,5
+165,Leocadia,34,F,top,"cuidado del cabello, tienda de conveniencia, mexicano",Mañana,Fin de semana,Medio,Yape/Plin,miraflores,Alta,Descuento,"Mascotas,Juegos",2024-11-19,4
+166,Plácido,37,M,top,"sopas, cevicheria",Mañana,Fin de semana,Alto,Yape/Plin,pueblo libre,Alta,Manualidades,"Investigación,Estacionamiento",2024-11-19,12
+167,Natividad,43,F,top,"ferretería, droguería, funeraria",Mañana,Fin de semana,Medio,Tarjeta,barranco,Alta,Regalo,"Mascotas,Arte",2024-11-19,4
+168,José Ángel,29,M,top,"carnes, avicola",Tarde,Días de semana,Alto,Tarjeta,surquillo,Media,2x1,"Teatro,Música,Juegos",2024-11-19,9
+169,Flavio,49,M,top,"tienda de conveniencia, tienda de artículos para el hogar, atracción turística",Noche,Fin de semana,Medio,Tarjeta,barranco,Baja,2x1,"Cultura,Música",2024-11-19,5
+170,Sebastian,50,M,top,"vegetariano, comida rápida, agencia de viajes",Tarde,Fin de semana,Alto,Tarjeta,surquillo,Media,2x1,"Investigación,Cerámica,Salud",2024-11-19,8
+171,María Jesús,33,F,top,"hamburguesa, Postres",Tarde,Días de semana,Alto,Transferencia,jesus maria,Alta,Manualidades,"Deporte,Arte,Salud",2024-11-19,19
+172,Alejo,19,M,top,"fisioterapeuta, vegetariano, restaurante",Mañana,Fin de semana,Alto,Tarjeta,san luis,Alta,2x1,"Mascotas,Estacionamiento,Arte",2024-11-19,17
+173,Conrado,32,M,top,"tienda de electrónica, tienda de bicicletas, Sushi",Tarde,Días de semana,Alto,Transferencia,barranco,Baja,Regalo,"Juegos,Arte",2024-11-19,14
+174,César,35,M,top,"tienda, empresa de mudanzas, cerrajero",Mañana,Fin de semana,Bajo,Efectivo,san isidro,Media,Manualidades,"Aventura,Cocina",2024-11-19,9
+175,Galo,28,M,este,"tienda, heladeria, casino",Tarde,Días de semana,Medio,Efectivo,miraflores,Alta,Manualidades,"Teatro,Música en vivo,Deporte",2024-11-19,12
+176,Gabriel,32,M,top,"banco, parque, floristería",Noche,Días de semana,Medio,Tarjeta,san miguel,Alta,Happy Hour,"Juegos,Estacionamiento,Aventura",2024-11-19,19
+177,Ainoa,30,F,top,"marino, museo",Noche,Fin de semana,Alto,Yape/Plin,la molina,Baja,Regalo,"Cocina,Música,Estacionamiento",2024-11-19,13
+178,Susanita,33,F,top,"fisioterapeuta, salud, finanzas",Noche,Fin de semana,Medio,Tarjeta,la molina,Media,2x1,"Mascotas,Tecnología,Juegos",2024-11-19,7
+179,Gracia,18,F,top,"librería, almuerzo, avicola",Tarde,Fin de semana,Alto,Yape/Plin,la molina,Alta,Happy Hour,"Arte,Cultura",2024-11-19,1
+180,Calixto,26,M,top,"concesionario de coches, tienda de ropa",Mañana,Días de semana,Medio,Transferencia,magdalena del mar,Media,Manualidades,"Cerámica,Moda,Arte",2024-11-19,14
+181,Aitor,35,M,top,"zapatería, postres, gimnasio",Noche,Fin de semana,Bajo,Yape/Plin,la molina,Baja,Happy Hour,"Deporte,Belleza",2024-11-19,7
+182,Concepción,22,F,top,"Sushi, spa",Noche,Días de semana,Medio,Tarjeta,san isidro,Alta,Regalo,"Moda,Investigación,Aventura",2024-11-19,8
+183,Fanny,23,F,top,"alquiler de coches, farmacia, droguería",Tarde,Fin de semana,Alto,Tarjeta,la molina,Alta,Manualidades,"Belleza,Estacionamiento,Juegos",2024-11-19,12
+184,Nicolasa,27,F,top,"almuerzo, lavandería, chifa",Mañana,Fin de semana,Alto,Yape/Plin,san isidro,Alta,Happy Hour,"Cocina,Cultura",2024-11-19,1
+185,Nicolasa,39,F,top,"licorería, comida",Tarde,Días de semana,Alto,Transferencia,barranco,Alta,Manualidades,"Juegos,Libros",2024-11-19,4
+186,Narcisa,29,F,top,"Postres, cevicheria, minimarket",Tarde,Días de semana,Medio,Yape/Plin,miraflores,Baja,2x1,"Música en vivo,Tecnología",2024-11-19,2
+187,Lorenza,39,F,top,"médico, pasteleria",Tarde,Días de semana,Alto,Yape/Plin,la molina,Media,Manualidades,"Deporte,Aventura,Cerámica",2024-11-19,3
+188,Yésica,48,F,top,"postres, catering",Mañana,Fin de semana,Medio,Tarjeta,magdalena del mar,Media,Descuento,"Música en vivo,Cerámica",2024-11-19,17
+189,Tomás,40,M,top,"tienda de electrónica, criolla, Sushi",Mañana,Días de semana,Medio,Yape/Plin,san miguel,Media,Descuento,"Música,Juegos,Danza",2024-11-19,13
+190,Nazaret,29,F,top,"librería, galería de arte",Noche,Días de semana,Medio,Yape/Plin,la molina,Media,2x1,"Salud,Música en vivo",2024-11-19,13
+191,Ceferino,51,M,top,"médico, heladeria, galería de arte",Noche,Fin de semana,Alto,Tarjeta,miraflores,Alta,2x1,"Música,Moda",2024-11-19,14
+192,Nazaret,46,M,top,"finanzas, minimarket, joyería",Tarde,Fin de semana,Medio,Yape/Plin,san borja,Media,Happy Hour,"Tecnología,Cerámica",2024-11-19,12
+193,Luisa,41,F,top,"salón de belleza, venezolano",Mañana,Fin de semana,Alto,Yape/Plin,la molina,Media,2x1,"Cerámica,Arte",2024-11-19,4
+194,Elena,37,F,top,"Postres, tienda de artículos para el hogar",Noche,Días de semana,Alto,Yape/Plin,pueblo libre,Alta,2x1,"Tecnología,Arte",2024-11-19,20
+195,Dimas,41,M,top,"tienda de comestibles o supermercado, cevicheria, cine",Noche,Fin de semana,Medio,Efectivo,san isidro,Alta,2x1,"Investigación,Belleza,Wifi",2024-11-19,19
+196,Daniel,55,M,top,"saludable, minimarket, tienda de ropa",Noche,Fin de semana,Medio,Transferencia,jesus maria,Alta,Regalo,"Salud,Estacionamiento",2024-11-19,3
+197,Lola,46,F,top,"spa, almacenamiento",Noche,Fin de semana,Bajo,Efectivo,san isidro,Media,Manualidades,"Mascotas,Música en vivo",2024-11-19,7
+198,Cándida,21,F,top,"atracción turística, tienda de bicicletas",Noche,Días de semana,Alto,Transferencia,san luis,Media,Manualidades,"Cocina,Cerámica,Libros",2024-11-19,13
+199,Calista,26,F,este,"zapatería, droguería",Mañana,Fin de semana,Bajo,Transferencia,la molina,Alta,Happy Hour,"Estacionamiento,Mascotas,Cocina",2024-11-19,3
+200,Enrique,45,M,top,"cerrajero, salud",Noche,Días de semana,Alto,Yape/Plin,santiago de surco,Alta,Regalo,"Belleza,Libros",2024-11-19,15
+201,Plácido,39,M,top,"panadería, tienda",Mañana,Fin de semana,Alto,Tarjeta,surquillo,Alta,Descuento,"Salud,Estacionamiento",2024-11-19,19
+202,Lalo,43,M,top,"museo, argentino, hospital",Mañana,Fin de semana,Medio,Tarjeta,jesus maria,Baja,2x1,"Danza,Cerámica,Mascotas",2024-11-19,6
+203,Pastor,29,M,top,"postres, sopas, tienda",Noche,Fin de semana,Medio,Tarjeta,la molina,Alta,Manualidades,"Investigación,Danza",2024-11-19,9
+204,Fidel,18,M,top,"dentista, spa",Tarde,Fin de semana,Alto,Transferencia,jesus maria,Alta,2x1,"Cocina,Salud,Música",2024-11-19,18
+205,Brunilda,24,F,este,"tienda de electrónica, cine",Mañana,Fin de semana,Bajo,Efectivo,san miguel,Media,Happy Hour,"Aventura,Teatro",2024-11-19,10
+206,Aitana,39,F,top,"almacenamiento, médico",Tarde,Fin de semana,Alto,Transferencia,jesus maria,Alta,2x1,"Cerámica,Deporte,Danza",2024-11-19,15
+207,Vanesa,56,F,top,"ferretería, alquiler de coches, salud",Noche,Fin de semana,Alto,Tarjeta,jesus maria,Alta,Descuento,"Juegos,Salud,Arte",2024-11-19,14
+208,Nadia,30,F,top,"comida, heladeria",Noche,Días de semana,Medio,Tarjeta,la molina,Alta,Happy Hour,"Deporte,Arte",2024-11-19,19
+209,Lupe,21,M,top,"farmacia, agencia de viajes",Noche,Fin de semana,Alto,Yape/Plin,la molina,Alta,2x1,"Arte,Música en vivo",2024-11-19,9
+210,Lorenzo,32,M,top,"gimnasio, atracción turística",Tarde,Días de semana,Medio,Transferencia,la molina,Alta,Descuento,"Wifi,Cerámica,Libros",2024-11-19,12
+211,Clementina,42,F,top,"museo, Cafetería, italiano",Tarde,Fin de semana,Alto,Tarjeta,magdalena del mar,Alta,Descuento,"Belleza,Deporte",2024-11-19,11
+212,Irene,25,F,top,"cuidado del cabello, casino, gimnasio",Mañana,Días de semana,Alto,Transferencia,miraflores,Media,2x1,"Salud,Música",2024-11-19,20
+213,Irma,37,F,este,"sandwich, Postres",Tarde,Días de semana,Medio,Efectivo,lince,Alta,Descuento,"Libros,Danza",2024-11-19,18
+214,Rafael,40,M,top,"español, carnes, comida rápida",Mañana,Fin de semana,Medio,Efectivo,santiago de surco,Media,Manualidades,"Juegos,Cerámica,Cultura",2024-11-19,4
+215,Zaida,28,F,top,"entrega de comida, biblioteca, supermercado",Noche,Fin de semana,Alto,Tarjeta,barranco,Alta,2x1,"Aventura,Cultura",2024-11-19,5
+216,Alexandra,27,F,top,"tienda de mascotas, almuerzo, cerrajero",Tarde,Fin de semana,Medio,Yape/Plin,san isidro,Media,Manualidades,"Teatro,Belleza",2024-11-19,18
+217,Jose Francisco,27,M,este,"lavado de coches, agencia de seguros",Noche,Fin de semana,Alto,Efectivo,san borja,Alta,Descuento,"Música,Libros",2024-11-19,10
+218,Victor Manuel,38,M,top,"tienda de artículos para el hogar, museo, polleria",Noche,Fin de semana,Alto,Yape/Plin,jesus maria,Baja,2x1,"Moda,Cerámica,Arte",2024-11-19,1
+219,Petrona,47,F,top,"tienda de mascotas, parque de atracciones",Tarde,Fin de semana,Medio,Tarjeta,magdalena del mar,Media,Descuento,"Música,Investigación",2024-11-19,3
+220,Graciela,18,F,top,"venezolano, heladeria",Mañana,Fin de semana,Alto,Tarjeta,pueblo libre,Alta,Regalo,"Teatro,Tecnología,Cocina",2024-11-19,2
+221,Socorro,45,F,top,"minimarket, saludable, catering",Tarde,Días de semana,Medio,Yape/Plin,san isidro,Media,Manualidades,"Cerámica,Tecnología,Música en vivo",2024-11-19,2
+222,Virginia,40,F,top,"tienda, contabilidad",Noche,Días de semana,Alto,Yape/Plin,la molina,Alta,Regalo,"Libros,Tecnología,Deporte",2024-11-19,10
+223,Aitana,34,F,top,"gimnasio, comida rápida, español",Noche,Días de semana,Alto,Tarjeta,santiago de surco,Alta,2x1,"Libros,Salud,Estacionamiento",2024-11-19,1
+224,Lalo,38,M,top,"sushi, biblioteca",Noche,Días de semana,Medio,Tarjeta,san isidro,Media,Descuento,"Juegos,Salud",2024-11-19,9
+225,Moisés,20,M,este,"vegetariano, catering, tienda de electrónica",Noche,Fin de semana,Bajo,Transferencia,lince,Baja,Manualidades,"Aventura,Arte",2024-11-19,9
+226,Aureliano,48,M,top,"sopas, Cafetería",Noche,Fin de semana,Medio,Efectivo,magdalena del mar,Media,Happy Hour,"Juegos,Danza",2024-11-19,10
+227,Pascuala,37,F,top,"saludable, empresa de mudanzas, tienda de electrónica",Noche,Días de semana,Alto,Efectivo,san isidro,Media,Manualidades,"Aventura,Música",2024-11-19,11
+228,Pánfilo,31,M,top,"fisioterapeuta, agencia de viajes, bodega",Noche,Fin de semana,Medio,Tarjeta,santiago de surco,Media,Regalo,"Wifi,Música,Cocina",2024-11-19,7
+229,Édgar,44,M,top,"floristería, zapatería",Mañana,Días de semana,Alto,Transferencia,miraflores,Alta,2x1,"Cocina,Cerámica",2024-11-19,1
+230,Néstor,30,M,top,"vegetariano, polleria, postres",Mañana,Fin de semana,Medio,Yape/Plin,santiago de surco,Media,Manualidades,"Juegos,Estacionamiento",2024-11-19,20
+231,Kike,29,M,este,"peruano, lavado de coches",Mañana,Días de semana,Bajo,Tarjeta,san miguel,Baja,Manualidades,"Wifi,Música en vivo",2024-11-19,19
+232,Jenny,40,F,top,"finanzas, minimarket, médico",Noche,Días de semana,Medio,Tarjeta,la molina,Alta,Happy Hour,"Cultura,Teatro,Wifi",2024-11-19,16
+233,Juana,51,F,top,"médico, comida para llevar",Tarde,Días de semana,Medio,Efectivo,san luis,Alta,Happy Hour,"Deporte,Estacionamiento",2024-11-19,18
+234,Paula,21,F,este,"Cafetería, avicola, carnes",Tarde,Fin de semana,Bajo,Yape/Plin,magdalena del mar,Baja,Descuento,"Mascotas,Investigación,Cocina",2024-11-19,5
+235,Aurelia,41,F,este,"minimarket, comida rápida",Mañana,Fin de semana,Bajo,Efectivo,san luis,Baja,2x1,"Cultura,Aventura,Wifi",2024-11-19,1
+236,Blas,46,M,top,"tienda de artículos para el hogar, parque",Tarde,Fin de semana,Medio,Efectivo,barranco,Media,Manualidades,"Cultura,Cerámica,Aventura",2024-11-19,5
+237,Lino,41,M,top,"criolla, dentista",Noche,Fin de semana,Medio,Yape/Plin,lince,Alta,Descuento,"Cocina,Investigación,Mascotas",2024-11-19,12
+238,Rafa,39,M,top,"criolla, sandwich",Mañana,Fin de semana,Medio,Tarjeta,miraflores,Alta,Regalo,"Tecnología,Aventura",2024-11-19,14
+239,Brígida,33,F,top,"zapatería, entrega de comida, comida rápida",Mañana,Fin de semana,Medio,Tarjeta,san isidro,Media,Regalo,"Salud,Música en vivo",2024-11-19,19
+240,Sonia,23,F,este,"italiano, comida rapida, zapatería",Tarde,Días de semana,Bajo,Yape/Plin,san luis,Baja,Descuento,"Cerámica,Mascotas,Danza",2024-11-19,11
+241,Luisina,42,F,top,"cine, ferretería, galería de arte",Noche,Fin de semana,Alto,Yape/Plin,la molina,Baja,Manualidades,"Cocina,Música en vivo",2024-11-19,5
+242,Sara,29,F,top,"casino, parque de atracciones",Noche,Fin de semana,Medio,Efectivo,la molina,Alta,Manualidades,"Wifi,Cocina",2024-11-19,14
+243,Esteban,35,M,top,"casino, comida rapida",Mañana,Días de semana,Bajo,Yape/Plin,san luis,Media,2x1,"Estacionamiento,Investigación",2024-11-19,6
+244,Moisés,36,M,top,"electricista, floristería, contabilidad",Mañana,Fin de semana,Medio,Tarjeta,san borja,Baja,2x1,"Tecnología,Cocina",2024-11-19,6
+245,Antonia,34,F,top,"médico, criolla",Noche,Fin de semana,Alto,Yape/Plin,santiago de surco,Alta,Descuento,"Aventura,Libros",2024-11-19,11
+246,Felix,36,M,top,"polleria, lavandería",Noche,Días de semana,Alto,Yape/Plin,surquillo,Alta,2x1,"Arte,Danza,Deporte",2024-11-19,7
+247,Armando,36,M,este,"selvatica, cine",Mañana,Fin de semana,Alto,Transferencia,magdalena del mar,Baja,Descuento,"Salud,Juegos",2024-11-19,8
+248,Octavio,34,M,este,"licorería, electricista",Noche,Fin de semana,Alto,Tarjeta,san luis,Baja,2x1,"Mascotas,Deporte,Cocina",2024-11-19,16
+249,Paula,33,F,este,"museo, entrega de comida",Tarde,Fin de semana,Bajo,Efectivo,jesus maria,Baja,Regalo,"Arte,Wifi,Teatro",2024-11-19,2
+250,Manu,48,F,este,"zapatería, pasteleria",Mañana,Días de semana,Medio,Yape/Plin,surquillo,Baja,2x1,"Moda,Aventura,Tecnología",2024-11-19,18
+251,Moisés,43,M,top,"almuerzo, tienda de ropa, lavado de coches",Mañana,Fin de semana,Alto,Efectivo,jesus maria,Alta,Happy Hour,"Cerámica,Danza",2024-11-19,4
+252,Anastasio,47,M,top,"selvatica, zapatería, entrega de comida",Noche,Fin de semana,Alto,Transferencia,jesus maria,Alta,Happy Hour,"Belleza,Wifi,Arte",2024-11-19,9
+253,Germán,31,M,top,"hospital, tienda de bicicletas",Mañana,Fin de semana,Alto,Tarjeta,barranco,Media,Manualidades,"Música en vivo,Libros,Wifi",2024-11-19,14
+254,Martín,29,M,top,"bodega, gimnasio, tienda por departamentos",Noche,Fin de semana,Alto,Tarjeta,barranco,Media,Descuento,"Cultura,Aventura,Libros",2024-11-19,4
+255,Cipriano,28,M,top,"tienda de ropa, italiano",Tarde,Fin de semana,Medio,Tarjeta,jesus maria,Baja,Regalo,"Cerámica,Estacionamiento,Danza",2024-11-19,20
+256,Agustín,30,M,top,"comida rapida, abogado",Tarde,Días de semana,Alto,Transferencia,san borja,Media,Happy Hour,"Wifi,Cerámica",2024-11-19,19
+257,Lucía,37,F,top,"cerrajero, tienda de comestibles o supermercado, comida rapida",Noche,Fin de semana,Alto,Transferencia,la molina,Baja,Happy Hour,"Salud,Arte,Aventura",2024-11-19,19
+258,Ciro,22,M,top,"sopas, hamburguesa, pasteleria",Noche,Días de semana,Medio,Yape/Plin,magdalena del mar,Alta,2x1,"Estacionamiento,Libros",2024-11-19,6
+259,Olivia,37,F,top,"catering, comida para llevar",Tarde,Fin de semana,Medio,Tarjeta,san isidro,Alta,Manualidades,"Investigación,Tecnología",2024-11-19,14
+260,Octavio,22,M,top,"banco, tienda de artículos para el hogar",Tarde,Fin de semana,Alto,Transferencia,miraflores,Alta,Manualidades,"Aventura,Danza",2024-11-19,8
+261,Adelia,45,F,este,"lavandería, bodega",Mañana,Fin de semana,Alto,Transferencia,miraflores,Baja,Happy Hour,"Salud,Teatro,Música",2024-11-19,14
+262,Adela,29,F,top,"almuerzo, alitas, dentista",Noche,Días de semana,Alto,Transferencia,san isidro,Media,Happy Hour,"Moda,Belleza",2024-11-19,12
+263,Ambrosio,44,M,top,"dentista, Cafetería, alquiler de coches",Mañana,Fin de semana,Alto,Tarjeta,san borja,Media,Happy Hour,"Música en vivo,Mascotas",2024-11-19,12
+264,Julie,18,F,este,"tienda de electrónica, licorería",Mañana,Fin de semana,Bajo,Transferencia,san luis,Baja,Happy Hour,"Mascotas,Tecnología",2024-11-19,16
+265,Cándida,42,F,este,"tienda de bicicletas, tienda de comestibles o supermercado, farmacia",Tarde,Fin de semana,Bajo,Efectivo,san miguel,Alta,Regalo,"Juegos,Mascotas,Arte",2024-11-19,2
+266,Ramiro,18,M,top,"abogado, agencia de seguros, mexicano",Mañana,Fin de semana,Alto,Transferencia,san isidro,Alta,Manualidades,"Wifi,Moda,Música en vivo",2024-11-19,18
+267,Gabino,38,M,este,"concesionario de coches, tienda",Mañana,Fin de semana,Medio,Efectivo,lince,Baja,Manualidades,"Cerámica,Música",2024-11-19,1
+268,Gaspar,58,M,top,"italiano, farmacia, venezolano",Noche,Fin de semana,Medio,Transferencia,san miguel,Media,Regalo,"Mascotas,Danza",2024-11-19,2
+269,Marcial,32,M,este,"spa, comida rápida, funeraria",Tarde,Fin de semana,Bajo,Tarjeta,san borja,Media,2x1,"Arte,Moda",2024-11-19,6
+270,Cebrián,39,M,top,"dentista, tienda de bicicletas, joyería",Mañana,Días de semana,Medio,Transferencia,santiago de surco,Alta,2x1,"Estacionamiento,Wifi,Tecnología",2024-11-19,11
+271,Eligia,39,F,top,"agencia de seguros, bodega, parque de atracciones",Tarde,Días de semana,Alto,Tarjeta,san isidro,Baja,Regalo,"Libros,Mascotas,Belleza",2024-11-19,7
+272,Salud,25,F,este,"restaurante, sushi",Mañana,Días de semana,Bajo,Transferencia,surquillo,Media,Descuento,"Tecnología,Libros",2024-11-19,18
+273,Etelvina,28,F,top,"mexicano, biblioteca, salón de belleza",Tarde,Días de semana,Alto,Tarjeta,pueblo libre,Alta,2x1,"Moda,Salud",2024-11-19,9
+274,Fabiola,38,F,top,"electricista, venezolano",Mañana,Días de semana,Alto,Transferencia,lince,Media,2x1,"Wifi,Cocina,Aventura",2024-11-19,20
+275,Nicodemo,19,M,top,"selvatica, sandwich",Mañana,Días de semana,Medio,Tarjeta,san luis,Alta,2x1,"Mascotas,Aventura",2024-11-19,6
+276,María,31,M,top,"catering, peruano, galería de arte",Noche,Días de semana,Medio,Transferencia,pueblo libre,Alta,2x1,"Juegos,Música en vivo",2024-11-19,7
+277,Mauricio,21,M,top,"floristería, parque",Noche,Días de semana,Alto,Transferencia,san miguel,Alta,Descuento,"Cultura,Aventura",2024-11-19,4
+278,Basilio,29,M,este,"restaurante, abogado, tienda de muebles",Tarde,Fin de semana,Alto,Efectivo,pueblo libre,Alta,Descuento,"Arte,Juegos",2024-11-19,6
+279,Emilio,27,M,top,"selvatica, saludable",Noche,Fin de semana,Medio,Transferencia,pueblo libre,Media,Descuento,"Arte,Moda",2024-11-19,18
+280,Marcelino,40,M,top,"tienda de electrónica, entrega de comida",Noche,Fin de semana,Medio,Transferencia,san isidro,Media,Happy Hour,"Música,Música en vivo",2024-11-19,18
+281,Eric,41,M,top,"postres, local",Tarde,Fin de semana,Alto,Tarjeta,san miguel,Media,Happy Hour,"Danza,Cocina,Salud",2024-11-19,11
+282,Maribel,23,F,top,"selvatica, spa",Noche,Fin de semana,Alto,Transferencia,barranco,Alta,2x1,"Cultura,Moda",2024-11-19,18
+283,Pacífica,37,F,top,"abarrotes, tienda de ropa",Noche,Fin de semana,Alto,Tarjeta,jesus maria,Media,2x1,"Deporte,Cocina",2024-11-19,10
+284,Saturnina,37,F,este,"minimarket, panadería, alquiler de coches",Tarde,Días de semana,Bajo,Tarjeta,barranco,Baja,Manualidades,"Moda,Salud,Estacionamiento",2024-11-19,2
+285,Prudencio,45,M,top,"tienda de mascotas, atracción turística, avicola",Noche,Días de semana,Medio,Yape/Plin,barranco,Baja,2x1,"Música,Juegos,Belleza",2024-11-19,12
+286,Severino,33,M,top,"farmacia, marino, alojamiento",Mañana,Días de semana,Medio,Yape/Plin,san isidro,Media,Manualidades,"Moda,Deporte",2024-11-19,1
+287,Catalina,39,F,top,"cuidado del cabello, entrega de comida",Tarde,Días de semana,Alto,Transferencia,miraflores,Media,Happy Hour,"Danza,Deporte,Wifi",2024-11-19,10
+288,Jessica,34,F,top,"argentino, reparación de coches, bar",Mañana,Días de semana,Medio,Tarjeta,san isidro,Alta,Descuento,"Arte,Mascotas",2024-11-19,15
+289,Cintia,45,F,top,"tienda de comestibles o supermercado, droguería",Mañana,Fin de semana,Bajo,Tarjeta,la molina,Alta,Happy Hour,"Moda,Teatro",2024-11-19,13
+290,Fernanda,18,F,este,"discoteca, tienda de muebles",Mañana,Días de semana,Bajo,Tarjeta,lince,Baja,Happy Hour,"Música en vivo,Wifi",2024-11-19,16
+291,Régulo,36,M,este,"electricista, museo, comida",Mañana,Días de semana,Bajo,Tarjeta,magdalena del mar,Baja,Manualidades,"Wifi,Moda,Belleza",2024-11-19,1
+292,Bernabé,33,M,top,"mexicano, bodega, heladeria",Noche,Fin de semana,Medio,Tarjeta,magdalena del mar,Alta,Manualidades,"Belleza,Salud",2024-11-19,1
+293,Desiderio,28,M,top,"avicola, médico",Tarde,Fin de semana,Medio,Tarjeta,san isidro,Alta,Manualidades,"Tecnología,Cultura,Teatro",2024-11-19,3
+294,Ricarda,21,F,top,"farmacia, sandwich, italiano",Noche,Días de semana,Alto,Transferencia,miraflores,Baja,2x1,"Cerámica,Wifi,Tecnología",2024-11-19,10
+295,Esther,18,F,top,"sopas, tienda de bicicletas",Mañana,Días de semana,Bajo,Tarjeta,miraflores,Alta,2x1,"Deporte,Moda",2024-11-19,6
+296,Domingo,40,M,top,"licorería, joyería",Noche,Fin de semana,Alto,Transferencia,pueblo libre,Alta,Happy Hour,"Estacionamiento,Juegos,Deporte",2024-11-19,20
+297,Benigna,20,F,top,"licorería, carnes, tienda de mascotas",Mañana,Fin de semana,Medio,Transferencia,magdalena del mar,Baja,Happy Hour,"Música en vivo,Cocina,Aventura",2024-11-19,4
+298,Saturnina,31,F,este,"librería, tienda",Noche,Fin de semana,Alto,Yape/Plin,san luis,Baja,Happy Hour,"Libros,Wifi",2024-11-19,10
+299,Soledad,50,F,top,"desayuno, agencia de viajes, parque de atracciones",Noche,Días de semana,Medio,Tarjeta,barranco,Media,Happy Hour,"Música en vivo,Danza,Libros",2024-11-19,5
+300,Jose Manuel,35,M,top,"tienda de artículos para el hogar, italiano",Noche,Fin de semana,Medio,Transferencia,barranco,Alta,Happy Hour,"Cocina,Arte,Libros",2024-11-19,14

@@ -1,68 +1,138 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recomendaciones de Tiendas</title>
+    <title>Store Recommendations</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input, button, select { padding: 8px; margin-top: 10px; }
+        .recommendations { margin-top: 20px; }
+        .store { margin-bottom: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Recomendaciones de Tiendas</h1>
-    <form id="recommendationForm">
-        <label for="tienda_id">ID de la Tienda:</label>
-        <input type="text" id="tienda_id" name="tienda_id" required><br><br>
+    <h1>Store Recommendations</h1>
+
+    <!-- Distance-Based Recommendation Form -->
+    <h2>Distance-Based Recommendation</h2>
+    <form id="distanceForm">
+        <label for="id_df">ID Type:</label>
+        <select id="id_df" required>
+            <option value="local_id">Store</option>
+            <option value="evento_id">Event</option>
+            <option value="actividad_id">Activity</option>
+        </select><br>
         
-        <label for="latitud">Latitud:</label>
-        <input type="text" id="latitud" name="latitud" required><br><br>
+        <label for="local_id">ID:</label>
+        <input type="number" id="local_id" required><br>
         
-        <label for="longitud">Longitud:</label>
-        <input type="text" id="longitud" name="longitud" required><br><br>
+        <label for="user_location_distance">Location (latitude, longitude):</label>
+        <input type="text" id="user_location_distance" placeholder="-12.1351, -77.0221" required><br>
         
-        <label for="radius_km">Radio (km):</label>
-        <input type="number" id="radius_km" name="radius_km" value="1"><br><br>
+        <label for="radius_km_distance">Search Radius (km):</label>
+        <input type="number" id="radius_km_distance" step="0.1" value="1"><br>
         
-        <button type="submit">Obtener Recomendaciones</button>
+        <button type="button" onclick="getDistanceRecommendations()">Get Distance Recommendations</button>
+    </form>
+
+    <!-- Hybrid Recommendation Form -->
+    <h2>Hybrid Recommendation</h2>
+    <form id="hybridForm">
+        <label for="id_df_hybrid">ID Type:</label>
+        <select id="id_df_hybrid" required>
+            <option value="local_id">Store</option>
+            <option value="evento_id">Event</option>
+            <option value="actividad_id">Activity</option>
+        </select><br>
+        
+        <label for="user_id">User ID:</label>
+        <input type="number" id="user_id" required><br>
+        
+        <label for="user_location_hybrid">Location (latitude, longitude):</label>
+        <input type="text" id="user_location_hybrid" placeholder="-12.1351, -77.0221" required><br>
+        
+        <label for="user_preference">Preference:</label>
+        <input type="text" id="user_preference" placeholder="e.g., park, restaurant" required><br>
+        
+        <label for="radius_km_hybrid">Search Radius (km):</label>
+        <input type="number" id="radius_km_hybrid" step="0.1" value="1"><br>
+        
+        <button type="button" onclick="getHybridRecommendations()">Get Hybrid Recommendations</button>
     </form>
     
-    <h2>Resultados:</h2>
-    <ul id="result"></ul>
+    <!-- Recommendations Display -->
+    <div id="recommendations" class="recommendations"></div>
     
     <script>
-        document.getElementById('recommendationForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+        function displayRecommendations(data) {
+            const recommendationsDiv = document.getElementById("recommendations");
+            recommendationsDiv.innerHTML = "<h2>Recommendations:</h2>";
+            data.forEach(store => {
+                const storeDiv = document.createElement("div");
+                storeDiv.classList.add("store");
+                storeDiv.innerHTML = `
+                    <strong>Name:</strong> ${store.nombre}<br>
+                    <strong>Category:</strong> ${store.categorias}<br>
+                    <strong>Rating:</strong> ${store.calificaciones}<br>
+                    <strong>Distance:</strong> ${store.distance} km<br>
+                    <strong>Address:</strong> ${store.direccion}<br>
+                    <strong>Price Range:</strong> ${store.rango_precios}<br>
+                    <strong>Payment Methods:</strong> ${store.metodos_pago}<br>
+                    <strong>Store Size:</strong> ${store.tamano_tienda}<br>
+                    <strong>Parking:</strong> ${store.estacionamiento}<br>
+                    <strong>Opening Hours:</strong> ${store.horario_apertura}<br>
+                    <strong>District:</strong> ${store.distrito}<br>
+                    <strong>Zone:</strong> ${store.zona}
+                `;
+                recommendationsDiv.appendChild(storeDiv);
+            });
+        }
+
+        function getDistanceRecommendations() {
+            const idDf = document.getElementById("id_df").value;
+            const localId = document.getElementById("local_id").value;
+            const locationInput = document.getElementById("user_location_distance").value.split(",");
+            const userLocation = [parseFloat(locationInput[0]), parseFloat(locationInput[1])];
+            const radiusKm = parseFloat(document.getElementById("radius_km_distance").value);
             
-            const tienda_id = document.getElementById('tienda_id').value;
-            const latitud = parseFloat(document.getElementById('latitud').value);
-            const longitud = parseFloat(document.getElementById('longitud').value);
-            const radius_km = parseFloat(document.getElementById('radius_km').value);
-            
-            fetch('/recommend', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+            fetch("/recommend", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    tienda_id: tienda_id,
-                    user_location: [latitud, longitud],
-                    radius_km: radius_km
+                    id_df: idDf,
+                    local_id: localId,
+                    user_location: userLocation,
+                    radius_km: radiusKm
                 })
             })
             .then(response => response.json())
-            .then(data => {
-                const resultElement = document.getElementById('result');
-                resultElement.innerHTML = '';  // Limpiar resultados anteriores
-                data.forEach(tienda => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<strong>Nombre:</strong> ${tienda.nombre}<br>
-                                    <strong>Calificaciones:</strong> ${tienda.calificaciones}<br>
-                                    <strong>Distrito:</strong> ${tienda.distrito}<br>
-                                    <strong>Distancia:</strong> ${tienda.distance.toFixed(2)} km`;
-                    resultElement.appendChild(li);
-                });
+            .then(data => displayRecommendations(data))
+            .catch(error => console.error("Error fetching distance-based recommendations:", error));
+        }
+
+        function getHybridRecommendations() {
+            const idDfHybrid = document.getElementById("id_df_hybrid").value;
+            const userId = document.getElementById("user_id").value;
+            const locationInput = document.getElementById("user_location_hybrid").value.split(",");
+            const userLocation = [parseFloat(locationInput[0]), parseFloat(locationInput[1])];
+            const userPreference = document.getElementById("user_preference").value;
+            const radiusKm = parseFloat(document.getElementById("radius_km_hybrid").value);
+            
+            fetch("/recommend_hybrid", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id_df: idDfHybrid,
+                    user_id: userId,
+                    user_location: userLocation,
+                    user_preference: userPreference,
+                    radius_km: radiusKm
+                })
             })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
+            .then(response => response.json())
+            .then(data => displayRecommendations(data))
+            .catch(error => console.error("Error fetching hybrid recommendations:", error));
+        }
     </script>
 </body>
 </html>

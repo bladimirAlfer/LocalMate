@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Recommendations</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        input, button, select { padding: 8px; margin-top: 10px; }
+        .recommendations { margin-top: 20px; }
+        .store { margin-bottom: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Store Recommendations</h1>
+
+    <!-- Search-Based Recommendation Form -->
+    <h2>Search-Based Recommendation</h2>
+    <form id="searchForm">
+        <label for="id_df_search">ID Type:</label>
+        <select id="id_df_search" required>
+            <option value="local_id">Store</option>
+            <option value="evento_id">Event</option>
+            <option value="actividad_id">Activity</option>
+        </select><br>
+        
+        <label for="tienda_nombre">Store Name:</label>
+        <input type="text" id="tienda_nombre" required><br>
+        
+        <label for="user_location_search">Location (latitude, longitude):</label>
+        <input type="text" id="user_location_search" placeholder="-12.1351, -77.0221" required><br>
+        
+        <label for="radius_km_search">Search Radius (km):</label>
+        <input type="number" id="radius_km_search" step="0.1" value="5"><br>
+        
+        <label for="top_n_search">Top N Results:</label>
+        <input type="number" id="top_n_search" value="5"><br>
+        
+        <button type="button" onclick="getSearchRecommendations()">Get Search Recommendations</button>
+    </form>
+    
+    <!-- Recommendations Display -->
+    <div id="recommendations" class="recommendations"></div>
+    
+    <script>
+        function displayRecommendations(data) {
+            const recommendationsDiv = document.getElementById("recommendations");
+            recommendationsDiv.innerHTML = "<h2>Recommendations:</h2>";
+            data.forEach(store => {
+                const storeDiv = document.createElement("div");
+                storeDiv.classList.add("store");
+                storeDiv.innerHTML = `
+                    <strong>Name:</strong> ${store.nombre}<br>
+                    <strong>Category:</strong> ${store.categorias}<br>
+                    <strong>Rating:</strong> ${store.calificaciones}<br>
+                    <strong>Distance:</strong> ${store.distance} km<br>
+                    <strong>Address:</strong> ${store.direccion}<br>
+                    <strong>Price Range:</strong> ${store.rango_precios}<br>
+                    <strong>Payment Methods:</strong> ${store.metodos_pago}<br>
+                    <strong>Store Size:</strong> ${store.tamano_tienda}<br>
+                    <strong>Parking:</strong> ${store.estacionamiento}<br>
+                    <strong>Opening Hours:</strong> ${store.horario_apertura}<br>
+                    <strong>District:</strong> ${store.distrito}<br>
+                    <strong>Zone:</strong> ${store.zona}
+                `;
+                recommendationsDiv.appendChild(storeDiv);
+            });
+        }
+
+        function getSearchRecommendations() {
+            const idDf = document.getElementById("id_df_search").value;
+            const tiendaNombre = document.getElementById("tienda_nombre").value;
+            const locationInput = document.getElementById("user_location_search").value.split(",");
+            const userLocation = [parseFloat(locationInput[0]), parseFloat(locationInput[1])];
+            const radiusKm = parseFloat(document.getElementById("radius_km_search").value);
+            const topN = parseInt(document.getElementById("top_n_search").value);
+            
+            fetch("/search_stores", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id_df: idDf,
+                    tienda_nombre: tiendaNombre,
+                    user_location: userLocation,
+                    radius_km: radiusKm,
+                    top_n: topN
+                })
+            })
+            .then(response => response.json())
+            .then(data => displayRecommendations(data))
+            .catch(error => console.error("Error fetching search-based recommendations:", error));
+        }
+    </script>
+</body>
+</html>

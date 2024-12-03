@@ -1,0 +1,222 @@
+[
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 15976,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:00:04\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17950,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:08:53\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 15976,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:11:11\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 15976,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:14:03\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:21:59\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17980,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:22:23\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:29:07\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:32:00\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:34:52\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:34:54\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 15976,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:37:40\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17980,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "10:37:49\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "12:14:46\u202fAM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 17982,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "8:51:36\u202fAM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 15976,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-20",
+        "hora_interaccion": "8:51:52\u202fAM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 642,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-27",
+        "hora_interaccion": "10:45:18\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 643,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-27",
+        "hora_interaccion": "10:46:58\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 642,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-27",
+        "hora_interaccion": "10:51:12\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "iSMi9lWgJGgKD18q4uxtdlFmqNR2",
+        "contenido_id": 642,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-27",
+        "hora_interaccion": "10:51:26\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    },
+    {
+        "user_id": "wPiXTnkpErUahHL5GA4oPJiQ4573",
+        "contenido_id": 642,
+        "tipo_interaccion": "Visita",
+        "fecha_interaccion": "2024-11-27",
+        "hora_interaccion": "11:02:37\u202fPM",
+        "ubicacion_usuario": {
+            "latitude": -12.135609987425006,
+            "longitude": -77.02200434200567
+        }
+    }
+]
