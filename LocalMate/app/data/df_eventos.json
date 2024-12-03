@@ -1,0 +1,2729 @@
+[
+    {
+        "evento_id": 1,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.152356,
+        "longitud": -77.013885,
+        "direccion": "Dirección #1",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-10-14",
+        "fecha_fin": "2024-10-14",
+        "hora_inicio": "18:00",
+        "hora_fin": "20:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    },
+    {
+        "evento_id": 2,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.11282,
+        "longitud": -76.979462,
+        "direccion": "Dirección #2",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-05-16",
+        "fecha_fin": "2024-05-16",
+        "hora_inicio": "09:00",
+        "hora_fin": "10:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 3,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.174534,
+        "longitud": -77.016607,
+        "direccion": "Dirección #3",
+        "calificaciones": 4.7,
+        "fecha_inicio": "2024-09-06",
+        "fecha_fin": "2024-09-07",
+        "hora_inicio": "10:00",
+        "hora_fin": "13:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "lima este",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 4,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.102976,
+        "longitud": -76.971041,
+        "direccion": "Dirección #4",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-10-10",
+        "fecha_fin": "2024-10-10",
+        "hora_inicio": "15:00",
+        "hora_fin": "19:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 5,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.161147,
+        "longitud": -76.98122,
+        "direccion": "Dirección #5",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-09-24",
+        "fecha_fin": "2024-09-26",
+        "hora_inicio": "16:00",
+        "hora_fin": "17:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 6,
+        "nombre": "Noche de Karaoke",
+        "categorias": [
+            "Entretenimiento",
+            "Música"
+        ],
+        "descripcion_breve": "Canta tus canciones favoritas en una noche de karaoke.",
+        "latitud": -12.112892,
+        "longitud": -77.013005,
+        "direccion": "Dirección #6",
+        "calificaciones": 4.3,
+        "fecha_inicio": "2024-09-02",
+        "fecha_fin": "2024-09-04",
+        "hora_inicio": "13:00",
+        "hora_fin": "14:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/nochedekaraoke",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Karaoke",
+            "Música"
+        ]
+    },
+    {
+        "evento_id": 7,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.153176,
+        "longitud": -77.012195,
+        "direccion": "Dirección #7",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-06-14",
+        "fecha_fin": "2024-06-16",
+        "hora_inicio": "18:00",
+        "hora_fin": "21:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 8,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.148956,
+        "longitud": -77.012315,
+        "direccion": "Dirección #8",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-09-04",
+        "fecha_fin": "2024-09-06",
+        "hora_inicio": "14:00",
+        "hora_fin": "18:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 9,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.118746,
+        "longitud": -76.965842,
+        "direccion": "Dirección #9",
+        "calificaciones": 4.8,
+        "fecha_inicio": "2024-05-20",
+        "fecha_fin": "2024-05-20",
+        "hora_inicio": "19:00",
+        "hora_fin": "22:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 10,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.155544,
+        "longitud": -77.019866,
+        "direccion": "Dirección #10",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-09-03",
+        "fecha_fin": "2024-09-03",
+        "hora_inicio": "18:00",
+        "hora_fin": "21:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "barranco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 11,
+        "nombre": "Noche de Karaoke",
+        "categorias": [
+            "Entretenimiento",
+            "Música"
+        ],
+        "descripcion_breve": "Canta tus canciones favoritas en una noche de karaoke.",
+        "latitud": -12.129831,
+        "longitud": -76.989561,
+        "direccion": "Dirección #11",
+        "calificaciones": 4.8,
+        "fecha_inicio": "2024-10-16",
+        "fecha_fin": "2024-10-16",
+        "hora_inicio": "15:00",
+        "hora_fin": "19:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/nochedekaraoke",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Karaoke",
+            "Música"
+        ]
+    },
+    {
+        "evento_id": 12,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.126953,
+        "longitud": -76.965022,
+        "direccion": "Dirección #12",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-06-18",
+        "fecha_fin": "2024-06-19",
+        "hora_inicio": "08:00",
+        "hora_fin": "11:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 13,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.144378,
+        "longitud": -77.007891,
+        "direccion": "Dirección #13",
+        "calificaciones": 5.5,
+        "fecha_inicio": "2024-09-19",
+        "fecha_fin": "2024-09-19",
+        "hora_inicio": "15:00",
+        "hora_fin": "16:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    },
+    {
+        "evento_id": 14,
+        "nombre": "Obra de Teatro",
+        "categorias": [
+            "Cultura",
+            "Teatro"
+        ],
+        "descripcion_breve": "Disfruta de una obra de teatro con los mejores actores.",
+        "latitud": -12.153422,
+        "longitud": -76.969247,
+        "direccion": "Dirección #14",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-09-17",
+        "fecha_fin": "2024-09-18",
+        "hora_inicio": "16:00",
+        "hora_fin": "20:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/obradeteatro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Teatro",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 15,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.14244,
+        "longitud": -76.989507,
+        "direccion": "Dirección #15",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-05-02",
+        "fecha_fin": "2024-05-02",
+        "hora_inicio": "17:00",
+        "hora_fin": "21:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    },
+    {
+        "evento_id": 16,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.168159,
+        "longitud": -76.997408,
+        "direccion": "Dirección #16",
+        "calificaciones": 4.9,
+        "fecha_inicio": "2024-10-19",
+        "fecha_fin": "2024-10-20",
+        "hora_inicio": "11:00",
+        "hora_fin": "14:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 17,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.122237,
+        "longitud": -76.994868,
+        "direccion": "Dirección #17",
+        "calificaciones": 3.7,
+        "fecha_inicio": "2024-07-24",
+        "fecha_fin": "2024-07-26",
+        "hora_inicio": "10:00",
+        "hora_fin": "13:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 18,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.167335,
+        "longitud": -77.003953,
+        "direccion": "Dirección #18",
+        "calificaciones": 4.4,
+        "fecha_inicio": "2024-08-18",
+        "fecha_fin": "2024-08-19",
+        "hora_inicio": "11:00",
+        "hora_fin": "12:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 19,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.170082,
+        "longitud": -77.003764,
+        "direccion": "Dirección #19",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-06-02",
+        "fecha_fin": "2024-06-03",
+        "hora_inicio": "16:00",
+        "hora_fin": "20:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 20,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.138747,
+        "longitud": -76.987851,
+        "direccion": "Dirección #20",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-06-02",
+        "fecha_fin": "2024-06-03",
+        "hora_inicio": "15:00",
+        "hora_fin": "17:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 21,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.109047,
+        "longitud": -77.009619,
+        "direccion": "Dirección #21",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-10-25",
+        "fecha_fin": "2024-10-27",
+        "hora_inicio": "12:00",
+        "hora_fin": "14:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 22,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.152326,
+        "longitud": -76.973884,
+        "direccion": "Dirección #22",
+        "calificaciones": 3.4,
+        "fecha_inicio": "2024-09-16",
+        "fecha_fin": "2024-09-16",
+        "hora_inicio": "12:00",
+        "hora_fin": "13:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 23,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.142095,
+        "longitud": -77.014105,
+        "direccion": "Dirección #23",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-06-25",
+        "fecha_fin": "2024-06-26",
+        "hora_inicio": "12:00",
+        "hora_fin": "16:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 24,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.129512,
+        "longitud": -77.018819,
+        "direccion": "Dirección #24",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-08-29",
+        "fecha_fin": "2024-08-30",
+        "hora_inicio": "12:00",
+        "hora_fin": "15:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "miraflores",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 25,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.118758,
+        "longitud": -77.008305,
+        "direccion": "Dirección #25",
+        "calificaciones": 4.3,
+        "fecha_inicio": "2024-07-07",
+        "fecha_fin": "2024-07-07",
+        "hora_inicio": "18:00",
+        "hora_fin": "21:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 26,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.12145,
+        "longitud": -76.992049,
+        "direccion": "Dirección #26",
+        "calificaciones": 4.7,
+        "fecha_inicio": "2024-05-14",
+        "fecha_fin": "2024-05-15",
+        "hora_inicio": "16:00",
+        "hora_fin": "18:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 27,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.151241,
+        "longitud": -76.971676,
+        "direccion": "Dirección #27",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-07-25",
+        "fecha_fin": "2024-07-27",
+        "hora_inicio": "16:00",
+        "hora_fin": "17:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 28,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.138367,
+        "longitud": -76.980206,
+        "direccion": "Dirección #28",
+        "calificaciones": 3.7,
+        "fecha_inicio": "2024-09-06",
+        "fecha_fin": "2024-09-06",
+        "hora_inicio": "19:00",
+        "hora_fin": "21:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 29,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.162957,
+        "longitud": -76.970687,
+        "direccion": "Dirección #29",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-06-11",
+        "fecha_fin": "2024-06-12",
+        "hora_inicio": "19:00",
+        "hora_fin": "23:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 30,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.145373,
+        "longitud": -77.010568,
+        "direccion": "Dirección #30",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-09-05",
+        "fecha_fin": "2024-09-05",
+        "hora_inicio": "16:00",
+        "hora_fin": "17:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 31,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.120767,
+        "longitud": -76.976788,
+        "direccion": "Dirección #31",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-07-08",
+        "fecha_fin": "2024-07-10",
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 32,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.152066,
+        "longitud": -77.013064,
+        "direccion": "Dirección #32",
+        "calificaciones": 3.0,
+        "fecha_inicio": "2024-08-27",
+        "fecha_fin": "2024-08-29",
+        "hora_inicio": "15:00",
+        "hora_fin": "17:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 33,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.139716,
+        "longitud": -77.011479,
+        "direccion": "Dirección #33",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-05-14",
+        "fecha_fin": "2024-05-15",
+        "hora_inicio": "15:00",
+        "hora_fin": "17:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 34,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.107885,
+        "longitud": -77.002171,
+        "direccion": "Dirección #34",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-09-05",
+        "fecha_fin": "2024-09-07",
+        "hora_inicio": "17:00",
+        "hora_fin": "20:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 35,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.121802,
+        "longitud": -76.969579,
+        "direccion": "Dirección #35",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-06-22",
+        "fecha_fin": "2024-06-22",
+        "hora_inicio": "11:00",
+        "hora_fin": "15:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 36,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.174952,
+        "longitud": -77.018514,
+        "direccion": "Dirección #36",
+        "calificaciones": 2.8,
+        "fecha_inicio": "2024-05-28",
+        "fecha_fin": "2024-05-28",
+        "hora_inicio": "17:00",
+        "hora_fin": "20:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "lima este",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 37,
+        "nombre": "Noche de Karaoke",
+        "categorias": [
+            "Entretenimiento",
+            "Música"
+        ],
+        "descripcion_breve": "Canta tus canciones favoritas en una noche de karaoke.",
+        "latitud": -12.156574,
+        "longitud": -77.017603,
+        "direccion": "Dirección #37",
+        "calificaciones": 3.7,
+        "fecha_inicio": "2024-06-25",
+        "fecha_fin": "2024-06-25",
+        "hora_inicio": "20:00",
+        "hora_fin": "24:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/nochedekaraoke",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Karaoke",
+            "Música"
+        ]
+    },
+    {
+        "evento_id": 38,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.152525,
+        "longitud": -76.965197,
+        "direccion": "Dirección #38",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-10-15",
+        "fecha_fin": "2024-10-17",
+        "hora_inicio": "09:00",
+        "hora_fin": "12:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 39,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.166396,
+        "longitud": -77.002877,
+        "direccion": "Dirección #39",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-06-10",
+        "fecha_fin": "2024-06-10",
+        "hora_inicio": "08:00",
+        "hora_fin": "09:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 40,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.15966,
+        "longitud": -76.994514,
+        "direccion": "Dirección #40",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-08-12",
+        "fecha_fin": "2024-08-14",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    },
+    {
+        "evento_id": 41,
+        "nombre": "Obra de Teatro",
+        "categorias": [
+            "Cultura",
+            "Teatro"
+        ],
+        "descripcion_breve": "Disfruta de una obra de teatro con los mejores actores.",
+        "latitud": -12.13912,
+        "longitud": -76.990183,
+        "direccion": "Dirección #41",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-06-07",
+        "fecha_fin": "2024-06-09",
+        "hora_inicio": "13:00",
+        "hora_fin": "14:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/obradeteatro",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Teatro",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 42,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.175169,
+        "longitud": -77.019575,
+        "direccion": "Dirección #42",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-06-05",
+        "fecha_fin": "2024-06-05",
+        "hora_inicio": "10:00",
+        "hora_fin": "12:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "lima este",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 43,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.111652,
+        "longitud": -76.964549,
+        "direccion": "Dirección #43",
+        "calificaciones": 2.9,
+        "fecha_inicio": "2024-09-01",
+        "fecha_fin": "2024-09-01",
+        "hora_inicio": "15:00",
+        "hora_fin": "19:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 44,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.136899,
+        "longitud": -77.009603,
+        "direccion": "Dirección #44",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-05-14",
+        "fecha_fin": "2024-05-15",
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 45,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.108874,
+        "longitud": -76.99105,
+        "direccion": "Dirección #45",
+        "calificaciones": 5.3,
+        "fecha_inicio": "2024-06-01",
+        "fecha_fin": "2024-06-02",
+        "hora_inicio": "14:00",
+        "hora_fin": "17:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 46,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.119637,
+        "longitud": -76.992607,
+        "direccion": "Dirección #46",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-07-06",
+        "fecha_fin": "2024-07-06",
+        "hora_inicio": "20:00",
+        "hora_fin": "21:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 47,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.116737,
+        "longitud": -76.962734,
+        "direccion": "Dirección #47",
+        "calificaciones": 4.5,
+        "fecha_inicio": "2024-10-18",
+        "fecha_fin": "2024-10-19",
+        "hora_inicio": "17:00",
+        "hora_fin": "20:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 48,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.124114,
+        "longitud": -77.012989,
+        "direccion": "Dirección #48",
+        "calificaciones": 3.2,
+        "fecha_inicio": "2024-08-06",
+        "fecha_fin": "2024-08-07",
+        "hora_inicio": "15:00",
+        "hora_fin": "16:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 49,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.134247,
+        "longitud": -77.009993,
+        "direccion": "Dirección #49",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-07-14",
+        "fecha_fin": "2024-07-14",
+        "hora_inicio": "11:00",
+        "hora_fin": "13:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 50,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.100727,
+        "longitud": -76.981537,
+        "direccion": "Dirección #50",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-08-31",
+        "fecha_fin": "2024-08-31",
+        "hora_inicio": "19:00",
+        "hora_fin": "20:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 51,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.116518,
+        "longitud": -76.977815,
+        "direccion": "Dirección #51",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-05-08",
+        "fecha_fin": "2024-05-10",
+        "hora_inicio": "11:00",
+        "hora_fin": "13:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 52,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.111398,
+        "longitud": -76.980237,
+        "direccion": "Dirección #52",
+        "calificaciones": 4.7,
+        "fecha_inicio": "2024-09-23",
+        "fecha_fin": "2024-09-24",
+        "hora_inicio": "17:00",
+        "hora_fin": "21:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 53,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.102988,
+        "longitud": -76.984626,
+        "direccion": "Dirección #53",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-07-24",
+        "fecha_fin": "2024-07-25",
+        "hora_inicio": "08:00",
+        "hora_fin": "12:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 54,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.149279,
+        "longitud": -77.004232,
+        "direccion": "Dirección #54",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-09-25",
+        "fecha_fin": "2024-09-26",
+        "hora_inicio": "14:00",
+        "hora_fin": "18:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 55,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.170027,
+        "longitud": -76.974363,
+        "direccion": "Dirección #55",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-06-20",
+        "fecha_fin": "2024-06-20",
+        "hora_inicio": "20:00",
+        "hora_fin": "21:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    },
+    {
+        "evento_id": 56,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.105273,
+        "longitud": -77.002855,
+        "direccion": "Dirección #56",
+        "calificaciones": 4.5,
+        "fecha_inicio": "2024-10-24",
+        "fecha_fin": "2024-10-25",
+        "hora_inicio": "16:00",
+        "hora_fin": "19:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    },
+    {
+        "evento_id": 57,
+        "nombre": "Noche de Karaoke",
+        "categorias": [
+            "Entretenimiento",
+            "Música"
+        ],
+        "descripcion_breve": "Canta tus canciones favoritas en una noche de karaoke.",
+        "latitud": -12.163754,
+        "longitud": -76.995978,
+        "direccion": "Dirección #57",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-08-05",
+        "fecha_fin": "2024-08-05",
+        "hora_inicio": "13:00",
+        "hora_fin": "14:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/nochedekaraoke",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Karaoke",
+            "Música"
+        ]
+    },
+    {
+        "evento_id": 58,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.136251,
+        "longitud": -77.010358,
+        "direccion": "Dirección #58",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-08-04",
+        "fecha_fin": "2024-08-04",
+        "hora_inicio": "10:00",
+        "hora_fin": "12:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 59,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.108955,
+        "longitud": -76.987077,
+        "direccion": "Dirección #59",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-05-29",
+        "fecha_fin": "2024-05-29",
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 60,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.118,
+        "longitud": -76.990946,
+        "direccion": "Dirección #60",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-09-28",
+        "fecha_fin": "2024-09-28",
+        "hora_inicio": "16:00",
+        "hora_fin": "20:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 61,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.157906,
+        "longitud": -77.01262,
+        "direccion": "Dirección #61",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-10-02",
+        "fecha_fin": "2024-10-04",
+        "hora_inicio": "10:00",
+        "hora_fin": "13:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 62,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.100609,
+        "longitud": -77.009011,
+        "direccion": "Dirección #62",
+        "calificaciones": 3.7,
+        "fecha_inicio": "2024-06-23",
+        "fecha_fin": "2024-06-23",
+        "hora_inicio": "14:00",
+        "hora_fin": "15:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 63,
+        "nombre": "Obra de Teatro",
+        "categorias": [
+            "Cultura",
+            "Teatro"
+        ],
+        "descripcion_breve": "Disfruta de una obra de teatro con los mejores actores.",
+        "latitud": -12.170004,
+        "longitud": -77.005428,
+        "direccion": "Dirección #63",
+        "calificaciones": 3.3,
+        "fecha_inicio": "2024-05-10",
+        "fecha_fin": "2024-05-10",
+        "hora_inicio": "10:00",
+        "hora_fin": "14:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/obradeteatro",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Teatro",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 64,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.179117,
+        "longitud": -77.00443,
+        "direccion": "Dirección #64",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-05-19",
+        "fecha_fin": "2024-05-20",
+        "hora_inicio": "17:00",
+        "hora_fin": "21:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "lima este",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 65,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.166315,
+        "longitud": -76.994497,
+        "direccion": "Dirección #65",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-09-12",
+        "fecha_fin": "2024-09-12",
+        "hora_inicio": "19:00",
+        "hora_fin": "21:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 66,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.101188,
+        "longitud": -76.987892,
+        "direccion": "Dirección #66",
+        "calificaciones": 4.5,
+        "fecha_inicio": "2024-10-10",
+        "fecha_fin": "2024-10-10",
+        "hora_inicio": "15:00",
+        "hora_fin": "19:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 67,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.138675,
+        "longitud": -77.019287,
+        "direccion": "Dirección #67",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-08-05",
+        "fecha_fin": "2024-08-05",
+        "hora_inicio": "20:00",
+        "hora_fin": "24:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "barranco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 68,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.111135,
+        "longitud": -76.973141,
+        "direccion": "Dirección #68",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-07-06",
+        "fecha_fin": "2024-07-08",
+        "hora_inicio": "12:00",
+        "hora_fin": "14:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 69,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.114599,
+        "longitud": -76.997977,
+        "direccion": "Dirección #69",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-10-02",
+        "fecha_fin": "2024-10-02",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 70,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.130916,
+        "longitud": -76.96064,
+        "direccion": "Dirección #70",
+        "calificaciones": 3.4,
+        "fecha_inicio": "2024-05-20",
+        "fecha_fin": "2024-05-20",
+        "hora_inicio": "18:00",
+        "hora_fin": "20:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 71,
+        "nombre": "Obra de Teatro",
+        "categorias": [
+            "Cultura",
+            "Teatro"
+        ],
+        "descripcion_breve": "Disfruta de una obra de teatro con los mejores actores.",
+        "latitud": -12.118843,
+        "longitud": -76.987595,
+        "direccion": "Dirección #71",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-07-27",
+        "fecha_fin": "2024-07-29",
+        "hora_inicio": "16:00",
+        "hora_fin": "20:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/obradeteatro",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Teatro",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 72,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.129263,
+        "longitud": -76.986616,
+        "direccion": "Dirección #72",
+        "calificaciones": 3.8,
+        "fecha_inicio": "2024-09-03",
+        "fecha_fin": "2024-09-05",
+        "hora_inicio": "11:00",
+        "hora_fin": "13:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 73,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.169638,
+        "longitud": -76.963392,
+        "direccion": "Dirección #73",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-07-12",
+        "fecha_fin": "2024-07-12",
+        "hora_inicio": "18:00",
+        "hora_fin": "21:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 74,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.118322,
+        "longitud": -77.008325,
+        "direccion": "Dirección #74",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-05-28",
+        "fecha_fin": "2024-05-29",
+        "hora_inicio": "09:00",
+        "hora_fin": "10:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 75,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.138428,
+        "longitud": -77.019595,
+        "direccion": "Dirección #75",
+        "calificaciones": 4.7,
+        "fecha_inicio": "2024-05-21",
+        "fecha_fin": "2024-05-22",
+        "hora_inicio": "20:00",
+        "hora_fin": "24:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "barranco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 76,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.161054,
+        "longitud": -76.992337,
+        "direccion": "Dirección #76",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-07-27",
+        "fecha_fin": "2024-07-29",
+        "hora_inicio": "11:00",
+        "hora_fin": "12:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 77,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.173386,
+        "longitud": -76.964378,
+        "direccion": "Dirección #77",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-07-29",
+        "fecha_fin": "2024-07-30",
+        "hora_inicio": "16:00",
+        "hora_fin": "19:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 78,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.132315,
+        "longitud": -76.961212,
+        "direccion": "Dirección #78",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-08-30",
+        "fecha_fin": "2024-08-31",
+        "hora_inicio": "16:00",
+        "hora_fin": "18:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 79,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.107339,
+        "longitud": -76.991726,
+        "direccion": "Dirección #79",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-10-22",
+        "fecha_fin": "2024-10-22",
+        "hora_inicio": "09:00",
+        "hora_fin": "13:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 80,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.140949,
+        "longitud": -76.969349,
+        "direccion": "Dirección #80",
+        "calificaciones": 3.5,
+        "fecha_inicio": "2024-10-27",
+        "fecha_fin": "2024-10-29",
+        "hora_inicio": "08:00",
+        "hora_fin": "10:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 81,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.116933,
+        "longitud": -76.960278,
+        "direccion": "Dirección #81",
+        "calificaciones": 4.4,
+        "fecha_inicio": "2024-06-07",
+        "fecha_fin": "2024-06-09",
+        "hora_inicio": "14:00",
+        "hora_fin": "15:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 82,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.155832,
+        "longitud": -76.978914,
+        "direccion": "Dirección #82",
+        "calificaciones": 3.2,
+        "fecha_inicio": "2024-09-28",
+        "fecha_fin": "2024-09-28",
+        "hora_inicio": "10:00",
+        "hora_fin": "11:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 83,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.122434,
+        "longitud": -76.976298,
+        "direccion": "Dirección #83",
+        "calificaciones": 3.1,
+        "fecha_inicio": "2024-07-10",
+        "fecha_fin": "2024-07-11",
+        "hora_inicio": "08:00",
+        "hora_fin": "11:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 84,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.150124,
+        "longitud": -76.985461,
+        "direccion": "Dirección #84",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-07-16",
+        "fecha_fin": "2024-07-18",
+        "hora_inicio": "17:00",
+        "hora_fin": "21:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 85,
+        "nombre": "Conferencia de Tecnología",
+        "categorias": [
+            "Educación",
+            "Tecnología"
+        ],
+        "descripcion_breve": "Aprende sobre tecnología en una conferencia especializada.",
+        "latitud": -12.159448,
+        "longitud": -76.976944,
+        "direccion": "Dirección #85",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-05-24",
+        "fecha_fin": "2024-05-25",
+        "hora_inicio": "12:00",
+        "hora_fin": "13:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/conferenciadetecnología",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Tecnología",
+            "Educación"
+        ]
+    },
+    {
+        "evento_id": 86,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.163144,
+        "longitud": -76.997382,
+        "direccion": "Dirección #86",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-09-08",
+        "fecha_fin": "2024-09-09",
+        "hora_inicio": "18:00",
+        "hora_fin": "19:00",
+        "precio": 0,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 87,
+        "nombre": "Feria del Libro",
+        "categorias": [
+            "Cultura",
+            "Libros"
+        ],
+        "descripcion_breve": "Descubre las últimas novedades literarias en la feria del libro.",
+        "latitud": -12.129977,
+        "longitud": -76.965517,
+        "direccion": "Dirección #87",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-09-28",
+        "fecha_fin": "2024-09-30",
+        "hora_inicio": "18:00",
+        "hora_fin": "19:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/feriadellibro",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Libros",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 88,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.167795,
+        "longitud": -76.992262,
+        "direccion": "Dirección #88",
+        "calificaciones": 3.1,
+        "fecha_inicio": "2024-09-25",
+        "fecha_fin": "2024-09-26",
+        "hora_inicio": "09:00",
+        "hora_fin": "11:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 89,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.170279,
+        "longitud": -76.989505,
+        "direccion": "Dirección #89",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-10-01",
+        "fecha_fin": "2024-10-02",
+        "hora_inicio": "13:00",
+        "hora_fin": "14:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 90,
+        "nombre": "Obra de Teatro",
+        "categorias": [
+            "Cultura",
+            "Teatro"
+        ],
+        "descripcion_breve": "Disfruta de una obra de teatro con los mejores actores.",
+        "latitud": -12.142403,
+        "longitud": -77.014633,
+        "direccion": "Dirección #90",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-09-23",
+        "fecha_fin": "2024-09-25",
+        "hora_inicio": "12:00",
+        "hora_fin": "13:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/obradeteatro",
+        "target_etario": "25-50",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Teatro",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 91,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.101592,
+        "longitud": -77.012952,
+        "direccion": "Dirección #91",
+        "calificaciones": 3.6,
+        "fecha_inicio": "2024-06-14",
+        "fecha_fin": "2024-06-16",
+        "hora_inicio": "14:00",
+        "hora_fin": "16:00",
+        "precio": 60,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 92,
+        "nombre": "Festival Gastronómico",
+        "categorias": [
+            "Comida",
+            "Festival"
+        ],
+        "descripcion_breve": "Prueba los mejores platillos en el festival gastronómico.",
+        "latitud": -12.166805,
+        "longitud": -76.977157,
+        "direccion": "Dirección #92",
+        "calificaciones": 4.5,
+        "fecha_inicio": "2024-09-05",
+        "fecha_fin": "2024-09-06",
+        "hora_inicio": "15:00",
+        "hora_fin": "16:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/festivalgastronómico",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Comida",
+            "Gastronomía"
+        ]
+    },
+    {
+        "evento_id": 93,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.168339,
+        "longitud": -76.974448,
+        "direccion": "Dirección #93",
+        "calificaciones": 5.1,
+        "fecha_inicio": "2024-08-27",
+        "fecha_fin": "2024-08-27",
+        "hora_inicio": "20:00",
+        "hora_fin": "24:00",
+        "precio": 100,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 94,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.150263,
+        "longitud": -76.968146,
+        "direccion": "Dirección #94",
+        "calificaciones": 4.1,
+        "fecha_inicio": "2024-05-27",
+        "fecha_fin": "2024-05-27",
+        "hora_inicio": "16:00",
+        "hora_fin": "17:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 95,
+        "nombre": "Concierto",
+        "categorias": [
+            "Música",
+            "Concierto"
+        ],
+        "descripcion_breve": "Disfruta de un concierto en vivo con tus artistas favoritos.",
+        "latitud": -12.17253,
+        "longitud": -76.98117,
+        "direccion": "Dirección #95",
+        "calificaciones": 3.9,
+        "fecha_inicio": "2024-07-10",
+        "fecha_fin": "2024-07-10",
+        "hora_inicio": "15:00",
+        "hora_fin": "17:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/concierto",
+        "target_etario": "18-65",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Música en vivo",
+            "Ambiente juvenil"
+        ]
+    },
+    {
+        "evento_id": 96,
+        "nombre": "Taller de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educativo"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un taller especializado.",
+        "latitud": -12.15268,
+        "longitud": -76.966801,
+        "direccion": "Dirección #96",
+        "calificaciones": 3.4,
+        "fecha_inicio": "2024-08-25",
+        "fecha_fin": "2024-08-25",
+        "hora_inicio": "11:00",
+        "hora_fin": "15:00",
+        "precio": 20,
+        "redes_sociales": "fb.com/tallerdefotografía",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Fotografía",
+            "Arte"
+        ]
+    },
+    {
+        "evento_id": 97,
+        "nombre": "Exposición de Arte",
+        "categorias": [
+            "Arte",
+            "Cultura"
+        ],
+        "descripcion_breve": "Descubre las últimas tendencias en arte en una exposición.",
+        "latitud": -12.129574,
+        "longitud": -76.96729,
+        "direccion": "Dirección #97",
+        "calificaciones": 4.6,
+        "fecha_inicio": "2024-05-07",
+        "fecha_fin": "2024-05-07",
+        "hora_inicio": "18:00",
+        "hora_fin": "19:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/exposicióndearte",
+        "target_etario": "18-40",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 98,
+        "nombre": "Feria de Emprendedores",
+        "categorias": [
+            "Negocios",
+            "Innovación"
+        ],
+        "descripcion_breve": "Conoce los emprendimientos más innovadores en la feria.",
+        "latitud": -12.146003,
+        "longitud": -76.995979,
+        "direccion": "Dirección #98",
+        "calificaciones": 4.7,
+        "fecha_inicio": "2024-07-27",
+        "fecha_fin": "2024-07-27",
+        "hora_inicio": "11:00",
+        "hora_fin": "13:00",
+        "precio": 500,
+        "redes_sociales": "fb.com/feriadeemprendedores",
+        "target_etario": "25-50",
+        "estacionamiento": false,
+        "wifi": false,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Emprendimiento",
+            "Negocios"
+        ]
+    },
+    {
+        "evento_id": 99,
+        "nombre": "Noche de Karaoke",
+        "categorias": [
+            "Entretenimiento",
+            "Música"
+        ],
+        "descripcion_breve": "Canta tus canciones favoritas en una noche de karaoke.",
+        "latitud": -12.135978,
+        "longitud": -76.997107,
+        "direccion": "Dirección #99",
+        "calificaciones": 4.2,
+        "fecha_inicio": "2024-06-15",
+        "fecha_fin": "2024-06-15",
+        "hora_inicio": "10:00",
+        "hora_fin": "12:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/nochedekaraoke",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Karaoke",
+            "Música"
+        ]
+    },
+    {
+        "evento_id": 100,
+        "nombre": "Obra de Teatro",
+        "categorias": [
+            "Cultura",
+            "Teatro"
+        ],
+        "descripcion_breve": "Disfruta de una obra de teatro con los mejores actores.",
+        "latitud": -12.116176,
+        "longitud": -76.967738,
+        "direccion": "Dirección #100",
+        "calificaciones": 3.7,
+        "fecha_inicio": "2024-08-11",
+        "fecha_fin": "2024-08-11",
+        "hora_inicio": "18:00",
+        "hora_fin": "19:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/obradeteatro",
+        "target_etario": "18-65",
+        "estacionamiento": true,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Teatro",
+            "Cultura"
+        ]
+    },
+    {
+        "evento_id": 101,
+        "nombre": "Carrera de 5K",
+        "categorias": [
+            "Deportes",
+            "Salud"
+        ],
+        "descripcion_breve": "Participa en una carrera de 5K para mantenerte en forma.",
+        "latitud": -12.136491204094087,
+        "longitud": -77.02330399253533,
+        "direccion": "Dirección #1",
+        "calificaciones": 4.0,
+        "fecha_inicio": "2024-10-14",
+        "fecha_fin": "2024-10-14",
+        "hora_inicio": "18:00",
+        "hora_fin": "20:00",
+        "precio": 40,
+        "redes_sociales": "fb.com/carrerade5k",
+        "target_etario": "18-40",
+        "estacionamiento": false,
+        "wifi": true,
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deporte",
+            "Salud"
+        ]
+    }
+]

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, Modal, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../database/firebase';
@@ -7,7 +7,6 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function ContributeScreen() {
   const [userName, setUserName] = useState('');
-  const [menuVisible, setMenuVisible] = useState(false);
   const navigation = useNavigation();
 
   useEffect(() => {
@@ -20,20 +19,18 @@ export default function ContributeScreen() {
     try {
       await signOut(auth);
       Alert.alert('Sesión cerrada', 'Has cerrado sesión correctamente.');
-      navigation.navigate('Home'); // Redirect to home screen after sign out
+      navigation.navigate('Home'); // Redirecciona a la pantalla de inicio
     } catch (error) {
       Alert.alert('Error', 'Hubo un problema al cerrar sesión.');
     }
   };
 
-  const toggleMenu = () => setMenuVisible(!menuVisible);
-
   return (
     <View style={styles.container}>
-      {/* Header with welcome message and profile image */}
+      {/* Header personalizado con el botón de menú */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={toggleMenu}>
-          <Ionicons name="menu" size={28} color="#333" />
+        <TouchableOpacity onPress={() => navigation.openDrawer()} style={styles.menuButton}>
+          <Ionicons name="menu" size={24} color="#333" />
         </TouchableOpacity>
         <Text style={styles.welcomeText}>Bienvenido {userName}</Text>
         <Image
@@ -42,34 +39,7 @@ export default function ContributeScreen() {
         />
       </View>
 
-      {/* Modal for the hamburger menu */}
-      <Modal
-        transparent={true}
-        visible={menuVisible}
-        animationType="slide"
-        onRequestClose={toggleMenu}
-      >
-        <View style={styles.modalBackground}>
-          <View style={styles.menuContainer}>
-            <TouchableOpacity style={styles.menuItem} onPress={() => {
-              toggleMenu();
-              navigation.navigate('ProfileScreen'); // Navigate to ProfileScreen
-            }}>
-              <Ionicons name="person" size={24} color="#333" />
-              <Text style={styles.menuText}>Perfil</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem} onPress={() => {
-              toggleMenu();
-              handleSignOut();
-            }}>
-              <Ionicons name="log-out" size={24} color="#333" />
-              <Text style={styles.menuText}>Cerrar sesión</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
-
-      {/* Benefits Section */}
+      {/* Sección de beneficios */}
       <Text style={styles.sectionTitle}>Beneficios GreatMate</Text>
       <View style={styles.benefitsList}>
         <Text style={styles.benefit}>• Vales de descuento semanales</Text>
@@ -78,7 +48,7 @@ export default function ContributeScreen() {
         <Text style={styles.benefit}>• Visualización interactiva de tus movimientos</Text>
       </View>
 
-      {/* Subscription Options */}
+      {/* Opciones de suscripción */}
       <Text style={styles.plansTitle}>Planes ofrecidos</Text>
       <View style={styles.plansContainer}>
         <TouchableOpacity style={styles.planBox}>
@@ -105,6 +75,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
+  menuButton: {
+    paddingRight: 10, // Espacio a la derecha del botón de menú
+  },
   welcomeText: {
     fontSize: 20,
     fontWeight: 'bold',
@@ -116,26 +89,6 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 25,
-  },
-  modalBackground: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  menuContainer: {
-    backgroundColor: 'white',
-    padding: 20,
-    borderTopRightRadius: 20,
-    borderTopLeftRadius: 20,
-  },
-  menuItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingVertical: 15,
-  },
-  menuText: {
-    fontSize: 16,
-    marginLeft: 10,
   },
   sectionTitle: {
     fontSize: 22,

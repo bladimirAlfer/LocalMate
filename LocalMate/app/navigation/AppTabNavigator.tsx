@@ -1,22 +1,19 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image, Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import HomeUserScreen from '../screens/User/HomeUserScreen';
 import ContributeScreen from '../screens/User/ContributeScreen';
 import SavedScreen from '../screens/User/SavedScreen';
 import ProfileScreen from '../screens/User/ProfileScreen';
-
-const exploreIcon = require("../../assets/images/Explore.png");
-const addIcon = require("../../assets/images/Add.png");
-const saveIcon = require("../../assets/images/Guardados.png");
-const profileIcon = require("../../assets/images/Profile.png");
+import ExploreScreen from '../screens/User/ExploreScreen';
 
 const Tab = createBottomTabNavigator();
 
-function TabBarIcon({ source, label, focused }) {
+function TabBarIcon({ name, label, focused }) {
   return (
     <View style={styles.tabItem}>
-      <Image source={source} style={[styles.icon, focused ? styles.activeIcon : styles.inactiveIcon]} />
+      <MaterialCommunityIcons name={name} size={24} color={focused ? "#006ffd" : "#71727a"} />
       <Text style={[styles.tabText, focused ? styles.activeText : styles.inactiveText]}>{label}</Text>
     </View>
   );
@@ -30,34 +27,39 @@ export default function AppTabNavigator() {
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBar,
         tabBarIcon: ({ focused }) => {
-          let iconSource;
+          let iconName;
           let label;
 
           switch (route.name) {
             case "HomeUserScreen":
-              iconSource = exploreIcon;
-              label = "Explorar";
+              iconName = "home-outline";
+              label = "Inicio";
               break;
             case "ContributeScreen":
-              iconSource = addIcon;
+              iconName = "plus";
               label = "Contribuir";
               break;
+            case "ExploreScreen":
+              iconName = "map-outline";
+              label = "Explorar";
+              break;
             case "SavedScreen":
-              iconSource = saveIcon;
+              iconName = "bookmark-outline";
               label = "Guardados";
               break;
             case "ProfileScreen":
-              iconSource = profileIcon;
+              iconName = "account-outline";
               label = "Perfil";
               break;
           }
 
-          return <TabBarIcon source={iconSource} label={label} focused={focused} />;
+          return <TabBarIcon name={iconName} label={label} focused={focused} />;
         },
       })}
     >
       <Tab.Screen name="HomeUserScreen" component={HomeUserScreen} />
       <Tab.Screen name="ContributeScreen" component={ContributeScreen} />
+      <Tab.Screen name="ExploreScreen" component={ExploreScreen} />
       <Tab.Screen name="SavedScreen" component={SavedScreen} />
       <Tab.Screen name="ProfileScreen" component={ProfileScreen} />
     </Tab.Navigator>
@@ -73,25 +75,16 @@ const styles = StyleSheet.create({
   tabItem: {
     alignItems: 'center',
   },
-  icon: {
-    width: 20,
-    height: 20,
-  },
-  activeIcon: {
-    tintColor: "#006ffd", // Cambia el color a azul cuando está activo
-  },
-  inactiveIcon: {
-    tintColor: "#71727a", // Color gris cuando está inactivo
-  },
   tabText: {
     fontSize: 10,
     textAlign: 'center',
   },
   activeText: {
-    color: "#006ffd", // Cambia el color del texto a azul cuando está activo
+    color: "#006ffd", // Color azul cuando está activo
     fontWeight: '600',
   },
   inactiveText: {
     color: "#71727a", // Color gris cuando está inactivo
   },
 });
+

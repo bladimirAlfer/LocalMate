@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
-import { auth, createUserWithEmailAndPassword } from '../../database/firebase';
+import { auth, createUserWithEmailAndPassword, db } from '../../database/firebase';
 import { RootStackParamList } from '../../navigation/MainNavigator';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { doc, setDoc } from 'firebase/firestore';
 
 type RegisterScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Register'>;
 
@@ -16,14 +17,19 @@ export default function RegisterScreen() {
 
   const handleRegister = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      await AsyncStorage.setItem('hasCompletedOnboarding', 'false'); // Inicializa en falso
-      navigation.replace('PreferenciasScreen'); // Navega al inicio del onboarding
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        const userId = userCredential.user.uid;
+
+        // Establece hasCompletedOnboarding en false en Firebase y AsyncStorage
+        await setDoc(doc(db, 'users', userId), { hasCompletedOnboarding: false });
+        await AsyncStorage.setItem('hasCompletedOnboarding', 'false');
+
+        // Navega al inicio del onboarding
+        navigation.replace('PreferenciasScreen');
     } catch (error) {
-      Alert.alert('Error al registrarse', error.message);
+        Alert.alert('Error al registrarse', error.message);
     }
   };
-  
 
   return (
     <View style={styles.container}>

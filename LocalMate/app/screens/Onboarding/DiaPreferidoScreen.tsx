@@ -26,67 +26,57 @@ export default function DiaPreferidoScreen({ navigation }) {
 
   const guardarDiaPreferido = async () => {
     if (diasSeleccionados.length === 0) {
-      Alert.alert('Por favor selecciona al menos un día');
-      return;
+        Alert.alert('Por favor selecciona al menos un día');
+        return;
     }
-  
+
     const diaPreferido = clasificarDias();
     const userId = auth.currentUser?.uid;
-  
+
     if (!userId) {
-      Alert.alert('Error', 'No se pudo autenticar el usuario');
-      return;
-    }
-  
-    try {
-      // Recupera todos los datos de AsyncStorage
-      const preferencia = await AsyncStorage.getItem('preferencia');
-      const nivelSocioeconomico = await AsyncStorage.getItem('nivel_socioeconomico');
-      const frecuenciaVisitas = await AsyncStorage.getItem('frecuencia_visitas');
-      const dispositivo = await AsyncStorage.getItem('dispositivo');
-  
-      // Log para verificar los datos antes de guardarlos
-      console.log("Datos a enviar a Firestore:", {
-        preferencias: preferencia,
-        nivel_socioeconomico: nivelSocioeconomico,
-        frecuencia_visitas: frecuenciaVisitas,
-        dispositivo: dispositivo,
-        dia_preferido_visita: diaPreferido,
-        hasCompletedOnboarding: true
-      });
-  
-      // Verifica que todos los datos existen antes de guardar
-      if (!preferencia || !nivelSocioeconomico || !frecuenciaVisitas || !dispositivo) {
-        Alert.alert(
-          'Error',
-          'Faltan algunos datos del onboarding. Por favor completa todos los pasos del onboarding.'
-        );
+        Alert.alert('Error', 'No se pudo autenticar el usuario');
         return;
-      }
-  
-      // Guarda todos los datos en Firebase en una sola operación
-      const userRef = doc(db, 'users', userId);
-      await setDoc(userRef, {
-        preferencias: preferencia,
-        nivel_socioeconomico: nivelSocioeconomico,
-        frecuencia_visitas: frecuenciaVisitas,
-        dispositivo: dispositivo,
-        dia_preferido_visita: diaPreferido,
-        hasCompletedOnboarding: true // Marca el onboarding como completado en Firebase
-      }, { merge: true });
-  
-      // Limpia AsyncStorage y marca el onboarding como completado en esta sesión
-      await AsyncStorage.multiRemove(['preferencia', 'nivel_socioeconomico', 'frecuencia_visitas', 'dispositivo']);
-      await AsyncStorage.setItem('hasCompletedOnboarding', 'true');
-  
-      // Navega a HomeUser
-      navigation.navigate('MainTabs');
+    }
+
+    try {
+        // Verifica los datos del onboarding
+        const preferencia = await AsyncStorage.getItem('preferencia');
+        const nivelSocioeconomico = await AsyncStorage.getItem('nivel_socioeconomico');
+        const frecuenciaVisitas = await AsyncStorage.getItem('frecuencia_visitas');
+        const dispositivo = await AsyncStorage.getItem('dispositivo');
+
+        if (!preferencia || !nivelSocioeconomico || !frecuenciaVisitas || !dispositivo) {
+            Alert.alert(
+                'Error',
+                'Faltan algunos datos del onboarding. Por favor completa todos los pasos del onboarding.'
+            );
+            return;
+        }
+
+        // Guarda los datos en Firestore y marca el onboarding como completado
+        const userRef = doc(db, 'users', userId);
+        await setDoc(userRef, {
+            preferencias: preferencia,
+            nivel_socioeconomico: nivelSocioeconomico,
+            frecuencia_visitas: frecuenciaVisitas,
+            dispositivo: dispositivo,
+            dia_preferido_visita: diaPreferido,
+            hasCompletedOnboarding: true // Marca el onboarding como completado en Firebase
+        }, { merge: true });
+
+        // Marca el onboarding como completado en AsyncStorage
+        await AsyncStorage.multiRemove(['preferencia', 'nivel_socioeconomico', 'frecuencia_visitas', 'dispositivo']);
+        await AsyncStorage.setItem('hasCompletedOnboarding', 'true');
+        console.log("Onboarding completado y marcado en Firebase y AsyncStorage");
+
+        // Navega a HomeUser
+        navigation.replace('AppDrawer');
     } catch (error) {
-      Alert.alert('Error', 'No se pudo completar el onboarding');
-      console.error(error);
+        Alert.alert('Error', 'No se pudo completar el onboarding');
+        console.error(error);
     }
   };
-  
+
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Selecciona tus días preferidos para salir</Text>

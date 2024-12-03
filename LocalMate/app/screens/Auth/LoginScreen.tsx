@@ -5,6 +5,7 @@ import { auth, signInWithEmailAndPassword, db } from '../../database/firebase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { doc, getDoc } from 'firebase/firestore';
 import LoadingScreen from '../LoadingScreen';
+import { CommonActions } from '@react-navigation/native';
 
 export default function LoginScreen() {
   const [email, setEmail] = useState('');
@@ -16,34 +17,38 @@ export default function LoginScreen() {
     setLoading(true);
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      const user = auth.currentUser;
-      if (user) {
-        // Revisa primero en AsyncStorage
-        let hasCompletedOnboarding = await AsyncStorage.getItem('hasCompletedOnboarding');
+        await signInWithEmailAndPassword(auth, email, password);
+        const user = auth.currentUser;
+        if (user) {
+            let hasCompletedOnboarding = await AsyncStorage.getItem('hasCompletedOnboarding');
+            
+            console.log('Valor de hasCompletedOnboarding en AsyncStorage:', hasCompletedOnboarding); // Agrega esto
 
-        if (!hasCompletedOnboarding) {
-          // Si no está en AsyncStorage, consulta Firebase
-          const userRef = doc(db, 'users', user.uid);
-          const userDoc = await getDoc(userRef);
-          hasCompletedOnboarding = userDoc.exists() && userDoc.data()?.hasCompletedOnboarding ? 'true' : 'false';
+            if (!hasCompletedOnboarding) {
+                const userRef = doc(db, 'users', user.uid);
+                const userDoc = await getDoc(userRef);
+                hasCompletedOnboarding = userDoc.exists() && userDoc.data()?.hasCompletedOnboarding ? 'true' : 'false';
 
-          // Guarda en AsyncStorage para evitar consultas repetidas
-          await AsyncStorage.setItem('hasCompletedOnboarding', hasCompletedOnboarding);
+                await AsyncStorage.setItem('hasCompletedOnboarding', hasCompletedOnboarding);
+            }
+
+            if (hasCompletedOnboarding === 'true') {
+              navigation.dispatch(
+                CommonActions.reset({
+                  index: 0,
+                  routes: [{ name: 'AppDrawer' }],
+                })
+              );            } else {
+                navigation.replace('PreferenciasScreen'); // Iniciar onboarding si no está completo
+            }
         }
-
-        if (hasCompletedOnboarding === 'true') {
-          navigation.replace('MainTabs'); // Dirige al TabNavigator después del login
-        } else {
-          navigation.replace('PreferenciasScreen'); // Iniciar onboarding si no está completo
-        }
-      }
     } catch (error) {
-      Alert.alert('Error al iniciar sesión', error.message);
+        Alert.alert('Error al iniciar sesión', error.message);
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
-  };
+};
+
 
   if (loading) {
     return <LoadingScreen />; 

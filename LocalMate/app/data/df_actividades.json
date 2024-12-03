@@ -1,0 +1,2527 @@
+[
+    {
+        "actividad_id": 1,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.196742,
+        "longitud": -76.967147,
+        "direccion": "Dirección #1-Clase de Baile",
+        "calificaciones": 1.4,
+        "precio": 0,
+        "fecha_inicio": "2024-10-14",
+        "fecha_fin": "2024-10-16",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "lima este",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 2,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.116383,
+        "longitud": -77.013013,
+        "direccion": "Dirección #2-Tour en Bicicleta",
+        "calificaciones": 2.6,
+        "precio": 0,
+        "fecha_inicio": "2024-06-03",
+        "fecha_fin": "2024-06-05",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 3,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.133117,
+        "longitud": -76.971728,
+        "direccion": "Dirección #3-Clase de Baile",
+        "calificaciones": 1.2,
+        "precio": 20,
+        "fecha_inicio": "2024-08-16",
+        "fecha_fin": "2024-08-20",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 4,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.133124,
+        "longitud": -76.957576,
+        "direccion": "Dirección #4-Clase de Yoga",
+        "calificaciones": 1.8,
+        "precio": 0,
+        "fecha_inicio": "2024-10-03",
+        "fecha_fin": "2024-10-07",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 5,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.184503,
+        "longitud": -77.01335,
+        "direccion": "Dirección #5-Escalada en Roca",
+        "calificaciones": 1.1,
+        "precio": 40,
+        "fecha_inicio": "2024-05-20",
+        "fecha_fin": "2024-05-22",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "lima este",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 6,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.147292,
+        "longitud": -76.980489,
+        "direccion": "Dirección #6-Tour en Bicicleta",
+        "calificaciones": 1.7,
+        "precio": 20,
+        "fecha_inicio": "2024-05-09",
+        "fecha_fin": "2024-05-12",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 7,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.124091,
+        "longitud": -76.997957,
+        "direccion": "Dirección #7-Clase de Yoga",
+        "calificaciones": 1.9,
+        "precio": 20,
+        "fecha_inicio": "2024-10-24",
+        "fecha_fin": "2024-10-29",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 8,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.179418,
+        "longitud": -76.988967,
+        "direccion": "Dirección #8-Tour en Bicicleta",
+        "calificaciones": 1.7,
+        "precio": 20,
+        "fecha_inicio": "2024-06-29",
+        "fecha_fin": "2024-07-04",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "lima este",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 9,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.194026,
+        "longitud": -76.960598,
+        "direccion": "Dirección #9-Taller de Cerámica",
+        "calificaciones": 2.0,
+        "precio": 40,
+        "fecha_inicio": "2024-06-03",
+        "fecha_fin": "2024-06-07",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "lima este",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 10,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.127672,
+        "longitud": -77.009124,
+        "direccion": "Dirección #10-Cata de Vinos",
+        "calificaciones": 2.2,
+        "precio": 20,
+        "fecha_inicio": "2024-10-26",
+        "fecha_fin": "2024-10-28",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 11,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.188653,
+        "longitud": -76.967282,
+        "direccion": "Dirección #11-Entrenamiento Personalizado",
+        "calificaciones": 0.7,
+        "precio": 40,
+        "fecha_inicio": "2024-10-10",
+        "fecha_fin": "2024-10-12",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "lima este",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 12,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.114943,
+        "longitud": -76.996096,
+        "direccion": "Dirección #12-Taller de Cerámica",
+        "calificaciones": 2.4,
+        "precio": 0,
+        "fecha_inicio": "2024-05-11",
+        "fecha_fin": "2024-05-16",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 13,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.198784,
+        "longitud": -76.955037,
+        "direccion": "Dirección #13-Cata de Vinos",
+        "calificaciones": 1.9,
+        "precio": 60,
+        "fecha_inicio": "2024-06-24",
+        "fecha_fin": "2024-06-27",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "lima este",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 14,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.136815,
+        "longitud": -76.995546,
+        "direccion": "Dirección #14-Clase de Yoga",
+        "calificaciones": 1.7,
+        "precio": 60,
+        "fecha_inicio": "2024-06-30",
+        "fecha_fin": "2024-07-04",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 15,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.118822,
+        "longitud": -76.998344,
+        "direccion": "Dirección #15-Cata de Vinos",
+        "calificaciones": 2.0,
+        "precio": 20,
+        "fecha_inicio": "2024-06-09",
+        "fecha_fin": "2024-06-14",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 16,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.144621,
+        "longitud": -76.985284,
+        "direccion": "Dirección #16-Curso de Fotografía",
+        "calificaciones": 0.4,
+        "precio": 40,
+        "fecha_inicio": "2024-05-26",
+        "fecha_fin": "2024-05-29",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 17,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.159903,
+        "longitud": -76.976591,
+        "direccion": "Dirección #17-Clase de Baile",
+        "calificaciones": 1.8,
+        "precio": 20,
+        "fecha_inicio": "2024-05-14",
+        "fecha_fin": "2024-05-16",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 18,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.123673,
+        "longitud": -76.996938,
+        "direccion": "Dirección #18-Clase de Baile",
+        "calificaciones": 1.5,
+        "precio": 40,
+        "fecha_inicio": "2024-08-30",
+        "fecha_fin": "2024-08-31",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 19,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.193528,
+        "longitud": -76.993131,
+        "direccion": "Dirección #19-Taller de Cerámica",
+        "calificaciones": 1.4,
+        "precio": 60,
+        "fecha_inicio": "2024-10-10",
+        "fecha_fin": "2024-10-13",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "lima este",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 20,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.14637,
+        "longitud": -76.97018,
+        "direccion": "Dirección #20-Tour en Bicicleta",
+        "calificaciones": 0.4,
+        "precio": 0,
+        "fecha_inicio": "2024-07-26",
+        "fecha_fin": "2024-07-27",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 21,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.185963,
+        "longitud": -77.007023,
+        "direccion": "Dirección #21-Clase de Yoga",
+        "calificaciones": 1.8,
+        "precio": 0,
+        "fecha_inicio": "2024-09-03",
+        "fecha_fin": "2024-09-06",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "lima este",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 22,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.169939,
+        "longitud": -76.976589,
+        "direccion": "Dirección #22-Entrenamiento Personalizado",
+        "calificaciones": 1.0,
+        "precio": 20,
+        "fecha_inicio": "2024-10-05",
+        "fecha_fin": "2024-10-10",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 23,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.192195,
+        "longitud": -76.950238,
+        "direccion": "Dirección #23-Clase de Baile",
+        "calificaciones": 1.8,
+        "precio": 100,
+        "fecha_inicio": "2024-09-27",
+        "fecha_fin": "2024-09-30",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "lima este",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 24,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.153022,
+        "longitud": -77.009098,
+        "direccion": "Dirección #24-Paseo a Caballo",
+        "calificaciones": 2.2,
+        "precio": 20,
+        "fecha_inicio": "2024-10-21",
+        "fecha_fin": "2024-10-24",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Jueves 18:00 - 22:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 25,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.125029,
+        "longitud": -76.992846,
+        "direccion": "Dirección #25-Taller de Cerámica",
+        "calificaciones": 0.2,
+        "precio": 40,
+        "fecha_inicio": "2024-08-12",
+        "fecha_fin": "2024-08-15",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 26,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.137938,
+        "longitud": -76.974007,
+        "direccion": "Dirección #26-Entrenamiento Personalizado",
+        "calificaciones": 1.8,
+        "precio": 60,
+        "fecha_inicio": "2024-08-29",
+        "fecha_fin": "2024-09-02",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 27,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.128326,
+        "longitud": -76.957591,
+        "direccion": "Dirección #27-Cata de Vinos",
+        "calificaciones": 0.8,
+        "precio": 20,
+        "fecha_inicio": "2024-10-20",
+        "fecha_fin": "2024-10-24",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 28,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.120821,
+        "longitud": -77.017258,
+        "direccion": "Dirección #28-Clase de Baile",
+        "calificaciones": 1.4,
+        "precio": 60,
+        "fecha_inicio": "2024-08-16",
+        "fecha_fin": "2024-08-19",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 29,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.132664,
+        "longitud": -77.003617,
+        "direccion": "Dirección #29-Clase de Yoga",
+        "calificaciones": 2.7,
+        "precio": 40,
+        "fecha_inicio": "2024-06-19",
+        "fecha_fin": "2024-06-22",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 30,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.189325,
+        "longitud": -76.978915,
+        "direccion": "Dirección #30-Curso de Fotografía",
+        "calificaciones": 1.5,
+        "precio": 0,
+        "fecha_inicio": "2024-06-13",
+        "fecha_fin": "2024-06-14",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "lima este",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 31,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.165117,
+        "longitud": -77.017484,
+        "direccion": "Dirección #31-Entrenamiento Personalizado",
+        "calificaciones": 2.6,
+        "precio": 20,
+        "fecha_inicio": "2024-06-22",
+        "fecha_fin": "2024-06-23",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 32,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.145429,
+        "longitud": -77.008608,
+        "direccion": "Dirección #32-Escalada en Roca",
+        "calificaciones": 1.8,
+        "precio": 40,
+        "fecha_inicio": "2024-09-12",
+        "fecha_fin": "2024-09-17",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 33,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.11038,
+        "longitud": -77.010983,
+        "direccion": "Dirección #33-Clase de Yoga",
+        "calificaciones": 1.0,
+        "precio": 40,
+        "fecha_inicio": "2024-08-07",
+        "fecha_fin": "2024-08-09",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 34,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.15202,
+        "longitud": -76.998256,
+        "direccion": "Dirección #34-Paseo a Caballo",
+        "calificaciones": 1.4,
+        "precio": 20,
+        "fecha_inicio": "2024-10-05",
+        "fecha_fin": "2024-10-08",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 35,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.129378,
+        "longitud": -76.989971,
+        "direccion": "Dirección #35-Taller de Cerámica",
+        "calificaciones": 1.6,
+        "precio": 40,
+        "fecha_inicio": "2024-07-19",
+        "fecha_fin": "2024-07-22",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 36,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.111308,
+        "longitud": -77.006535,
+        "direccion": "Dirección #36-Taller de Cerámica",
+        "calificaciones": 0.8,
+        "precio": 0,
+        "fecha_inicio": "2024-08-23",
+        "fecha_fin": "2024-08-26",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 37,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.108517,
+        "longitud": -76.976488,
+        "direccion": "Dirección #37-Paseo a Caballo",
+        "calificaciones": 0.1,
+        "precio": 40,
+        "fecha_inicio": "2024-05-22",
+        "fecha_fin": "2024-05-24",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 38,
+        "nombre": "Clase de Cocina Peruana",
+        "categorias": [
+            "Gastronomía",
+            "Clase"
+        ],
+        "descripcion_breve": "Aprende a cocinar platos típicos en una clase divertida.",
+        "latitud": -12.123481,
+        "longitud": -77.008273,
+        "direccion": "Dirección #38-Clase de Cocina Peruana",
+        "calificaciones": 1.0,
+        "precio": 40,
+        "fecha_inicio": "2024-07-04",
+        "fecha_fin": "2024-07-08",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedecocinaperuana",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Cocina"
+        ]
+    },
+    {
+        "actividad_id": 39,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.149226,
+        "longitud": -77.017488,
+        "direccion": "Dirección #39-Clase de Baile",
+        "calificaciones": 2.7,
+        "precio": 0,
+        "fecha_inicio": "2024-07-05",
+        "fecha_fin": "2024-07-07",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 40,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.149171,
+        "longitud": -76.972003,
+        "direccion": "Dirección #40-Curso de Fotografía",
+        "calificaciones": 2.0,
+        "precio": 40,
+        "fecha_inicio": "2024-07-05",
+        "fecha_fin": "2024-07-06",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 41,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.194931,
+        "longitud": -76.960439,
+        "direccion": "Dirección #41-Paseo a Caballo",
+        "calificaciones": 2.0,
+        "precio": 100,
+        "fecha_inicio": "2024-08-22",
+        "fecha_fin": "2024-08-23",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "lima este",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 42,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.199291,
+        "longitud": -76.967964,
+        "direccion": "Dirección #42-Paseo a Caballo",
+        "calificaciones": 0.6,
+        "precio": 40,
+        "fecha_inicio": "2024-09-12",
+        "fecha_fin": "2024-09-15",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "lima este",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 43,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.179907,
+        "longitud": -76.955698,
+        "direccion": "Dirección #43-Entrenamiento Personalizado",
+        "calificaciones": 0.9,
+        "precio": 20,
+        "fecha_inicio": "2024-06-16",
+        "fecha_fin": "2024-06-21",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "lima este",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 44,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.159931,
+        "longitud": -76.972454,
+        "direccion": "Dirección #44-Curso de Fotografía",
+        "calificaciones": 0.4,
+        "precio": 60,
+        "fecha_inicio": "2024-09-14",
+        "fecha_fin": "2024-09-16",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 45,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.163828,
+        "longitud": -77.01473,
+        "direccion": "Dirección #45-Escalada en Roca",
+        "calificaciones": 0.7,
+        "precio": 40,
+        "fecha_inicio": "2024-05-19",
+        "fecha_fin": "2024-05-21",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Viernes 10:00 - 18:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 46,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.164606,
+        "longitud": -76.99359,
+        "direccion": "Dirección #46-Curso de Fotografía",
+        "calificaciones": 0.9,
+        "precio": 0,
+        "fecha_inicio": "2024-05-03",
+        "fecha_fin": "2024-05-04",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 47,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.154301,
+        "longitud": -76.950715,
+        "direccion": "Dirección #47-Taller de Cerámica",
+        "calificaciones": 0.9,
+        "precio": 0,
+        "fecha_inicio": "2024-06-20",
+        "fecha_fin": "2024-06-23",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 48,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.103471,
+        "longitud": -76.957137,
+        "direccion": "Dirección #48-Clase de Yoga",
+        "calificaciones": 1.3,
+        "precio": 60,
+        "fecha_inicio": "2024-08-07",
+        "fecha_fin": "2024-08-08",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 49,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.148414,
+        "longitud": -76.965271,
+        "direccion": "Dirección #49-Taller de Cerámica",
+        "calificaciones": 2.4,
+        "precio": 60,
+        "fecha_inicio": "2024-10-13",
+        "fecha_fin": "2024-10-17",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 50,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.130459,
+        "longitud": -76.977781,
+        "direccion": "Dirección #50-Tour en Bicicleta",
+        "calificaciones": 1.5,
+        "precio": 40,
+        "fecha_inicio": "2024-09-15",
+        "fecha_fin": "2024-09-20",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 51,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.154748,
+        "longitud": -76.988643,
+        "direccion": "Dirección #51-Cata de Vinos",
+        "calificaciones": 1.0,
+        "precio": 40,
+        "fecha_inicio": "2024-08-05",
+        "fecha_fin": "2024-08-08",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 52,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.177177,
+        "longitud": -76.964688,
+        "direccion": "Dirección #52-Entrenamiento Personalizado",
+        "calificaciones": 1.0,
+        "precio": 20,
+        "fecha_inicio": "2024-05-31",
+        "fecha_fin": "2024-06-04",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "lima este",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 53,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.151696,
+        "longitud": -76.977992,
+        "direccion": "Dirección #53-Escalada en Roca",
+        "calificaciones": 1.4,
+        "precio": 60,
+        "fecha_inicio": "2024-09-24",
+        "fecha_fin": "2024-09-26",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 54,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.181316,
+        "longitud": -77.01332,
+        "direccion": "Dirección #54-Clase de Yoga",
+        "calificaciones": 1.1,
+        "precio": 60,
+        "fecha_inicio": "2024-05-03",
+        "fecha_fin": "2024-05-04",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "lima este",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 55,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.161648,
+        "longitud": -77.003435,
+        "direccion": "Dirección #55-Taller de Cerámica",
+        "calificaciones": 0.7,
+        "precio": 60,
+        "fecha_inicio": "2024-07-22",
+        "fecha_fin": "2024-07-23",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Viernes 10:00 - 18:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 56,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.106687,
+        "longitud": -76.998639,
+        "direccion": "Dirección #56-Tour en Bicicleta",
+        "calificaciones": 1.5,
+        "precio": 0,
+        "fecha_inicio": "2024-07-29",
+        "fecha_fin": "2024-07-30",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 57,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.115233,
+        "longitud": -76.9548,
+        "direccion": "Dirección #57-Paseo a Caballo",
+        "calificaciones": 0.7,
+        "precio": 60,
+        "fecha_inicio": "2024-06-01",
+        "fecha_fin": "2024-06-06",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 58,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.1218,
+        "longitud": -77.007504,
+        "direccion": "Dirección #58-Cata de Vinos",
+        "calificaciones": 2.5,
+        "precio": 40,
+        "fecha_inicio": "2024-07-02",
+        "fecha_fin": "2024-07-05",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 59,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.153542,
+        "longitud": -77.019801,
+        "direccion": "Dirección #59-Clase de Baile",
+        "calificaciones": 1.2,
+        "precio": 0,
+        "fecha_inicio": "2024-10-25",
+        "fecha_fin": "2024-10-28",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "barranco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 60,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.167967,
+        "longitud": -76.955366,
+        "direccion": "Dirección #60-Tour en Bicicleta",
+        "calificaciones": 1.8,
+        "precio": 20,
+        "fecha_inicio": "2024-08-17",
+        "fecha_fin": "2024-08-22",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 61,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.150279,
+        "longitud": -76.973981,
+        "direccion": "Dirección #61-Curso de Fotografía",
+        "calificaciones": 0.4,
+        "precio": 60,
+        "fecha_inicio": "2024-05-27",
+        "fecha_fin": "2024-06-01",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 62,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.104964,
+        "longitud": -76.974348,
+        "direccion": "Dirección #62-Clase de Baile",
+        "calificaciones": 1.9,
+        "precio": 40,
+        "fecha_inicio": "2024-09-21",
+        "fecha_fin": "2024-09-23",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 63,
+        "nombre": "Clase de Cocina Peruana",
+        "categorias": [
+            "Gastronomía",
+            "Clase"
+        ],
+        "descripcion_breve": "Aprende a cocinar platos típicos en una clase divertida.",
+        "latitud": -12.14391,
+        "longitud": -76.99002,
+        "direccion": "Dirección #63-Clase de Cocina Peruana",
+        "calificaciones": 2.4,
+        "precio": 60,
+        "fecha_inicio": "2024-09-26",
+        "fecha_fin": "2024-09-29",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Sábado 14:00 - 24:00', 'Jueves 18:00 - 22:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/clasedecocinaperuana",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Cocina"
+        ]
+    },
+    {
+        "actividad_id": 64,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.1544,
+        "longitud": -76.959914,
+        "direccion": "Dirección #64-Escalada en Roca",
+        "calificaciones": 0.8,
+        "precio": 60,
+        "fecha_inicio": "2024-07-22",
+        "fecha_fin": "2024-07-24",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00', 'Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 65,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.147328,
+        "longitud": -76.963508,
+        "direccion": "Dirección #65-Paseo a Caballo",
+        "calificaciones": 2.7,
+        "precio": 40,
+        "fecha_inicio": "2024-06-27",
+        "fecha_fin": "2024-06-28",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Viernes 10:00 - 18:00', 'Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 66,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.177802,
+        "longitud": -76.969229,
+        "direccion": "Dirección #66-Clase de Yoga",
+        "calificaciones": 2.4,
+        "precio": 60,
+        "fecha_inicio": "2024-10-16",
+        "fecha_fin": "2024-10-19",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "lima este",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 67,
+        "nombre": "Clase de Yoga",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Relájate y mejora tu flexibilidad con clases de yoga.",
+        "latitud": -12.136929,
+        "longitud": -77.012531,
+        "direccion": "Dirección #67-Clase de Yoga",
+        "calificaciones": 1.5,
+        "precio": 0,
+        "fecha_inicio": "2024-09-22",
+        "fecha_fin": "2024-09-23",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Domingo 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedeyoga",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Bienestar"
+        ]
+    },
+    {
+        "actividad_id": 68,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.127528,
+        "longitud": -77.000396,
+        "direccion": "Dirección #68-Entrenamiento Personalizado",
+        "calificaciones": 2.4,
+        "precio": 20,
+        "fecha_inicio": "2024-06-20",
+        "fecha_fin": "2024-06-25",
+        "horario_disponible": "['Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 69,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.123818,
+        "longitud": -76.987291,
+        "direccion": "Dirección #69-Tour en Bicicleta",
+        "calificaciones": 2.7,
+        "precio": 100,
+        "fecha_inicio": "2024-08-14",
+        "fecha_fin": "2024-08-19",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 70,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.106952,
+        "longitud": -76.950337,
+        "direccion": "Dirección #70-Escalada en Roca",
+        "calificaciones": 0.8,
+        "precio": 100,
+        "fecha_inicio": "2024-08-20",
+        "fecha_fin": "2024-08-25",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 71,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.1342,
+        "longitud": -77.009593,
+        "direccion": "Dirección #71-Clase de Baile",
+        "calificaciones": 1.2,
+        "precio": 0,
+        "fecha_inicio": "2024-09-10",
+        "fecha_fin": "2024-09-15",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 72,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.19553,
+        "longitud": -76.976434,
+        "direccion": "Dirección #72-Cata de Vinos",
+        "calificaciones": 0.4,
+        "precio": 0,
+        "fecha_inicio": "2024-08-30",
+        "fecha_fin": "2024-09-04",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "lima este",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 73,
+        "nombre": "Clase de Cocina Peruana",
+        "categorias": [
+            "Gastronomía",
+            "Clase"
+        ],
+        "descripcion_breve": "Aprende a cocinar platos típicos en una clase divertida.",
+        "latitud": -12.119272,
+        "longitud": -76.997101,
+        "direccion": "Dirección #73-Clase de Cocina Peruana",
+        "calificaciones": 2.8,
+        "precio": 0,
+        "fecha_inicio": "2024-09-02",
+        "fecha_fin": "2024-09-07",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Jueves 18:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedecocinaperuana",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Cocina"
+        ]
+    },
+    {
+        "actividad_id": 74,
+        "nombre": "Entrenamiento Personalizado",
+        "categorias": [
+            "Salud",
+            "Ejercicio"
+        ],
+        "descripcion_breve": "Alcanza tus metas con un entrenador personal.",
+        "latitud": -12.141104,
+        "longitud": -76.975626,
+        "direccion": "Dirección #74-Entrenamiento Personalizado",
+        "calificaciones": 1.4,
+        "precio": 20,
+        "fecha_inicio": "2024-10-07",
+        "fecha_fin": "2024-10-11",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/entrenamientopersonalizado",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Salud",
+            "Ejercicio"
+        ]
+    },
+    {
+        "actividad_id": 75,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.156705,
+        "longitud": -76.999025,
+        "direccion": "Dirección #75-Paseo a Caballo",
+        "calificaciones": 1.0,
+        "precio": 40,
+        "fecha_inicio": "2024-05-17",
+        "fecha_fin": "2024-05-21",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 76,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.14262,
+        "longitud": -76.957656,
+        "direccion": "Dirección #76-Tour en Bicicleta",
+        "calificaciones": 1.6,
+        "precio": 0,
+        "fecha_inicio": "2024-05-25",
+        "fecha_fin": "2024-05-30",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 77,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.154764,
+        "longitud": -76.954432,
+        "direccion": "Dirección #77-Taller de Cerámica",
+        "calificaciones": 2.6,
+        "precio": 0,
+        "fecha_inicio": "2024-10-05",
+        "fecha_fin": "2024-10-08",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 78,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.112518,
+        "longitud": -76.974731,
+        "direccion": "Dirección #78-Escalada en Roca",
+        "calificaciones": 2.0,
+        "precio": 20,
+        "fecha_inicio": "2024-05-09",
+        "fecha_fin": "2024-05-11",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 79,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.195051,
+        "longitud": -76.997114,
+        "direccion": "Dirección #79-Paseo a Caballo",
+        "calificaciones": 2.0,
+        "precio": 40,
+        "fecha_inicio": "2024-05-25",
+        "fecha_fin": "2024-05-26",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "lima este",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 80,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.144617,
+        "longitud": -77.000574,
+        "direccion": "Dirección #80-Taller de Cerámica",
+        "calificaciones": 2.9,
+        "precio": 40,
+        "fecha_inicio": "2024-07-17",
+        "fecha_fin": "2024-07-19",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 81,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.160157,
+        "longitud": -77.002727,
+        "direccion": "Dirección #81-Cata de Vinos",
+        "calificaciones": 2.5,
+        "precio": 100,
+        "fecha_inicio": "2024-05-03",
+        "fecha_fin": "2024-05-08",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 82,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.149197,
+        "longitud": -76.986328,
+        "direccion": "Dirección #82-Tour en Bicicleta",
+        "calificaciones": 1.1,
+        "precio": 0,
+        "fecha_inicio": "2024-08-15",
+        "fecha_fin": "2024-08-17",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 83,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.162375,
+        "longitud": -76.998245,
+        "direccion": "Dirección #83-Paseo a Caballo",
+        "calificaciones": 0.8,
+        "precio": 40,
+        "fecha_inicio": "2024-09-17",
+        "fecha_fin": "2024-09-18",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 84,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.158618,
+        "longitud": -76.962984,
+        "direccion": "Dirección #84-Tour en Bicicleta",
+        "calificaciones": 1.9,
+        "precio": 100,
+        "fecha_inicio": "2024-08-30",
+        "fecha_fin": "2024-09-01",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 85,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.193064,
+        "longitud": -76.96303,
+        "direccion": "Dirección #85-Cata de Vinos",
+        "calificaciones": 1.4,
+        "precio": 20,
+        "fecha_inicio": "2024-07-09",
+        "fecha_fin": "2024-07-10",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "lima este",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 86,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.10149,
+        "longitud": -77.001067,
+        "direccion": "Dirección #86-Clase de Baile",
+        "calificaciones": 0.5,
+        "precio": 20,
+        "fecha_inicio": "2024-09-21",
+        "fecha_fin": "2024-09-24",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 87,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.108498,
+        "longitud": -77.005203,
+        "direccion": "Dirección #87-Paseo a Caballo",
+        "calificaciones": 1.5,
+        "precio": 0,
+        "fecha_inicio": "2024-10-24",
+        "fecha_fin": "2024-10-28",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 88,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.168791,
+        "longitud": -76.998159,
+        "direccion": "Dirección #88-Cata de Vinos",
+        "calificaciones": 2.1,
+        "precio": 40,
+        "fecha_inicio": "2024-09-06",
+        "fecha_fin": "2024-09-07",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 89,
+        "nombre": "Clase de Baile",
+        "categorias": [
+            "Cultura",
+            "Danza"
+        ],
+        "descripcion_breve": "Aprende pasos de baile con los mejores instructores.",
+        "latitud": -12.152756,
+        "longitud": -76.985638,
+        "direccion": "Dirección #89-Clase de Baile",
+        "calificaciones": 0.8,
+        "precio": 40,
+        "fecha_inicio": "2024-09-06",
+        "fecha_fin": "2024-09-07",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Domingo 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Lunes 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedebaile",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Cultura",
+            "Danza"
+        ]
+    },
+    {
+        "actividad_id": 90,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.167742,
+        "longitud": -77.005341,
+        "direccion": "Dirección #90-Cata de Vinos",
+        "calificaciones": 1.2,
+        "precio": 20,
+        "fecha_inicio": "2024-10-11",
+        "fecha_fin": "2024-10-16",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 91,
+        "nombre": "Tour en Bicicleta",
+        "categorias": [
+            "Deportes",
+            "Tour"
+        ],
+        "descripcion_breve": "Recorre la ciudad en un tour guiado en bicicleta.",
+        "latitud": -12.143654,
+        "longitud": -76.990492,
+        "direccion": "Dirección #91-Tour en Bicicleta",
+        "calificaciones": 0.9,
+        "precio": 100,
+        "fecha_inicio": "2024-05-15",
+        "fecha_fin": "2024-05-19",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00', 'Jueves 18:00 - 22:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tourenbicicleta",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Turismo"
+        ]
+    },
+    {
+        "actividad_id": 92,
+        "nombre": "Curso de Fotografía",
+        "categorias": [
+            "Arte",
+            "Educación"
+        ],
+        "descripcion_breve": "Aprende técnicas de fotografía en un curso especializado.",
+        "latitud": -12.1017,
+        "longitud": -77.008585,
+        "direccion": "Dirección #92-Curso de Fotografía",
+        "calificaciones": 0.6,
+        "precio": 40,
+        "fecha_inicio": "2024-07-06",
+        "fecha_fin": "2024-07-11",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Sábado 14:00 - 24:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/cursodefotografía",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Fotografía"
+        ]
+    },
+    {
+        "actividad_id": 93,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.119386,
+        "longitud": -76.96683,
+        "direccion": "Dirección #93-Escalada en Roca",
+        "calificaciones": 0.6,
+        "precio": 100,
+        "fecha_inicio": "2024-06-13",
+        "fecha_fin": "2024-06-15",
+        "horario_disponible": "['Viernes 10:00 - 18:00', 'Miércoles 16:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 94,
+        "nombre": "Clase de Cocina Peruana",
+        "categorias": [
+            "Gastronomía",
+            "Clase"
+        ],
+        "descripcion_breve": "Aprende a cocinar platos típicos en una clase divertida.",
+        "latitud": -12.188514,
+        "longitud": -77.005336,
+        "direccion": "Dirección #94-Clase de Cocina Peruana",
+        "calificaciones": 2.2,
+        "precio": 0,
+        "fecha_inicio": "2024-09-09",
+        "fecha_fin": "2024-09-13",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Sábado 14:00 - 24:00', 'Lunes 10:00 - 22:00', 'Martes 14:00 - 20:00', 'Miércoles 16:00 - 20:00', 'Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/clasedecocinaperuana",
+        "distrito": "lima este",
+        "tags": [
+            "Gastronomía",
+            "Cocina"
+        ]
+    },
+    {
+        "actividad_id": 95,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.102765,
+        "longitud": -77.008242,
+        "direccion": "Dirección #95-Taller de Cerámica",
+        "calificaciones": 1.6,
+        "precio": 60,
+        "fecha_inicio": "2024-07-31",
+        "fecha_fin": "2024-08-05",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00', 'Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 96,
+        "nombre": "Cata de Vinos",
+        "categorias": [
+            "Gastronomía",
+            "Experiencia"
+        ],
+        "descripcion_breve": "Descubre los mejores vinos con una cata guiada.",
+        "latitud": -12.180652,
+        "longitud": -76.991866,
+        "direccion": "Dirección #96-Cata de Vinos",
+        "calificaciones": 2.2,
+        "precio": 20,
+        "fecha_inicio": "2024-09-27",
+        "fecha_fin": "2024-10-02",
+        "horario_disponible": "['Jueves 18:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Viernes 10:00 - 18:00', 'Sábado 14:00 - 24:00', 'Martes 14:00 - 20:00', 'Lunes 10:00 - 22:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/catadevinos",
+        "distrito": "lima este",
+        "tags": [
+            "Gastronomía",
+            "Vinos"
+        ]
+    },
+    {
+        "actividad_id": 97,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.162563,
+        "longitud": -76.959903,
+        "direccion": "Dirección #97-Taller de Cerámica",
+        "calificaciones": 0.6,
+        "precio": 40,
+        "fecha_inicio": "2024-08-09",
+        "fecha_fin": "2024-08-12",
+        "horario_disponible": "['Miércoles 16:00 - 20:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": false,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 98,
+        "nombre": "Escalada en Roca",
+        "categorias": [
+            "Deportes",
+            "Aventura"
+        ],
+        "descripcion_breve": "Vive una aventura emocionante escalando paredes de roca.",
+        "latitud": -12.188389,
+        "longitud": -77.007221,
+        "direccion": "Dirección #98-Escalada en Roca",
+        "calificaciones": 1.4,
+        "precio": 60,
+        "fecha_inicio": "2024-08-04",
+        "fecha_fin": "2024-08-06",
+        "horario_disponible": "['Lunes 10:00 - 22:00', 'Miércoles 16:00 - 20:00', 'Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00', 'Domingo 10:00 - 22:00']",
+        "material_incluido": true,
+        "target_etario": "25-50",
+        "redes_sociales": "fb.com/escaladaenroca",
+        "distrito": "lima este",
+        "tags": [
+            "Deportes",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 99,
+        "nombre": "Paseo a Caballo",
+        "categorias": [
+            "Naturaleza",
+            "Aventura"
+        ],
+        "descripcion_breve": "Disfruta de la naturaleza con un paseo a caballo.",
+        "latitud": -12.124908,
+        "longitud": -76.979172,
+        "direccion": "Dirección #99-Paseo a Caballo",
+        "calificaciones": 0.6,
+        "precio": 40,
+        "fecha_inicio": "2024-10-07",
+        "fecha_fin": "2024-10-10",
+        "horario_disponible": "['Sábado 14:00 - 24:00', 'Viernes 10:00 - 18:00']",
+        "material_incluido": true,
+        "target_etario": "18-65",
+        "redes_sociales": "fb.com/paseoacaballo",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Naturaleza",
+            "Aventura"
+        ]
+    },
+    {
+        "actividad_id": 100,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.151253,
+        "longitud": -76.965876,
+        "direccion": "Dirección #100-Taller de Cerámica",
+        "calificaciones": 0.3,
+        "precio": 40,
+        "fecha_inicio": "2024-05-26",
+        "fecha_fin": "2024-05-27",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    },
+    {
+        "actividad_id": 101,
+        "nombre": "Taller de Cerámica",
+        "categorias": [
+            "Arte",
+            "Taller"
+        ],
+        "descripcion_breve": "Crea piezas únicas en un taller de cerámica.",
+        "latitud": -12.137545330387132, 
+        "longitud": -77.02327641816302,
+        "direccion": "Dirección #100-Taller de Cerámica",
+        "calificaciones": 0.3,
+        "precio": 40,
+        "fecha_inicio": "2024-05-26",
+        "fecha_fin": "2024-05-27",
+        "horario_disponible": "['Domingo 10:00 - 22:00', 'Viernes 10:00 - 18:00', 'Martes 14:00 - 20:00']",
+        "material_incluido": true,
+        "target_etario": "18-40",
+        "redes_sociales": "fb.com/tallerdecerámica",
+        "distrito": "santiago de surco",
+        "tags": [
+            "Arte",
+            "Manualidades"
+        ]
+    }
+]

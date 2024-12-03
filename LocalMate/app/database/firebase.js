@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "localmate-e5528",
   storageBucket: "localmate-e5528.firebasestorage.app",
   messagingSenderId: "743928314158",
-  appId: "1:743928314158:web:c2d6fd6b18f88646b562bf"
+  appId: "1:743928314158:web:c2d6fd6b18f88646b562bf",
 };
 
 const app = initializeApp(firebaseConfig);

@@ -1,15 +1,13 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "jsx": "react-native",
     "baseUrl": ".",
     "strict": true,
     "paths": {
-      "@/*": [
-        "app/*"
-      ],
-      "assets/*": [
-        "assets/*"
-      ]
+      "@/*": ["app/*"],
+      "assets/*": ["assets/*"],
+      "constants/*": ["constants/*"]
     }
   },
   "include": [
@@ -17,7 +15,9 @@
     "app/**/*.tsx",
     "components/**/*.ts",
     "components/**/*.tsx",
+    "screens/**/*.ts",
+    "screens/**/*.tsx",
     "expo-env.d.ts",
-    ".expo/types/**/*.ts"
-  ]
+    ".expo/types/**/*.ts",
+    "app/screens/Store/SearchResultsScreen.js"  ]
 }

@@ -1,135 +1,126 @@
 import React, { useEffect, useState } from 'react';
-import { View, StyleSheet, Dimensions, ActivityIndicator, Alert, Modal, Text, TouchableOpacity } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import { View, StyleSheet, Text, FlatList, TouchableOpacity, Alert, ActivityIndicator } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import { DrawerActions } from '@react-navigation/native';
+import VerticalCard from "../../../components/HomeUser/VerticalCard";
+import HorizontalCard from "../../../components/HomeUser/HorizontalCard";
 import * as Location from 'expo-location';
-import { getStoresData } from '../../data/storesData';
-import { signOut } from 'firebase/auth';
-import { auth } from '../../database/firebase';
-import Header from '../../../components/Header';
-import SearchBar from '../../../components/SearchBar';
-import Sidebar from '../../../components/HomeUser/SideBar';
-import ZoomControls from '../../../components/HomeUser/ZoomControls';
-import StoreDetail from '../../../components/StoreDetail';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getAuth } from "firebase/auth"; 
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
-export default function HomeUserScreen({ navigation }) {
-  const [initialStores, setInitialStores] = useState([]); // Guardar las tiendas iniciales
-  const [stores, setStores] = useState([]);
-  const [selectedStore, setSelectedStore] = useState(null);
-  const [showDetailModal, setShowDetailModal] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false);
-  const [loadingLocation, setLoadingLocation] = useState(true);
-  const [region, setRegion] = useState({
-    latitude: -12.0464,
-    longitude: -77.0428,
-    latitudeDelta: 0.005,
-    longitudeDelta: 0.005,
-  });
-
-  const RADIO_TIENDAS_INICIAL = 1; // Radio inicial de 1 km
-  const RADIO_TIENDAS_CERCANAS = 1; // Radio de 10 km para recomendaciones
-
-  const calcularDistancia = (lat1, lon1, lat2, lon2) => {
-    const R = 6371; // Radio de la Tierra en km
-    const dLat = ((lat2 - lat1) * Math.PI) / 180;
-    const dLon = ((lon2 - lon1) * Math.PI) / 180;
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; // Distancia en km
-  };
-
-  const fetchLocationAndStores = async () => {
-    setLoadingLocation(true);
-    const { status } = await Location.requestForegroundPermissionsAsync();
-    if (status !== 'granted') {
-      Alert.alert('Permiso denegado', 'Necesitamos permisos para acceder a tu ubicación.');
-      setLoadingLocation(false);
-      return;
-    }
-    try {
-      const userLocation = await Location.getCurrentPositionAsync({});
-      const { latitude, longitude } = userLocation.coords;
-      setRegion({
-        latitude,
-        longitude,
-        latitudeDelta: 0.005,
-        longitudeDelta: 0.005,
-      });
-
-      const allStores = getStoresData();
-      const nearbyStores = allStores.filter(store =>
-        calcularDistancia(latitude, longitude, store.latitud, store.longitud) <= RADIO_TIENDAS_INICIAL
-      );
-
-      setStores(nearbyStores);
-      setInitialStores(nearbyStores); // Guardar las tiendas iniciales para restauración
-    } catch (error) {
-      Alert.alert('Error al obtener ubicación', 'No se pudo obtener la ubicación del usuario.');
-    } finally {
-      setLoadingLocation(false);
-    }
-  };
+export default function HomeUserScreen() {
+  const [nearbyStores, setNearbyStores] = useState([]);
+  const [recommendedStores, setRecommendedStores] = useState([]);
+  const [userLocation, setUserLocation] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const navigation = useNavigation();
+  const auth = getAuth(); // Define auth aquí
 
   useEffect(() => {
-    fetchLocationAndStores();
+    const fetchUserAndRecommendations = async () => {
+      setLoading(true);
+
+      try {
+        // Obtener ubicación del usuario
+        const { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          Alert.alert('Permiso denegado', 'Necesitamos permisos para acceder a tu ubicación.');
+          setLoading(false);
+          return;
+        }
+
+        const location = await Location.getCurrentPositionAsync({});
+        const { latitude, longitude } = location.coords;
+        setUserLocation({ latitude, longitude });
+
+        // Obtener datos del usuario desde Firebase
+        const auth = getAuth();
+        const user = auth.currentUser;
+
+        if (!user) {
+          Alert.alert("Error", "Usuario no autenticado.");
+          setLoading(false);
+          return;
+        }
+
+        const db = getFirestore();
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+
+        if (!userDoc.exists()) {
+          Alert.alert("Error", "Datos del usuario no encontrados.");
+          setLoading(false);
+          return;
+        }
+
+        const userData = userDoc.data();
+        const radius_km = 1; // Radio fijo de 1 km
+
+        // Solicitar recomendaciones al backend
+        const recommendResponse = await fetch("http://172.20.10.2:5001/recommend_hybrid", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            user_id: user.uid,
+            user_location: [latitude, longitude],
+            user_preference: userData.preferencias || "",
+            radius_km,
+            id_df: ["local_id", "evento_id", "actividad_id"], // Asegúrate de que sea una lista
+          }),
+        });
+        
+
+        if (!recommendResponse.ok) {
+          const errorText = await recommendResponse.text();
+          console.error("Error en la respuesta de recomendaciones:", errorText);
+          setLoading(false);
+          return;
+        }
+
+        const recommendations = await recommendResponse.json();
+        setRecommendedStores(recommendations);
+
+        // Solicitar tiendas cercanas al backend
+        const nearbyResponse = await fetch("http://172.20.10.2:5001/nearby_entities", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            user_location: [latitude, longitude],
+            radius_km,
+            entity_types: ["local", "evento", "actividad"], // Asegúrate de incluir entity_types
+          }),
+        });
+        
+
+        if (!nearbyResponse.ok) {
+          const errorText = await nearbyResponse.text();
+          console.error("Error en la respuesta de tiendas cercanas:", errorText);
+          setLoading(false);
+          return;
+        }
+
+        const nearbyStoresData = await nearbyResponse.json();
+        setNearbyStores(nearbyStoresData);
+      } catch (error) {
+        console.error("Error al obtener datos:", error);
+        Alert.alert("Error", "No se pudieron obtener los datos.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUserAndRecommendations();
   }, []);
 
-  const handleMarkerPress = (store) => {
-    console.log("Tienda seleccionada:", store);
-    setSelectedStore(store);
+
+  const navigateToSearchScreen = () => {
+    navigation.navigate('SearchScreen');
   };
 
-  const fetchRecommendations = async () => {
-    if (!selectedStore || !selectedStore.id) {
-      console.error("selectedStore o tienda_id no están definidos:", selectedStore);
-      Alert.alert("Error", "No se pudo obtener el ID de la tienda seleccionada.");
-      return;
-    }
-  
-    const { latitude, longitude } = region;
-    const tienda_id = selectedStore.id;
-  
-    try {
-      const response = await fetch("http://127.0.0.1:5000/recommend", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          tienda_id,
-          user_location: [latitude, longitude],
-          radius_km: RADIO_TIENDAS_CERCANAS, // Cambia a 10 km para las recomendaciones
-        }),
-      });
-  
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error("Error en la respuesta del servidor:", errorText);
-        Alert.alert("Error", "No se pudo obtener las recomendaciones. Verifica el servidor.");
-        return;
-      }
-  
-      const recommendations = await response.json();
-      setStores(recommendations); // Actualiza con tiendas recomendadas dentro de 10 km
-      setShowDetailModal(false); // Cierra el modal después de obtener recomendaciones
-    } catch (error) {
-      console.error("Error al obtener recomendaciones:", error);
-      Alert.alert("Error", "No se pudo obtener las recomendaciones. Verifica tu conexión.");
-    }
-  };
 
-  const restoreInitialStores = async () => {
-    await fetchLocationAndStores(); // Vuelve a obtener la ubicación y las tiendas iniciales
-    setSelectedStore(null); // Cierra cualquier selección actual
-  };
-
-  const toggleSidebar = () => setShowSidebar(!showSidebar);
-
-  if (loadingLocation) {
+  if (loading) {
     return (
       <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color="#4A90E2" />
@@ -139,135 +130,68 @@ export default function HomeUserScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <MapView
-        style={styles.map}
-        region={region}
-        showsUserLocation
-        customMapStyle={mapStyle}
-      >
-        {stores.map((store, index) => (
-          <Marker
-            key={index}
-            coordinate={{ latitude: store.latitud, longitude: store.longitud }}
-            title={store.nombre}
-            description={`${store.categoria} - ${store.direccion}`}
-            onPress={() => handleMarkerPress(store)}
-          />
-        ))}
-      </MapView>
-  
-      <Header onMenuPress={toggleSidebar} />
-      <SearchBar onSearch={(text) => { /* Implementar funcionalidad de búsqueda */ }} />
-      {showSidebar && (
-        <Sidebar
-          onLogout={async () => {
-            try {
-              await AsyncStorage.removeItem('hasCompletedOnboarding');
-              await signOut(auth);
-              navigation.navigate('Home');
-            } catch (error) {
-              Alert.alert('Error', 'Hubo un problema al cerrar sesión');
-            }
-          }}
-          onProfile={() => Alert.alert('Perfil')}
-        />
-      )}
+      {/* Header personalizado con el botón de menú */}
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.openDrawer())} style={styles.menuButton}>
+          <Ionicons name="menu" size={24} color="#333" />
+        </TouchableOpacity>
+        <Text style={styles.logo}>LocalMate</Text>
+      </View>
 
-      <ZoomControls
-        onZoomIn={() => setRegion({ ...region, latitudeDelta: region.latitudeDelta / 2, longitudeDelta: region.longitudeDelta / 2 })}
-        onZoomOut={() => setRegion({ ...region, latitudeDelta: region.latitudeDelta * 2, longitudeDelta: region.longitudeDelta * 2 })}
+      {/* Barra de búsqueda que lleva a SearchScreen */}
+      <TouchableOpacity style={styles.searchContainer} onPress={navigateToSearchScreen}>
+        <Ionicons name="search" size={20} color="#71727a" />
+        <Text style={styles.searchInput}>Buscar otras opciones</Text>
+      </TouchableOpacity>
+
+      {/* Sección de "Cerca de ti" */}
+      <Text style={styles.sectionTitle}>Cerca de ti</Text>
+      <FlatList
+        data={nearbyStores}
+        renderItem={({ item }) => (
+          <VerticalCard 
+            store={item}
+            userId={auth.currentUser.uid} 
+            userLocation={userLocation} 
+          />
+        )}
+        keyExtractor={(item, index) => item.id?.toString() || index.toString()}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.carouselContainer}
       />
 
-      {/* Vista previa de la tienda */}
-      {selectedStore && !showDetailModal && (
-        <View style={styles.previewContainer}>
-          <Text style={styles.previewTitle}>{selectedStore.nombre}</Text>
-          <Text style={styles.previewCategory}>{selectedStore.categoria}</Text>
-          <TouchableOpacity style={styles.previewButton} onPress={() => setShowDetailModal(true)}>
-            <Text style={styles.previewButtonText}>Más Detalles</Text>
-          </TouchableOpacity>
-        </View>
-      )}
-
-      {/* Modal para mostrar el detalle de la tienda */}
-      <Modal visible={showDetailModal} animationType="slide" transparent={true}>
-        <View style={styles.modalContainer}>
-          {selectedStore && (
-            <StoreDetail
-              store={selectedStore}
-              onClose={() => setShowDetailModal(false)}
-              onShowRecommendations={fetchRecommendations}
-              onRestoreStores={restoreInitialStores} // Llama a restoreInitialStores cuando se hace clic en "Ver todas las tiendas"
-            />
-          )}
-        </View>
-      </Modal>
+      {/* Sección de "Recomendados" desplazable verticalmente */}
+      <Text style={styles.sectionTitle}>Recomendados</Text>
+      <FlatList
+        data={recommendedStores}
+        renderItem={({ item }) => (
+          
+          <HorizontalCard 
+            store={item}
+            userId={auth.currentUser.uid} 
+            userLocation={userLocation} 
+          />
+        )}
+        keyExtractor={(item, index) => item.id?.toString() || index.toString()}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.verticalListContainer}
+        style={styles.recommendedList}
+      />
     </View>
-  );  
+  );
 }
 
-const mapStyle = [
-  { elementType: 'geometry', stylers: [{ color: '#eaeaea' }] },
-  { elementType: 'labels.text.fill', stylers: [{ color: '#757575' }] },
-  { elementType: 'labels.text.stroke', stylers: [{ color: '#f5f5f5' }] },
-  { featureType: 'road', stylers: [{ color: '#ffffff' }] },
-  { featureType: 'road.highway', stylers: [{ color: '#dadada' }] },
-  { featureType: 'poi', stylers: [{ visibility: 'off' }] },
-  { featureType: 'water', stylers: [{ color: '#c9c9c9' }] },
-];
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F7F8FA',
-  },
-  modalContainer: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  previewContainer: {
-    position: 'absolute',
-    bottom: 100,
-    width: '90%',
-    alignSelf: 'center',
-    backgroundColor: 'white',
-    padding: 20,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    borderRadius: 10,
-    elevation: 10,
-    alignItems: 'center',
-  },
-  previewTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#1f2024',
-  },
-  previewCategory: {
-    fontSize: 14,
-    color: '#71727a',
-    marginVertical: 5,
-  },
-  previewButton: {
-    marginTop: 10,
-    backgroundColor: '#006ffd',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 8,
-  },
-  previewButtonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '600',
-  },
+  container: { flex: 1, backgroundColor: '#F7F8FA' },
+  header: { flexDirection: 'row', alignItems: 'center', paddingTop: 40, paddingBottom: 20, paddingHorizontal: 15 },
+  menuButton: { marginRight: 10 },
+  logo: { fontSize: 24, fontWeight: 'bold', color: '#4A90E2', flex: 1, textAlign: 'center' },
+  searchContainer: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', marginHorizontal: 20, paddingHorizontal: 10, paddingVertical: 8, borderRadius: 8, marginBottom: 10 },
+  searchInput: { flex: 1, marginLeft: 10, fontSize: 16, color: '#71727a' },
+  sectionTitle: { fontSize: 18, fontWeight: 'bold', color: '#333', marginHorizontal: 20, marginBottom: 10 },
+  carouselContainer: { paddingHorizontal: 10 },
+  recommendedList: { maxHeight: 150 },
+  verticalListContainer: { paddingBottom: 0 },
+  loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#F7F8FA' },
 });
