@@ -1,137 +1,246 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, Alert } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { signOut } from 'firebase/auth';
-import { auth } from '../../database/firebase';
 import { useNavigation } from '@react-navigation/native';
 
 export default function ContributeScreen() {
-  const [userName, setUserName] = useState('');
   const navigation = useNavigation();
+  const [selectedPlan, setSelectedPlan] = useState(null);
 
-  useEffect(() => {
-    const userEmail = auth.currentUser?.email || 'Usuario';
-    const nameWithoutDomain = userEmail.split('@')[0];
-    setUserName(nameWithoutDomain);
-  }, []);
-  
-  const handleSignOut = async () => {
-    try {
-      await signOut(auth);
-      Alert.alert('Sesión cerrada', 'Has cerrado sesión correctamente.');
-      navigation.navigate('Home'); // Redirecciona a la pantalla de inicio
-    } catch (error) {
-      Alert.alert('Error', 'Hubo un problema al cerrar sesión.');
-    }
+  const handlePlanSelection = (plan) => {
+    setSelectedPlan(plan);
   };
 
   return (
-    <View style={styles.container}>
-      {/* Header personalizado con el botón de menú */}
+    <ScrollView contentContainerStyle={styles.container}>
+      {/* Header con el botón de menú */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.openDrawer()} style={styles.menuButton}>
           <Ionicons name="menu" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.welcomeText}>Bienvenido {userName}</Text>
-        <Image
-          source={require('../../../assets/images/badass-ash.jpg')}
-          style={styles.profileImage}
-        />
       </View>
 
-      {/* Sección de beneficios */}
-      <Text style={styles.sectionTitle}>Beneficios GreatMate</Text>
-      <View style={styles.benefitsList}>
-        <Text style={styles.benefit}>• Vales de descuento semanales</Text>
-        <Text style={styles.benefit}>• Promocionar tu negocio</Text>
-        <Text style={styles.benefit}>• Mayor alcance en tus opiniones</Text>
-        <Text style={styles.benefit}>• Visualización interactiva de tus movimientos</Text>
+      {/* Título de la página */}
+      <View style={styles.headerContainer}>
+        <Text style={styles.title}>Escoge tu plan de beneficios</Text>
+        <Text style={styles.subtitle}>Y opten una prueba gratis de 7 dias</Text>
       </View>
 
       {/* Opciones de suscripción */}
-      <Text style={styles.plansTitle}>Planes ofrecidos</Text>
-      <View style={styles.plansContainer}>
-        <TouchableOpacity style={styles.planBox}>
-          <Text style={styles.planText}>Suscripción Mensual</Text>
-          <Text style={styles.priceText}>S/. 6.00</Text>
+      <View style={styles.planContainer}>
+        {/* Plan anual */}
+        <TouchableOpacity
+          style={[styles.planBox, selectedPlan === 'Anual' && styles.activePlanBox]}
+          onPress={() => handlePlanSelection('Anual')}
+        >
+          <View style={styles.planDetails}>
+            <View style={selectedPlan === 'Anual' ? styles.planCircleActive : styles.planCircle}>
+              {selectedPlan === 'Anual' && <View style={styles.planInnerCircle} />}
+            </View>
+            <View style={styles.planInfo}>
+              <Text style={styles.planTitle}>GreatMate Emprendedores</Text>
+            </View>
+            <View style={styles.planPrice}>
+              <Text style={styles.price}>$ 49.90</Text>
+              <Text style={styles.priceDetails}>cada mes</Text>
+            </View>
+          </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.planBox}>
-          <Text style={styles.planText}>Suscripción Anual</Text>
-          <Text style={styles.priceText}>S/. 50.00</Text>
+
+        {/* Plan mensual */}
+        <TouchableOpacity
+          style={[styles.planBox, selectedPlan === 'Mensual' && styles.activePlanBox]}
+          onPress={() => handlePlanSelection('Mensual')}
+        >
+          <View style={styles.planDetails}>
+            <View style={selectedPlan === 'Mensual' ? styles.planCircleActive : styles.planCircle}>
+              {selectedPlan === 'Mensual' && <View style={styles.planInnerCircle} />}
+            </View>
+            <View style={styles.planInfo}>
+              <Text style={styles.planTitle}>GreatMate Usuarios</Text>
+            </View>
+            <View style={styles.planPrice}>
+              <Text style={styles.price}>$ 6.90</Text>
+              <Text style={styles.priceDetails}>cada mes</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+
+        {/* Plan semanal */}
+        <TouchableOpacity
+          style={[styles.planBox, selectedPlan === 'Semanal' && styles.activePlanBox]}
+          onPress={() => handlePlanSelection('Semanal')}
+        >
+          <View style={styles.planDetails}>
+            <View style={selectedPlan === 'Semanal' ? styles.planCircleActive : styles.planCircle}>
+              {selectedPlan === 'Semanal' && <View style={styles.planInnerCircle} />}
+            </View>
+            <View style={styles.planInfo}>
+              <Text style={styles.planTitle}>Semanal</Text>
+            </View>
+            <View style={styles.planPrice}>
+              <Text style={styles.price}>$ 1.90</Text>
+              <Text style={styles.priceDetails}>cada semana</Text>
+            </View>
+          </View>
         </TouchableOpacity>
       </View>
-    </View>
+
+      {/* Beneficios */}
+      <View style={styles.benefitsContainer}>
+        <Text style={styles.benefitsTitle}>Podras obtener:</Text>
+        <Text style={styles.benefit}>• Mejor visualización de tu local</Text>
+        <Text style={styles.benefit}>• Reporte de interacciones</Text>
+        <Text style={styles.benefit}>• Mayor alcance de usuarios</Text>
+        <Text style={styles.benefit}></Text>
+        <Text style={styles.benefit}>• Cupones cerca de ti</Text>
+        <Text style={styles.benefit}>• Descuentos en eventos</Text>
+      </View>
+
+      {/* Botón de suscripción */}
+      <TouchableOpacity style={styles.subscribeButton}>
+        <Text style={styles.subscribeText}>Suscribete</Text>
+      </TouchableOpacity>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#F7F8FA',
+    flexGrow: 1,
+    padding: 24,
+    backgroundColor: 'white',
   },
   header: {
     flexDirection: 'row',
+    justifyContent: 'flex-start',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 16,
   },
   menuButton: {
-    paddingRight: 10, // Espacio a la derecha del botón de menú
+    padding: 10,
   },
-  welcomeText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
-    flex: 1,
-    textAlign: 'center',
+  headerContainer: {
+    marginBottom: 32,
   },
-  profileImage: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
+  title: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: '#1F2024',
+    letterSpacing: 0.24,
+    marginBottom: 8,
   },
-  sectionTitle: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 10,
+  subtitle: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: '#71727A',
+    lineHeight: 20,
   },
-  benefitsList: {
-    marginBottom: 20,
-  },
-  benefit: {
-    fontSize: 16,
-    color: '#71727a',
-    marginBottom: 5,
-    lineHeight: 24,
-  },
-  plansTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 10,
-  },
-  plansContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  planContainer: {
+    gap: 12,
+    marginBottom: 32,
   },
   planBox: {
-    flex: 1,
-    backgroundColor: '#e0e0e0',
-    padding: 20,
-    margin: 5,
+    height: 67,
+    padding: 16,
+    borderRadius: 16,
+    borderWidth: 0.5,
+    borderColor: '#D4D6DD',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+  },
+  activePlanBox: {
+    backgroundColor: '#EAF2FF',
+  },
+  planDetails: {
+    flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 10,
+    justifyContent: 'space-between',
   },
-  planText: {
+  planCircle: {
+    width: 16,
+    height: 16,
+    borderRadius: 999,
+    borderWidth: 1.5,
+    borderColor: '#C5C6CC',
+  },
+  planCircleActive: {
+    width: 16,
+    height: 16,
+    borderRadius: 999,
+    borderWidth: 1.5,
+    borderColor: '#006FFD',
+    backgroundColor: '#006FFD',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  planInnerCircle: {
+    width: 6,
+    height: 6,
+    borderRadius: 999,
+    backgroundColor: 'white',
+  },
+  planInfo: {
+    flex: 1,
+    marginHorizontal: 12,
+  },
+  planTitle: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#1F2024',
+  },
+  planDiscount: {
+    fontSize: 10,
+    color: '#006FFD',
+    lineHeight: 14,
+    letterSpacing: 0.15,
+  },
+  planPrice: {
+    alignItems: 'flex-end',
+  },
+  price: {
     fontSize: 16,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 10,
+    fontWeight: '800',
+    color: '#1F2024',
   },
-  priceText: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
+  priceDetails: {
+    fontSize: 10,
+    fontWeight: '400',
+    color: '#1F2024',
+    lineHeight: 14,
+    letterSpacing: 0.15,
+  },
+  benefitsContainer: {
+    padding: 24,
+    borderRadius: 16,
+    backgroundColor: '#F8F9FE',
+    marginBottom: 32,
+  },
+  benefitsTitle: {
+    fontSize: 16,
+    fontWeight: '800',
+    color: '#1F2024',
+    letterSpacing: 0.08,
+    marginBottom: 16,
+  },
+  benefit: {
+    fontSize: 12,
+    fontWeight: '400',
+    color: '#71727A',
+    lineHeight: 16,
+    letterSpacing: 0.12,
+  },
+  subscribeButton: {
+    height: 48,
+    backgroundColor: '#006FFD',
+    borderRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  subscribeText: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: 'white',
   },
 });
+

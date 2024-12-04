@@ -65,7 +65,7 @@ export default function HomeUserScreen() {
           body: JSON.stringify({
             user_id: user.uid,
             user_location: [latitude, longitude],
-            user_preference: userData.preferencias || "",
+            user_preference: userData.categorias_favoritas || [], // Array de preferencias
             radius_km,
             id_df: ["local_id", "evento_id", "actividad_id"], // Asegúrate de que sea una lista
           }),
@@ -175,7 +175,7 @@ export default function HomeUserScreen() {
         )}
         keyExtractor={(item, index) => item.id?.toString() || index.toString()}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.verticalListContainer}
+        contentContainerStyle={styles.carouselContainer}
         style={styles.recommendedList}
       />
     </View>

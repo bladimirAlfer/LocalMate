@@ -167,30 +167,35 @@ export default function ExploreScreen({ navigation, route }) {
           setLoadingLocation(false);
           return;
         }
-
+  
         // Obtener datos del usuario desde Firestore
         const userDocRef = doc(db, "users", user.uid);
         const userDoc = await getDoc(userDocRef);
-
+  
         if (!userDoc.exists()) {
           Alert.alert("Error", "No se encontraron datos del usuario.");
           setLoadingLocation(false);
           return;
         }
-
+  
         const userData = userDoc.data();
-
-      // Combinar `userId` con los datos del usuario
-      const userDataWithId = {
-        ...userData,
-        id: user.uid, // Agrega el UID del usuario
-      };
-
+  
+        // Combinar `userId` con los datos del usuario
+        const userDataWithId = {
+          ...userData,
+          id: user.uid, // Agrega el UID del usuario
+        };
+  
+        // Manejar `categorias_favoritas` como lista
+        const categoriasFavoritas = Array.isArray(userData.categorias_favoritas)
+          ? userData.categorias_favoritas
+          : [];
+  
         // Establecer los datos del usuario en el estado
         setUserId(user.uid); // UID del usuario autenticado
-        setUserPreference(userData.preferencias || ""); // Preferencias del usuario
-
-      console.log("Datos del usuario cargados:", userDataWithId); // Log que incluye el UID
+        setUserPreference(categoriasFavoritas); // Manejar como lista de categorías favoritas
+  
+        console.log("Datos del usuario cargados:", userDataWithId); // Log que incluye el UID
       } catch (error) {
         console.error("Error al obtener datos del usuario:", error);
         Alert.alert("Error", "No se pudieron cargar los datos del usuario.");
@@ -198,10 +203,10 @@ export default function ExploreScreen({ navigation, route }) {
         setLoadingLocation(false);
       }
     };
-
+  
     fetchUserData(); // Llama a la función al montar el componente
   }, []);
-
+  
   
   const fetchHybridRecommendations = async () => {
     if (!userId || !userPreference) {

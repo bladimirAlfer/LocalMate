@@ -1,12 +1,28 @@
 // app/screens/LoadingScreen.tsx
-import React from 'react';
-import { View, ActivityIndicator, Text, StyleSheet } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, StyleSheet } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
-export default function LoadingScreen() {
+export default function LoadingScreen({ navigation }) {
+  // Redirige después de la animación
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      navigation.replace('HomeScreen'); // Cambia 'HomeScreen' por tu pantalla inicial
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
-      <ActivityIndicator size="large" color="#4A90E2" />
-      <Text style={styles.text}>Cargando...</Text>
+      <Animatable.Image
+        animation="pulse" 
+        iterationCount="infinite" 
+        duration={1000} 
+        source={require('assets/images/home_logo.png')} 
+        style={styles.image}
+        resizeMode="contain"
+      />
     </View>
   );
 }
@@ -16,11 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F7F8FA',
+    backgroundColor: '#ffffff', // Fondo blanco
   },
-  text: {
-    marginTop: 10,
-    fontSize: 16,
-    color: '#333',
+  image: {
+    width: 200,
+    height: 200,
   },
 });
