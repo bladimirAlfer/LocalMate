@@ -443,7 +443,7 @@ export { db };
 ---
 
 ## Contribuciones
-Si deseas contribuir, envía un pull request a nuestro repositorio oficial en GitHub: [LocalMate Repository](https://github.com/tu-repo).
+Si deseas contribuir, envía un pull request a nuestro repositorio oficial en GitHub: [LocalMate Repository](https://github.com/bladimirAlfer/LocalMate).
 
 ---
 ## Conclusion
