@@ -37,7 +37,7 @@ export default function AppTabNavigator() {
               break;
             case "ContributeScreen":
               iconName = "plus";
-              label = "Contribuir";
+              label = "Beneficios";
               break;
             case "ExploreScreen":
               iconName = "map-outline";

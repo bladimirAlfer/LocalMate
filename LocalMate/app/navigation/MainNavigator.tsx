@@ -5,10 +5,7 @@ import RegisterScreen from '../screens/Auth/RegisterScreen';
 import HomeScreen from '../screens/Home/HomeScreen';
 import LoadingScreen from '../screens/LoadingScreen';
 import PreferenciasScreen from '../screens/Onboarding/PreferenciasScreen';
-import NivelSocioeconomicoScreen from '../screens/Onboarding/NivelSocioeconomicoScreen';
-import FrecuenciaVisitasScreen from '../screens/Onboarding/FrecuenciaVisitasScreen';
-import DispositivoScreen from '../screens/Onboarding/DispositivoScreen';
-import DiaPreferidoScreen from '../screens/Onboarding/DiaPreferidoScreen';
+
 import AppDrawer from './AppDrawer';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from '../database/firebase';
@@ -20,6 +17,8 @@ import StoreDetailScreen from '../screens/Store/StoreDetailScreen';
 import SearchScreen from '../screens/Store/SearchScreen';
 import SearchResultsScreen from '../screens/Store/SearchResultsScreen';
 import EntityDetailScreen from '@/screens/User/EntityDetailScreen';
+import InformationScreen from '@/screens/Onboarding/InformationScreen';
+import ReviewScreen from '@/screens/User/ReviewsScreen';
 
 const Stack = createStackNavigator();
 
@@ -48,7 +47,6 @@ const MainNavigator = () => {
       } else {
         setInitialRoute('Home');
       }
-      setInitialRoute('AppDrawer'); // Asegúrate de establecer el valor adecuado aquí
       setLoadingAuth(false);
     };
 
@@ -68,19 +66,18 @@ const MainNavigator = () => {
   return (
     <Stack.Navigator initialRouteName={initialRoute}>
           <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Register" component={RegisterScreen} />
+          <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="Register" component={RegisterScreen} options={{ headerShown: false }} />
           <Stack.Screen name="PreferenciasScreen" component={PreferenciasScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="NivelSocioeconomicoScreen" component={NivelSocioeconomicoScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="FrecuenciaVisitasScreen" component={FrecuenciaVisitasScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="DispositivoScreen" component={DispositivoScreen} options={{ headerShown: false }} />
-          <Stack.Screen name="DiaPreferidoScreen" component={DiaPreferidoScreen} options={{ headerShown: false }} />
+          <Stack.Screen name="InformationScreen" component={InformationScreen} options={{ headerShown: false }} />
           <Stack.Screen name="AppDrawer" component={AppDrawer} options={{ headerShown: false }} />
           <Stack.Screen name="StoreDetailScreen" component={StoreDetailScreen} options={{ headerShown: false }} />
           <Stack.Screen name="SearchScreen" component={SearchScreen} options={{ headerShown: false }} />
           <Stack.Screen name="SearchResultsScreen" component={SearchResultsScreen} options={{ headerShown: false }}/>
-          <Stack.Screen name="EntityDetailScreen" component={EntityDetailScreen} options={{ headerShown: false }}
+          <Stack.Screen name="EntityDetailScreen" component={EntityDetailScreen} options={{ headerShown: false }}/>
+          <Stack.Screen name="ReviewScreen" component={ReviewScreen} options={{ headerShown: false }}
 />
+
 
     </Stack.Navigator>
   );
