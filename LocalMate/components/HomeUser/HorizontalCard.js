@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { Border, FontFamily, FontSize, Color } from "constants/StyleHorizontalcard";
 import { useNavigation } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const HorizontalCard = ({ store, userId, userLocation }) => {
   const navigation = useNavigation();
+  const [startTime, setStartTime] = useState(null);
 
-  // Función para registrar la interacción (Visita)
-  const registrarInteraccion = async () => {
-    if (!userId || !store?.tienda_id || !userLocation) {
+  const registrarInteraccion = async (interactionDuration) => {
+    const contenidoId = store.local_id;
+    if (!userId || !contenidoId || !userLocation) {
       console.warn("Faltan datos para registrar la interacción.");
       return;
     }
 
     try {
+      // Registrar la interacción en el backend
       const response = await fetch("http://172.20.10.2:5001/guardar_interaccion", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           user_id: userId,
-          contenido_id: store.local_id,
+          contenido_id: contenidoId,
           tipo_interaccion: "Visita",
+          tiempo_interaccion: interactionDuration, // Tiempo en milisegundos
           fecha_interaccion: new Date().toISOString().split("T")[0],
           hora_interaccion: new Date().toLocaleTimeString(),
           ubicacion_usuario: userLocation,
@@ -31,28 +35,69 @@ const HorizontalCard = ({ store, userId, userLocation }) => {
       if (response.ok) {
         console.log("Interacción registrada correctamente para la tienda:", store.nombre);
       } else {
-        console.error("Error al registrar la interacción.");
+        const errorText = await response.text();
+        console.error("Error en la respuesta del servidor:", errorText);
       }
+
+      // Registrar la interacción en Firebase Firestore
+      const db = getFirestore();
+      const interaccionData = {
+        user_id: userId,
+        contenido_id: contenidoId,
+        tipo_interaccion: "Visita",
+        tiempo_interaccion: interactionDuration,
+        fecha_interaccion: new Date().toISOString().split("T")[0],
+        hora_interaccion: new Date().toLocaleTimeString(),
+        ubicacion_usuario: userLocation,
+        nombre_tienda: store.nombre,
+        categorias: store.categorias,
+      };
+
+      const docRef = await addDoc(collection(db, "interacciones"), interaccionData);
+      console.log("Interacción registrada en Firebase con ID:", docRef.id);
+
     } catch (error) {
       console.error("Error en registrarInteraccion:", error);
     }
   };
 
+  const handlePressIn = () => {
+    setStartTime(Date.now()); // Registrar el tiempo de inicio
+  };
+
+  const handlePressOut = () => {
+    if (startTime) {
+      const endTime = Date.now();
+      const interactionDuration = endTime - startTime; // Calcular el tiempo de interacción
+      registrarInteraccion(interactionDuration); // Enviar el tiempo al backend y Firebase
+    }
+  };
+
   const handleMoreDetails = () => {
-    registrarInteraccion(); // Registrar interacción al hacer clic
     navigation.navigate('StoreDetailScreen', { store });
   };
 
+  const getValidImageUrl = (imageUrl) => {
+    return imageUrl && imageUrl.startsWith("http")
+      ? imageUrl
+      : "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg";
+  };
+
   return (
-    <TouchableOpacity style={styles.horizontalCard} onPress={handleMoreDetails}>
+    <TouchableOpacity
+      style={styles.horizontalCard}
+      onPressIn={handlePressIn} // Detectar inicio de interacción
+      onPressOut={() => {
+        handlePressOut(); // Detectar fin de interacción
+        handleMoreDetails();
+      }}
+    >
       <View style={styles.imageWrapper}>
-        <Image
-          style={styles.imageIcon}
-          resizeMode="cover"
-          source={store?.imageUrl
-            ? { uri: store.imageUrl }
-            : { uri: "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg" }}
-        />
+      <Image
+        style={styles.imageIcon}
+        resizeMode="cover"
+        source={{ uri: getValidImageUrl(store?.imagenes) }} // Cambia imageUrl a imagenes
+      />
       </View>
       <View style={styles.contentParent}>
         <Text style={styles.title} numberOfLines={1}>
