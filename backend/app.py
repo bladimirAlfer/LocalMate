@@ -122,7 +122,7 @@ def obtener_recomendaciones_con_distancia(id, df, id_df, user_location, cosine_s
     # Calcular similitud del coseno solo para las tiendas dentro del radio
     sim_scores = [(i, cosine_sim[idx][i]) for i, _ in tiendas_dentro_radio]
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1:5]  # Obtener los 4 más similares
+    sim_scores = sim_scores[1:11]  # Obtener los 4 más similares
     tienda_indices = [i[0] for i in sim_scores]
 
     recomendaciones = []
@@ -142,7 +142,6 @@ def obtener_recomendaciones_con_distancia(id, df, id_df, user_location, cosine_s
 
     return recomendaciones
 
-
 def hybrid_recommendation_with_location_and_preference(
     user_id, user_location, user_preference, df, id, 
     interaction_matrix, latent_matrix, latent_matrix_df, item_similarity, item_features_encoded, 
@@ -157,19 +156,25 @@ def hybrid_recommendation_with_location_and_preference(
 
     # Filter stores based on user preference matching store categories
     filtered_stores_df = df.loc[[i for i, _ in stores_within_radius]]
-    filtered_stores_df = filtered_stores_df[filtered_stores_df['categorias'].str.contains(user_preference, case=False, na=False)]
-    
+    filtered_stores_df = filtered_stores_df[
+        filtered_stores_df['categorias'].apply(
+            lambda categorias: any(
+                preference.lower() in categorias.lower() 
+                for preference in user_preference
+            ) if isinstance(categorias, str) else False
+        )
+    ]
+
     # Si no encuentra la categoria, buscar por el nombre más cercano y aplicar modelo basado en contenido
     if filtered_stores_df.empty:
         print("No stores match the user preference within the specified radius.")
         
-        # buscar coincidencia en el nombre
+        # Combinar las preferencias en una cadena para buscar coincidencias
         store_names = df['nombre'].str.lower().unique()
-        store_name = user_preference.lower()
+        store_name = " ".join(user_preference).lower()
         
         print(f"Searching for close matches to '{store_name}'...")
 
-        
         matches = get_close_matches(store_name, store_names, n=1, cutoff=0.6)
         if matches:
             matched_store = df[df['nombre'].str.lower() == matches[0]].iloc[0]
@@ -185,7 +190,6 @@ def hybrid_recommendation_with_location_and_preference(
             print("No close matches found.")
             return []
 
-
     # Collaborative Filtering Scores
     if user_id not in latent_matrix_df.index:
         # If the user is new, recommend based on the most popular items in the filtered set
@@ -194,9 +198,7 @@ def hybrid_recommendation_with_location_and_preference(
         
         # Convert each row to a full dictionary to include all store information
         recommendations_json = recommended_stores.apply(lambda row: row.to_dict(), axis=1).tolist()
-        
         return recommendations_json
-
 
     # Get the user's latent vector from collaborative filtering
     user_latent_vector = latent_matrix_df.loc[user_id].values.reshape(1, -1)
@@ -230,8 +232,6 @@ def hybrid_recommendation_with_location_and_preference(
                     score = 0  # Default score if no valid index found
                 hybrid_scores.append((tienda_id, score, distance))
             except KeyError:
-                # Handle cases where tienda_id is not in the interaction_matrix columns
-                #print(f"Store ID {tienda_id} not found in interaction matrix.")
                 continue
 
     # Sort by hybrid score and select top N
@@ -288,7 +288,6 @@ def get_nearby_entities():
             elif entity_type == "actividad":
                 results.extend(recommend_nearby_stores(user_location, df_actividades, radius_km))
 
-        print(f"Entidades encontradas: {results}")  # Debug
         results = sorted(results, key=lambda x: x["distance"])
         return jsonify(results)
     except Exception as e:
@@ -343,7 +342,9 @@ def recommend_api():
 
         user_id = data.get("user_id")
         user_location = tuple(data["user_location"])
-        user_preference = data["user_preference"]
+        user_preference = data.get("user_preference", [])
+        if not isinstance(user_preference, list):
+            return jsonify({"error": "'user_preference' must be a list"}), 400
         radius_km = float(data.get("radius_km", 1))
 
         # Diccionario para mapear configuraciones por tipo
@@ -521,7 +522,6 @@ def delete_tienda(local_id):
         return jsonify({"error": "No se pudo eliminar la tienda"}), 500
 
 
-
 # Cargar categorías desde el archivo JSON
 def load_categories():
     if os.path.exists(CATEGORY_FILE):
@@ -553,7 +553,6 @@ def add_category():
         save_categories(categories)
         return jsonify({"message": "Categoría añadida correctamente"}), 201
     return jsonify({"message": "La categoría ya existe o está vacía"}), 400
-
 
 
 # Función para cargar datos del archivo JSON
